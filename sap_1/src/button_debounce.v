@@ -14,7 +14,7 @@ reg [15:0] counter;
 
 always @(posedge clk) begin
     if(~button_i) 
-        if (counter < 16'b111111111111111111)
+        if (counter < 16'b1111111111111111)
             counter <= counter + 1'd1;
         else
             button_o <= 0;
