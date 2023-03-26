@@ -1,0 +1,12 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/loz/Development/8bitFPGA/sap_1/sap.v'
+Analyzing included file '/home/loz/Development/8bitFPGA/sap_1/src/button_debounce.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":1)
+Back to file '/home/loz/Development/8bitFPGA/sap_1/sap.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":1)
+Analyzing included file '/home/loz/Development/8bitFPGA/sap_1/src/led_byte.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":2)
+Back to file '/home/loz/Development/8bitFPGA/sap_1/sap.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":2)
+Analyzing included file '/home/loz/Development/8bitFPGA/sap_1/src/sap_register.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":3)
+Back to file '/home/loz/Development/8bitFPGA/sap_1/sap.v'("/home/loz/Development/8bitFPGA/sap_1/sap.v":3)
+Undeclared symbol 'a_eo', assumed default net type 'wire'("/home/loz/Development/8bitFPGA/sap_1/sap.v":47)
+ERROR (EX3805) : Concurrent assignment to a non-net 'led' is not permitted("/home/loz/Development/8bitFPGA/sap_1/sap.v":41)
+GowinSynthesis finish

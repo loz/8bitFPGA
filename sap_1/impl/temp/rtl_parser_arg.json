@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "/home/loz/Development/8bitFPGA/sap_1/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

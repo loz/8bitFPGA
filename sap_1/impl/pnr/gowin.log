@@ -1,0 +1,9 @@
+Reading netlist file: "/home/loz/Development/8bitFPGA/sap_1/impl/gwsynthesis/gowin.vg"
+Parsing netlist file "/home/loz/Development/8bitFPGA/sap_1/impl/gwsynthesis/gowin.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/loz/Development/8bitFPGA/sap_1/tangnano9k.cst"
+ERROR  (CT1135) : "/home/loz/Development/8bitFPGA/sap_1/tangnano9k.cst":24 | Can't find object named 'uart_tx'
+ERROR  (CT1135) : "/home/loz/Development/8bitFPGA/sap_1/tangnano9k.cst":25 | Can't find object named 'uart_tx'
+ERROR  (CT1135) : "/home/loz/Development/8bitFPGA/sap_1/tangnano9k.cst":27 | Can't find object named 'uart_rx'
+ERROR  (CT1135) : "/home/loz/Development/8bitFPGA/sap_1/tangnano9k.cst":28 | Can't find object named 'uart_rx'
+Physical Constraint parsed completed with errors

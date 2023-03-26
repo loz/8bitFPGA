@@ -32,7 +32,14 @@ wire [7:0] a_debug;
 reg a_clear = 0;
 reg a_load = 0;
 reg a_oe = 0;
-reg [7:0] data_out;
+wire [7:0] data_out;
+
+//Wire up the DEBUG out from A
+led_byte leds(
+    .clk(clk),
+    .i_byte(a_debug),
+    .led(led)
+);
 
 //Create A Register
 sap_register a_register(
@@ -45,11 +52,7 @@ sap_register a_register(
     .debug_out(a_debug)  
 );
 
-//Wire up the DEBUG out from A
-led_byte leds(
-    .i_byte(a_debug),
-    .led(led)
-);
+
 
 
 always @(posedge clk) begin
@@ -66,7 +69,7 @@ always @(posedge clk) begin
         active <= 0;
     
     if (~btn2_b) begin
-        a_load = 1;
+        a_load <= 1;
     end
 end
 

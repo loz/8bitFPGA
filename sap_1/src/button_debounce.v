@@ -7,7 +7,7 @@
 module button_debounce(
     input clk,
     input button_i,
-    output button_o
+    output reg button_o
 );
 
 reg [15:0] counter;
@@ -17,9 +17,9 @@ always @(posedge clk) begin
         if (counter < 16'b1111111111111111)
             counter <= counter + 1'd1;
         else
-            button_o <= 0;
+            button_o = 0;
     else
-        button_o <= 1;
+        button_o = 1;
 end
 
 

@@ -1,0 +1,44 @@
+[
+ {
+  "InstFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+  "InstLine" : 5,
+  "InstName" : "sap",
+  "ModuleFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+  "ModuleLine" : 5,
+  "ModuleName" : "sap",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+    "InstLine" : 38,
+    "InstName" : "a_register",
+    "ModuleFile" : "/home/loz/Development/8bitFPGA/sap_1/src/sap_register.v",
+    "ModuleLine" : 6,
+    "ModuleName" : "sap_register"
+   },
+   {
+    "InstFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+    "InstLine" : 19,
+    "InstName" : "bbtn1",
+    "ModuleFile" : "/home/loz/Development/8bitFPGA/sap_1/src/button_debounce.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "button_debounce"
+   },
+   {
+    "InstFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+    "InstLine" : 25,
+    "InstName" : "bbtn2",
+    "ModuleFile" : "/home/loz/Development/8bitFPGA/sap_1/src/button_debounce.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "button_debounce"
+   },
+   {
+    "InstFile" : "/home/loz/Development/8bitFPGA/sap_1/sap.v",
+    "InstLine" : 49,
+    "InstName" : "leds",
+    "ModuleFile" : "/home/loz/Development/8bitFPGA/sap_1/src/led_byte.v",
+    "ModuleLine" : 6,
+    "ModuleName" : "led_byte"
+   }
+  ]
+ }
+]

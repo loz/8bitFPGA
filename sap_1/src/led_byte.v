@@ -4,10 +4,13 @@
 */
 
 module led_byte(
-    input [7:0] i_byte ,
-    output [5:0] led 
+    input clk,
+    input [7:0] i_byte,
+    output reg [5:0] led 
 );
 
-    assign led = ~(i_byte[5:0]); //INVERT as LED as active low
+always @(posedge clk) begin
+    led <= 6'b110000; //~(i_byte[5:0]); //INVERT as LED as active low
+end
 
 endmodule
