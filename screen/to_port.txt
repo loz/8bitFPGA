@@ -1,0 +1,3 @@
+Port across into this setup:
+
+https://github.com/solinnovay/Python_ST7789/blob/master/ST7789/ST7789.py
