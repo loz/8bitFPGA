@@ -32,7 +32,7 @@ wire [7:0] a_debug;
 reg a_clear = 0;
 reg a_load = 0;
 reg a_oe = 0;
-wire [7:0] data_out;
+reg [7:0] data_out;
 
 //Wire up the DEBUG out from A
 led_byte leds(
@@ -68,9 +68,10 @@ always @(posedge clk) begin
     else if(btn1_b)
         active <= 0;
     
-    if (~btn2_b) begin
+    if (~btn2_b)
         a_load <= 1;
-    end
+    else   
+        a_load <= 0;
 end
 
 endmodule

@@ -5,7 +5,7 @@ DEVICE=GW1NR-LV9QN88PC6/I5
 all: out/sap.fs
 
 # Synthesis
-out/sap.json: sap.v
+out/sap.json: sap.v src/*.v
 	yosys -p "read_verilog sap.v; synth_gowin -top sap -json out/sap.json"
 
 # Place and Route

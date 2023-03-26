@@ -10,7 +10,7 @@ module led_byte(
 );
 
 always @(posedge clk) begin
-    led <= 6'b110000; //~(i_byte[5:0]); //INVERT as LED as active low
+    led <= ~i_byte; //INVERT as LED as active low
 end
 
 endmodule
