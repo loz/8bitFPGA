@@ -1,0 +1,11 @@
+-d /home/loz/Development/8bitFPGA/clock_divider/impl/gwsynthesis/clock_divider.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst /home/loz/Development/8bitFPGA/clock_divider/src/tangnano.cst
+-cfg /home/loz/Development/8bitFPGA/clock_divider/impl/pnr/device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-route_maxfan 23

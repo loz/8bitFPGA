@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "/home/loz/Development/8bitFPGA/clock_divider/src/clock_divider.v",
+  "InstLine" : 1,
+  "InstName" : "clock_divider",
+  "ModuleFile" : "/home/loz/Development/8bitFPGA/clock_divider/src/clock_divider.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "clock_divider"
+ }
+]

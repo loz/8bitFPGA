@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "/home/loz/Development/8bitFPGA/clock_divider/src/clock_divider.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "/home/loz/Development/8bitFPGA/clock_divider/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

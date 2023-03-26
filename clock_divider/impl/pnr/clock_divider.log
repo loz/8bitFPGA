@@ -1,0 +1,29 @@
+Reading netlist file: "/home/loz/Development/8bitFPGA/clock_divider/impl/gwsynthesis/clock_divider.vg"
+Parsing netlist file "/home/loz/Development/8bitFPGA/clock_divider/impl/gwsynthesis/clock_divider.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/loz/Development/8bitFPGA/clock_divider/src/tangnano.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/home/loz/Development/8bitFPGA/clock_divider/impl/pnr/clock_divider.power.html" completed
+Generate file "/home/loz/Development/8bitFPGA/clock_divider/impl/pnr/clock_divider.pin.html" completed
+Generate file "/home/loz/Development/8bitFPGA/clock_divider/impl/pnr/clock_divider.rpt.html" completed
+Generate file "/home/loz/Development/8bitFPGA/clock_divider/impl/pnr/clock_divider.rpt.txt" completed
+Generate file "/home/loz/Development/8bitFPGA/clock_divider/impl/pnr/clock_divider.tr.html" completed
+Sat Mar 25 17:19:57 2023
+

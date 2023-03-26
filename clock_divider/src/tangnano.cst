@@ -1,0 +1,16 @@
+//IO_LOC "led[5]" 16;
+//IO_PORT "led[5]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "clk_div32" 15;
+IO_PORT "clk_div32" PULL_MODE=UP DRIVE=8;
+IO_LOC "clk_div16" 14;
+IO_PORT "clk_div16" PULL_MODE=UP DRIVE=8;
+IO_LOC "clk_div8" 13;
+IO_PORT "clk_div8" PULL_MODE=UP DRIVE=8;
+IO_LOC "clk_div4" 11;
+IO_PORT "clk_div4" PULL_MODE=UP DRIVE=8;
+IO_LOC "clk_div2" 10;
+IO_PORT "clk_div2" PULL_MODE=UP DRIVE=8;
+IO_LOC "reset" 4;
+IO_PORT "reset" PULL_MODE=UP;
+IO_LOC "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
