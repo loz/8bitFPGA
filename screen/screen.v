@@ -10,7 +10,8 @@ module screen
     output io_sdin,
     output io_cs,
     output io_dc,
-    output io_reset
+    output io_reset,
+    output reg [7:0] led
 );
 
 // Constants for interacting with display registers.
@@ -139,55 +140,87 @@ localparam ST7789_WHITE       = 16'hFFFF; //0b 11111 111111 11111
   reg [3:0] bitNumber = 0;  
   reg [9:0] pixelCounter = 0;
 
-  localparam SETUP_INSTRUCTIONS = 23;
+  localparam SETUP_INSTRUCTIONS = 64;
 
+localparam COMMAND = 1'b0;
+localparam DATA = 1'b1;
+localparam ZERO_BYTE = 8'h00;
 
-reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
-    8'h11,  // SLP_OUT
-    8'h36  // MAD_CTL
+// COMMANDS ARE CMD, MODE (Data/Command)
+reg [(SETUP_INSTRUCTIONS*9)-1:0] startupCommands = {
+   ST7789_SLPOUT, COMMAND,
+   ST7789_MADCTL, COMMAND,
+   ZERO_BYTE, DATA,
+   ST7789_COLMOD, COMMAND,
+   8'h05, DATA,
+   ST7789_PORCTRL, COMMAND,
+   8'h0C, DATA,
+   8'h0C, DATA,
+   ST7789_GCTRL, COMMAND,
+   8'h35, DATA,
+
+   ST7789_VCOMS, COMMAND,
+   8'h1A, DATA,
+   ST7789_LCMCTRL, COMMAND,
+   8'h2C, DATA,
+   ST7789_VDVVRHEN, COMMAND,
+   8'h01, DATA,
+   ST7789_VRHS, COMMAND,
+   8'h0B, DATA,
+   ST7789_VDVSET, COMMAND,
+   8'h20, DATA,
+
+   ST7789_FRCTR2, COMMAND,
+   8'h0F, DATA,
+   ST7789_PWCTRL1, COMMAND,
+   8'hA4, DATA,
+   8'hA1, DATA,
+   ST7789_INVON, COMMAND,
+   ST7789_PVGAMCTRL, COMMAND,
+   8'h00, DATA,
+   8'h19, DATA,
+   8'h1E, DATA,
+
+   8'h0A, DATA,
+   8'h09, DATA,
+   8'h15, DATA,
+   8'h3D, DATA,
+   8'h44, DATA,
+   8'h51, DATA,
+   8'h12, DATA,
+   8'h03, DATA,
+   8'h00, DATA,
+   8'h3F, DATA,
+
+   8'h3F, DATA,
+   ST7789_NVGAMCTRL, COMMAND,
+   8'h00, DATA,
+   8'h18, DATA,
+   8'h1E, DATA,
+   8'h0A, DATA,
+   8'h09, DATA,
+   8'h25, DATA,
+   8'h3F, DATA,
+   8'h43, DATA,
+
+   8'h52, DATA,
+   8'h33, DATA,
+   8'h03, DATA,
+   8'h00, DATA,
+   8'h3F, DATA,
+   8'h3F, DATA,
+   ST7789_DISPON, COMMAND,
+   ST7789_CASET, COMMAND,
+   8'h00, DATA,
+   8'd240, DATA, //240px wide
+
+   ST7789_RASET, COMMAND,
+   8'h00, DATA,
+   8'd240, DATA, //240px tall
+   ST7789_RAMWR, COMMAND
 };
-  /*
-  reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
-    8'hAE,  // display off
 
-    8'h81,  // contast value to 0x7F according to datasheet
-    8'h7F,  
-
-    8'hA6,  // normal screen mode (not inverted)
-
-    8'h20,  // horizontal addressing mode
-    8'h00,  
-
-    8'hC8,  // normal scan direction
-
-    8'h40,  // first line to start scanning from
-
-    8'hA1,  // address 0 is segment 0
-
-    8'hA8,  // mux ratio
-    8'h3f,  // 63 (64 -1)
-
-    8'hD3,  // display offset
-    8'h00,  // no offset
-
-    8'hD5,  // clock divide ratio
-    8'h80,  // set to default ratio/osc frequency
-
-    8'hD9,  // set precharge
-    8'h22,  // switch precharge to 0x22 default
-
-    8'hDB,  // vcom deselect level
-    8'h20,  //  0x20 
-
-    8'h8D,  // charge pump config
-    8'h14,  // enable charge pump
-
-    8'hA4,  // resume RAM content
-
-    8'hAF   // display on
-  };
-  */
-  reg [7:0] commandIndex = SETUP_INSTRUCTIONS * 8;
+  reg [7:0] commandIndex = SETUP_INSTRUCTIONS * 9; //57 9bit instructions {byte,mode}
 
   assign io_sclk = sclk;
   assign io_sdin = sdin;
@@ -197,6 +230,9 @@ reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
 
   reg [7:0] screenBuffer [1023:0];
   initial $readmemh("image.hex", screenBuffer);
+
+  reg [7:0] spi_byte;
+  reg spi_dmode;
 
   always @(posedge clk) begin
     case (state)
@@ -214,12 +250,14 @@ reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
         end
       end
       STATE_LOAD_INIT_CMD: begin
-        dc <= 0;
-        dataToSend <= startupCommands[(commandIndex-1)-:8'd8];
+        led <= 7'b011111;
+        {spi_byte, spi_dmode} <= startupCommands[(commandIndex-1)-:9'd8];
+        dc <= spi_dmode; //MODE
+        dataToSend <= spi_byte; //BYTE
         state <= STATE_SEND;
         bitNumber <= 3'd7;
         cs <= 0;
-        commandIndex <= commandIndex - 8'd8;
+        commandIndex <= commandIndex - 8'd9; //MOVE to next COMMAND
       end
       STATE_SEND: begin
         if (counter == 32'd0) begin
@@ -244,12 +282,24 @@ reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
             state <= STATE_LOAD_INIT_CMD; 
       end
       STATE_LOAD_DATA: begin
+          led <= 7'b101111;
+          pixelCounter <= pixelCounter + 1;
+          cs <= 0;
+          dc <= 1;
+          bitNumber <= 3'd7;
+          state <= STATE_SEND;
+          if (pixelCounter < 136)
+            dataToSend <= 8'b01010111;
+          else
+            dataToSend <= 0;
+        /*
         pixelCounter <= pixelCounter + 1;
         cs <= 0;
         dc <= 1;
         bitNumber <= 3'd7;
         state <= STATE_SEND;
         dataToSend <= screenBuffer[pixelCounter];
+        */
       end
     endcase
   end
