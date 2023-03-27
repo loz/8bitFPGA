@@ -1,0 +1,7 @@
+// Generated with Lushay Code
+
+IO_LOC  "spkr" 32;
+IO_PORT "spkr" PULL_MODE=UP;
+
+IO_LOC  "clk" 52;
+IO_PORT "clk" PULL_MODE=UP;
