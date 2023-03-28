@@ -18,8 +18,12 @@ reg [7:0] bus;
 
 reg init_complete;
 
+reg [23:0] slowclock = 0;
+reg inclock = 0;
+
 display disp(
-    .clk(clk),
+    .clk(inclock),
+ //   .clk(clk),
     .init_complete(init_complete),
     .ready(data_ready), //when UART byte ready
     .disp_ce(disp_ce),
@@ -28,17 +32,35 @@ display disp(
     .data(data) //UART data => Display Data
 );
 
+/*
 uart_in uain(
-    .clk(clk),
+    .clk(slowclock[30]),
+//    .clk(clk),
     .uart_rx(uart_rx),
     .byte_in(bus),
     .ready(data_ready)
 );
+*/
 
 reg init = 1;
 
 always @(posedge clk) begin
-    //slowclock <= slowclock + 1;
+    if(init) begin
+        disp_ce <= 0;
+        init <= 0;
+    end
+    if(slowclock == 1350000) begin
+        slowclock <= 0;
+        inclock <= ~inclock;
+        //disp_ce <= ~disp_ce;
+        led <= ~led;
+    end
+    else
+        slowclock <= slowclock + 1;
+end
+
+/*
+always @(posedge slowclock[30]) begin
     if(init) begin
         led <= 1;
         init <= 0;
@@ -49,5 +71,6 @@ always @(posedge clk) begin
         led <= 0;
     end
 end
+*/
 
 endmodule

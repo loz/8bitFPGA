@@ -16,6 +16,11 @@ top_pnr.json: top.json *.cst
 top.fs: top_pnr.json
 	gowin_pack -d ${FAMILY} -o top.fs top_pnr.json
 
+#Tests
+test: display.v display_tb.v
+	iverilog -o display.o -s test display_tb.v
+	vvp display.o
+
 # Program Board
 load: top.fs
 	openFPGALoader -b ${BOARD} top.fs
