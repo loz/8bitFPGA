@@ -49,7 +49,7 @@ always @(posedge clk) begin
         disp_ce <= 0;
         init <= 0;
     end
-    if(slowclock == 1350000) begin
+    if(slowclock == 135000) begin
         slowclock <= 0;
         inclock <= ~inclock;
         //disp_ce <= ~disp_ce;

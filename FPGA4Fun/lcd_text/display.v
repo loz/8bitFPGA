@@ -24,25 +24,15 @@ localparam DEV_READY = 2;
 localparam SETUP_INSTRUCTIONS = 5;
 
 
-reg [7:0] startupCommands[0:5]; // = '{8'b10111000, 8'b00001110, 8'b10000110, 8'b00000001, 8'b10000010};
+reg [7:0] startupCommands[0:5];
 
 initial begin
-	startupCommands[0] = 8'b10111000; //Set 8bit mode, 2line display, 5x8 font
+	startupCommands[0] = 8'b00110000; //Set 8bit mode, 2line display, 5x8 font
 	startupCommands[1] = 8'b00001110; //In, cursor on, no blink
-	startupCommands[2] = 8'b10000110; //Entry mode, shift cursor automaticaly
+	startupCommands[2] = 8'b00000110; //Entry mode, shift cursor automaticaly
 	startupCommands[3] = 8'b00000001; //Clear Display
-	startupCommands[4] = 8'b10000010; //Home
+	startupCommands[4] = 8'b00000010; //Home
 end
-
-/*
-reg [7:0] startupCommands [0:5] = '{
-	8'b10111000, //Set 8bit mode, 2line display, 5x8 font
-	8'b00001110, //In, cursor on, no blink
-	8'b10000110, //Entry mode, shift cursor automaticaly
-	8'b00000001, //Clear Display
-	8'b10000010 //Home
-};
-*/
 
 
 reg [8:0] curcommand = 0;
@@ -53,7 +43,7 @@ always @(posedge clk) begin
 		DEV_INIT_WAIT: begin
 			init_complete <= 0;
 			disp_ce <= 0;
-			disp_rw <= 0;
+			disp_rw <= 1; //0;
 			disp_rs <= 0;
 			if(waitcounter < DELAY_FRAMES)
 				waitcounter <= waitcounter + 1;
@@ -65,7 +55,7 @@ always @(posedge clk) begin
 				if (~sending) begin
 					data <= startupCommands[curcommand];
 					disp_ce <= 1;
-					disp_rw <= 1;
+					disp_rw <= 0; //1;
 					disp_rs <= 0;
 					sending <= 1;
 					curcommand <= curcommand + 1;
@@ -78,7 +68,7 @@ always @(posedge clk) begin
 			else begin
 				init_complete <= 1;
 				disp_ce <= 0;
-				disp_rw <= 0;
+				disp_rw <= 1; //0;
 				disp_rs <= 1;
 				sending <= 0;
 				data <= 8'bZ;
@@ -89,12 +79,12 @@ always @(posedge clk) begin
 			if(ready) begin
 				data <= msg_byte;
 				disp_ce <= 1;
-				disp_rw <= 1;
+				disp_rw <= 0; //1;
 				disp_rs <= 1;
 			end
 			else begin
 				disp_ce <= 0;
-				disp_rw <= 0;
+				disp_rw <= 1; //0;
 				disp_rs <= 1;
 			end
 		end
