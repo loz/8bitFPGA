@@ -1,0 +1,40 @@
+// Generated with Lushay Code
+
+IO_LOC  "disp_rs" 70;
+
+IO_LOC  "disp_rw" 71;
+
+IO_LOC  "disp_ce" 72;
+
+IO_LOC  "data[7]" 51;
+IO_PORT "data[7]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[6]" 53;
+IO_PORT "data[6]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[5]" 54;
+IO_PORT "data[5]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[4]" 55;
+IO_PORT "data[4]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[3]" 56;
+IO_PORT "data[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[2]" 57;
+IO_PORT "data[2]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[1]" 68;
+IO_PORT "data[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "data[0]" 69;
+IO_PORT "data[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "uart_rx" 18;
+IO_PORT "uart_rx" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+IO_LOC  "led" 10;
+IO_PORT "led" DRIVE=8 IO_TYPE=LVCMOS18;
