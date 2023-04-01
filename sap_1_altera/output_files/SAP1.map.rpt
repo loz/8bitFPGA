@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAP1
-Sat Apr  1 15:07:14 2023
+Sat Apr  1 16:09:50 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -13,17 +13,35 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0
- 13. Parameter Settings for User Entity Instance: clock_pulser:clock_pulser_inst0|debounce:debounce_inst0
- 14. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
- 15. Port Connectivity Checks: "seg_scan:seg_scan_m0"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
+ 14. Source assignments for virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
+ 15. Source assignments for virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
+ 16. Source assignments for virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
+ 17. Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0
+ 18. Parameter Settings for User Entity Instance: clock_pulser:clock_pulser_inst0|debounce:debounce_inst0
+ 19. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0
+ 20. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 21. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0
+ 22. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 23. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0
+ 24. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 25. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0
+ 26. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 27. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"
+ 28. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"
+ 29. Port Connectivity Checks: "virtual_IO_8_bit:vio_control"
+ 30. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 31. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"
+ 32. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
+ 33. Port Connectivity Checks: "seg_scan:seg_scan_m0"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +68,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr  1 15:07:14 2023          ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr  1 16:09:50 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; SAP1                                           ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 131                                            ;
-;     Total combinational functions  ; 129                                            ;
-;     Dedicated logic registers      ; 68                                             ;
-; Total registers                    ; 68                                             ;
+; Total logic elements               ; 555                                            ;
+;     Total combinational functions  ; 531                                            ;
+;     Dedicated logic registers      ; 278                                            ;
+; Total registers                    ; 278                                            ;
 ; Total pins                         ; 21                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -171,69 +189,134 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; src/seg_scan.v                   ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_scan.v     ;         ;
-; src/seg_decoder.v                ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_decoder.v  ;         ;
-; src/top.v                        ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v          ;         ;
-; src/sap_register.v               ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v ;         ;
-; src/debounce.v                   ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/debounce.v     ;         ;
-; src/one_shot.v                   ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/one_shot.v     ;         ;
-; src/clock_pulser.v               ; yes             ; User Verilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                      ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
+; virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v        ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v        ;             ;
+; virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v                      ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v                      ;             ;
+; src/seg_scan.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_scan.v                                                     ;             ;
+; src/seg_decoder.v                                                  ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_decoder.v                                                  ;             ;
+; src/top.v                                                          ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v                                                          ;             ;
+; src/sap_register.v                                                 ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v                                                 ;             ;
+; src/debounce.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/debounce.v                                                     ;             ;
+; src/one_shot.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/one_shot.v                                                     ;             ;
+; src/clock_pulser.v                                                 ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v                                                 ;             ;
+; src/sap_alu.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_alu.v                                                      ;             ;
+; altsource_probe.v                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v                                       ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                           ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                       ;             ;
+; altsource_probe_body.vhd                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                          ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_hub.vhd                                             ; altera_sld  ;
+; db/ip/sldd6939449/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                        ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 131         ;
-;                                             ;             ;
-; Total combinational functions               ; 129         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 61          ;
-;     -- 3 input functions                    ; 17          ;
-;     -- <=2 input functions                  ; 51          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 91          ;
-;     -- arithmetic mode                      ; 38          ;
-;                                             ;             ;
-; Total registers                             ; 68          ;
-;     -- Dedicated logic registers            ; 68          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 21          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 67          ;
-; Total fan-out                               ; 677         ;
-; Average fan-out                             ; 2.83        ;
-+---------------------------------------------+-------------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 555                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 531                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 274                      ;
+;     -- 3 input functions                    ; 149                      ;
+;     -- <=2 input functions                  ; 108                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 482                      ;
+;     -- arithmetic mode                      ; 49                       ;
+;                                             ;                          ;
+; Total registers                             ; 278                      ;
+;     -- Dedicated logic registers            ; 278                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 21                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 240                      ;
+; Total fan-out                               ; 2742                     ;
+; Average fan-out                             ; 3.19                     ;
++---------------------------------------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
-+--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name  ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------+--------------+
-; |top                                 ; 129 (18)            ; 68 (8)                    ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top                                                         ; top          ; work         ;
-;    |clock_pulser:clock_pulser_inst0| ; 0 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0                         ; clock_pulser ; work         ;
-;       |one_shot:one_shot_inst0|      ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0 ; one_shot     ; work         ;
-;    |sap_register:sap_register_inst0| ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:sap_register_inst0                         ; sap_register ; work         ;
-;    |seg_decoder:seg_decoder_m0|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m0                              ; seg_decoder  ; work         ;
-;    |seg_decoder:seg_decoder_m1|      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m1                              ; seg_decoder  ; work         ;
-;    |seg_decoder:seg_decoder_m6|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m6                              ; seg_decoder  ; work         ;
-;    |seg_decoder:seg_decoder_m7|      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m7                              ; seg_decoder  ; work         ;
-;    |seg_scan:seg_scan_m0|            ; 77 (77)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_scan:seg_scan_m0                                    ; seg_scan     ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |top                                                                                                                                    ; 531 (26)            ; 278 (0)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+;    |clock_pulser:clock_pulser_inst0|                                                                                                    ; 0 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0                                                                                                                                                                                                                                                                                                            ; clock_pulser                      ; work         ;
+;       |one_shot:one_shot_inst0|                                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0                                                                                                                                                                                                                                                                                    ; one_shot                          ; work         ;
+;    |sap_alu:sap_alu_inst|                                                                                                               ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_alu:sap_alu_inst                                                                                                                                                                                                                                                                                                                       ; sap_alu                           ; work         ;
+;    |sap_register:a_register|                                                                                                            ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:a_register                                                                                                                                                                                                                                                                                                                    ; sap_register                      ; work         ;
+;    |sap_register:b_register|                                                                                                            ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:b_register                                                                                                                                                                                                                                                                                                                    ; sap_register                      ; work         ;
+;    |seg_decoder:seg_decoder_m0|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m0                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_decoder:seg_decoder_m1|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m1                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_decoder:seg_decoder_m2|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m2                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_decoder:seg_decoder_m3|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m3                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_decoder:seg_decoder_m6|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m6                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_decoder:seg_decoder_m7|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m7                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |seg_scan:seg_scan_m0|                                                                                                               ; 83 (83)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_scan:seg_scan_m0                                                                                                                                                                                                                                                                                                                       ; seg_scan                          ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 193 (1)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 192 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 192 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 192 (1)             ; 114 (8)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 191 (0)             ; 106 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 191 (147)           ; 106 (77)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                      ; work         ;
+;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 26 (26)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                        ; work         ;
+;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                    ; altera_sld   ;
+;    |virtual_IO_8_bit:vio_a_reg|                                                                                                         ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 35 (3)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                         ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 32 (21)             ; 24 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                  ; altsource_probe_impl              ; work         ;
+;                   |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                        ; 11 (11)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                     ; sld_rom_sr                        ; work         ;
+;    |virtual_IO_8_bit:vio_b_reg|                                                                                                         ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 35 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 35 (3)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                         ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 32 (21)             ; 24 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                  ; altsource_probe_impl              ; work         ;
+;                   |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                        ; 11 (11)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                     ; sld_rom_sr                        ; work         ;
+;    |virtual_IO_8_bit:vio_control|                                                                                                       ; 40 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control                                                                                                                                                                                                                                                                                                               ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 40 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 40 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                      ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 40 (3)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                       ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 37 (26)             ; 24 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                ; altsource_probe_impl              ; work         ;
+;                   |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                        ; 11 (11)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                   ; sld_rom_sr                        ; work         ;
+;    |virtual_IO_8_bit:vio_w_bus|                                                                                                         ; 37 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 37 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 37 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 37 (3)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                         ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 34 (23)             ; 24 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                  ; altsource_probe_impl              ; work         ;
+;                   |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                        ; 11 (11)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                     ; sld_rom_sr                        ; work         ;
++-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                          ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -252,48 +335,140 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 68    ;
-; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Total registers                              ; 278   ;
+; Number of registers using Synchronous Clear  ; 61    ;
+; Number of registers using Synchronous Load   ; 37    ;
+; Number of registers using Asynchronous Clear ; 147   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Clock Enable       ; 149   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; seg_scan:seg_scan_m0|seg_sel[0]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[1]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[2]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[3]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[4]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[5]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[6]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_sel[7]         ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[0]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[1]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[2]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[3]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[4]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[5]        ; 1       ;
-; seg_scan:seg_scan_m0|seg_data[6]        ; 1       ;
-; Total number of inverted registers = 15 ;         ;
-+-----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; seg_scan:seg_scan_m0|seg_sel[0]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[1]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[2]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[3]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[4]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[5]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[6]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_sel[7]                                                                                                                                                                                                                                                                                                 ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[0]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[1]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[2]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[3]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[4]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[5]                                                                                                                                                                                                                                                                                                ; 1       ;
+; seg_scan:seg_scan_m0|seg_data[6]                                                                                                                                                                                                                                                                                                ; 1       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
+; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
+; Total number of inverted registers = 17                                                                                                                                                                                                                                                                                         ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:sap_register_inst0|r[0] ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 21 LEs               ; 49 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[6]     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[2]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[2] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[1]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[1]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                   ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[0]        ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[3]      ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[0]        ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[2]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[6]                                                                                                                                                                                                                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[3]                                                                                                                                                                                                                                             ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[3]                                                                                                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                              ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; NOT_GATE_PUSH_BACK              ; OFF   ; -    ; -                                                                                                                                                                               ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; -                                                                                                                                                                               ;
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                               ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[0]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[7]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[6]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[5]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[4]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[3]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[2]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[1]                                                                                                                                                                     ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst ;
++---------------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                                ;
++---------------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; NOT_GATE_PUSH_BACK              ; OFF   ; -    ; -                                                                                                                                                                                 ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; -                                                                                                                                                                                 ;
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                                 ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[0]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[7]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[6]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[5]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[4]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[3]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[2]                                                                                                                                                                       ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[1]                                                                                                                                                                       ;
++---------------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                              ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; NOT_GATE_PUSH_BACK              ; OFF   ; -    ; -                                                                                                                                                                               ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; -                                                                                                                                                                               ;
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                               ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[0]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[7]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[6]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[5]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[4]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[3]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[2]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[1]                                                                                                                                                                     ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                                                                                                              ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; NOT_GATE_PUSH_BACK              ; OFF   ; -    ; -                                                                                                                                                                               ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; -                                                                                                                                                                               ;
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                                               ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[0]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[7]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[6]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[5]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[4]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[3]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[2]                                                                                                                                                                     ;
+; AUTO_CLOCK_ENABLE_RECOGNITION   ; OFF   ; -    ; hold_reg[1]                                                                                                                                                                     ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -318,6 +493,227 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0 ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                       ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                     ;
+; lpm_hint                ; UNUSED          ; String                                                                     ;
+; sld_auto_instance_index ; YES             ; String                                                                     ;
+; sld_instance_index      ; 0               ; Signed Integer                                                             ;
+; sld_node_info_parameter ; 4746752         ; Signed Integer                                                             ;
+; sld_ir_width            ; 4               ; Signed Integer                                                             ;
+; instance_id             ; NONE            ; String                                                                     ;
+; probe_width             ; 8               ; Signed Integer                                                             ;
+; source_width            ; 8               ; Signed Integer                                                             ;
+; source_initial_value    ; 0               ; String                                                                     ;
+; enable_metastability    ; NO              ; String                                                                     ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                                                 ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                                               ;
+; lpm_hint                ; UNUSED          ; String                                                                                               ;
+; sld_auto_instance_index ; YES             ; String                                                                                               ;
+; sld_instance_index      ; 0               ; Signed Integer                                                                                       ;
+; SLD_NODE_INFO           ; 4746752         ; Signed Integer                                                                                       ;
+; sld_ir_width            ; 4               ; Signed Integer                                                                                       ;
+; instance_id             ; NONE            ; String                                                                                               ;
+; probe_width             ; 8               ; Signed Integer                                                                                       ;
+; source_width            ; 8               ; Signed Integer                                                                                       ;
+; source_initial_value    ; 0               ; String                                                                                               ;
+; enable_metastability    ; NO              ; String                                                                                               ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0 ;
++-------------------------+-----------------+------------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                         ;
++-------------------------+-----------------+------------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                       ;
+; lpm_hint                ; UNUSED          ; String                                                                       ;
+; sld_auto_instance_index ; YES             ; String                                                                       ;
+; sld_instance_index      ; 0               ; Signed Integer                                                               ;
+; sld_node_info_parameter ; 4746752         ; Signed Integer                                                               ;
+; sld_ir_width            ; 4               ; Signed Integer                                                               ;
+; instance_id             ; NONE            ; String                                                                       ;
+; probe_width             ; 8               ; Signed Integer                                                               ;
+; source_width            ; 8               ; Signed Integer                                                               ;
+; source_initial_value    ; 0               ; String                                                                       ;
+; enable_metastability    ; NO              ; String                                                                       ;
++-------------------------+-----------------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl ;
++-------------------------+-----------------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                                                   ;
++-------------------------+-----------------+--------------------------------------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                                                 ;
+; lpm_hint                ; UNUSED          ; String                                                                                                 ;
+; sld_auto_instance_index ; YES             ; String                                                                                                 ;
+; sld_instance_index      ; 0               ; Signed Integer                                                                                         ;
+; SLD_NODE_INFO           ; 4746752         ; Signed Integer                                                                                         ;
+; sld_ir_width            ; 4               ; Signed Integer                                                                                         ;
+; instance_id             ; NONE            ; String                                                                                                 ;
+; probe_width             ; 8               ; Signed Integer                                                                                         ;
+; source_width            ; 8               ; Signed Integer                                                                                         ;
+; source_initial_value    ; 0               ; String                                                                                                 ;
+; enable_metastability    ; NO              ; String                                                                                                 ;
++-------------------------+-----------------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0 ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                       ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                     ;
+; lpm_hint                ; UNUSED          ; String                                                                     ;
+; sld_auto_instance_index ; YES             ; String                                                                     ;
+; sld_instance_index      ; 0               ; Signed Integer                                                             ;
+; sld_node_info_parameter ; 4746752         ; Signed Integer                                                             ;
+; sld_ir_width            ; 4               ; Signed Integer                                                             ;
+; instance_id             ; NONE            ; String                                                                     ;
+; probe_width             ; 8               ; Signed Integer                                                             ;
+; source_width            ; 8               ; Signed Integer                                                             ;
+; source_initial_value    ; 0               ; String                                                                     ;
+; enable_metastability    ; NO              ; String                                                                     ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                                                 ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                                               ;
+; lpm_hint                ; UNUSED          ; String                                                                                               ;
+; sld_auto_instance_index ; YES             ; String                                                                                               ;
+; sld_instance_index      ; 0               ; Signed Integer                                                                                       ;
+; SLD_NODE_INFO           ; 4746752         ; Signed Integer                                                                                       ;
+; sld_ir_width            ; 4               ; Signed Integer                                                                                       ;
+; instance_id             ; NONE            ; String                                                                                               ;
+; probe_width             ; 8               ; Signed Integer                                                                                       ;
+; source_width            ; 8               ; Signed Integer                                                                                       ;
+; source_initial_value    ; 0               ; String                                                                                               ;
+; enable_metastability    ; NO              ; String                                                                                               ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0 ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                       ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                     ;
+; lpm_hint                ; UNUSED          ; String                                                                     ;
+; sld_auto_instance_index ; YES             ; String                                                                     ;
+; sld_instance_index      ; 0               ; Signed Integer                                                             ;
+; sld_node_info_parameter ; 4746752         ; Signed Integer                                                             ;
+; sld_ir_width            ; 4               ; Signed Integer                                                             ;
+; instance_id             ; NONE            ; String                                                                     ;
+; probe_width             ; 8               ; Signed Integer                                                             ;
+; source_width            ; 8               ; Signed Integer                                                             ;
+; source_initial_value    ; 0               ; String                                                                     ;
+; enable_metastability    ; NO              ; String                                                                     ;
++-------------------------+-----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value           ; Type                                                                                                 ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+; lpm_type                ; altsource_probe ; String                                                                                               ;
+; lpm_hint                ; UNUSED          ; String                                                                                               ;
+; sld_auto_instance_index ; YES             ; String                                                                                               ;
+; sld_instance_index      ; 0               ; Signed Integer                                                                                       ;
+; SLD_NODE_INFO           ; 4746752         ; Signed Integer                                                                                       ;
+; sld_ir_width            ; 4               ; Signed Integer                                                                                       ;
+; instance_id             ; NONE            ; String                                                                                               ;
+; probe_width             ; 8               ; Signed Integer                                                                                       ;
+; source_width            ; 8               ; Signed Integer                                                                                       ;
+; source_initial_value    ; 0               ; String                                                                                               ;
+; enable_metastability    ; NO              ; String                                                                                               ;
++-------------------------+-----------------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; source[7..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; source[7..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_control"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; probe[7..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; source[7..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"                                                    ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; raw_tck         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; tdi             ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; usr1            ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_cdr  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_sdr  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_e1dr ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_udr  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_cir  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_uir  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; jtag_state_tlr  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; clr             ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; ena             ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; ir_in           ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; ir_out          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; tdo             ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"                                                                        ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                      ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; source_ena ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; source_clk ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"                                        ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -334,10 +730,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; seg_data_0[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
 ; seg_data_1[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; seg_data_2       ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (8 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; seg_data_2[7..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; seg_data_3       ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (8 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; seg_data_3[7..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
+; seg_data_2[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
+; seg_data_3[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
 ; seg_data_4       ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (8 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; seg_data_4[7..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                     ;
 ; seg_data_5       ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (8 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
@@ -352,26 +746,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 68                          ;
-;     CLR               ; 18                          ;
+; boundary_port         ; 105                         ;
+; cycloneiii_ff         ; 164                         ;
+;     CLR               ; 22                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 8                           ;
-;     ENA CLR           ; 1                           ;
-;     ENA SLD           ; 8                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 145                         ;
-;     arith             ; 38                          ;
-;         2 data inputs ; 38                          ;
-;     normal            ; 107                         ;
+;     ENA               ; 28                          ;
+;     ENA CLR           ; 9                           ;
+;     ENA CLR SLD       ; 24                          ;
+;     SCLR              ; 16                          ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 353                         ;
+;     arith             ; 40                          ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 313                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 18                          ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 61                          ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 69                          ;
+;         4 data inputs ; 195                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.10                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 3.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -390,10 +786,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Sat Apr  1 15:07:01 2023
+    Info: Processing started: Sat Apr  1 16:09:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file virtual_io_8_bit/synthesis/submodules/altsource_probe_top.v
+    Info (12023): Found entity 1: altsource_probe_top File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file virtual_io_8_bit/synthesis/virtual_io_8_bit.v
+    Info (12023): Found entity 1: virtual_IO_8_bit File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file src/seg_scan.v
     Info (12023): Found entity 1: seg_scan File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_scan.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
@@ -408,15 +808,62 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/one
     Info (12023): Found entity 1: one_shot File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/one_shot.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/clock_pulser.v
     Info (12023): Found entity 1: clock_pulser File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/sap_alu.v
+    Info (12023): Found entity 1: sap_alu File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_alu.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(79): truncated value with size 32 to match size of target (8) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 79
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 26
-Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 58
-Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 64
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 48
+Info (12128): Elaborating entity "sap_alu" for hierarchy "sap_alu:sap_alu_inst" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 75
+Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 102
+Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 108
 Info (12128): Elaborating entity "debounce" for hierarchy "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 22
 Info (12128): Elaborating entity "one_shot" for hierarchy "clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 28
-Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:sap_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 73
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_w_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 113
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
+    Info (12134): Parameter "lpm_type" = "altsource_probe"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "SLD_NODE_INFO" = "4746752"
+    Info (12134): Parameter "sld_ir_width" = "4"
+    Info (12134): Parameter "instance_id" = "NONE"
+    Info (12134): Parameter "probe_width" = "8"
+    Info (12134): Parameter "source_width" = "8"
+    Info (12134): Parameter "source_initial_value" = "0"
+    Info (12134): Parameter "enable_metastability" = "NO"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 169
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
+Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 776
+Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:a_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 137
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2023.04.01.16:09:39 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 222
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "w_bus[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" into an OR gate File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 17
     Warning (13047): Converted the fan-out from the tri-state buffer "w_bus[5]" to the node "seg_decoder:seg_decoder_m6|WideOr6" into an OR gate File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 17
@@ -430,17 +877,21 @@ Info (13000): Registers with preset signals will power-up high File: C:/Users/lo
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_data[7]" is stuck at VCC File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 9
-Info (286030): Timing-Driven Synthesis is running
+Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 131 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Sat Apr  1 15:07:14 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 4
+    Warning (15610): No output dependent on input pin "key2" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 5
+    Warning (15610): No output dependent on input pin "key3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 6
+Info (21057): Implemented 585 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 559 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Sat Apr  1 16:09:50 2023
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:01:01
 
 
