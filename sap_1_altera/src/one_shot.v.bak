@@ -1,0 +1,4 @@
+module one_shot(
+);
+
+endmodule;
