@@ -16,8 +16,7 @@ sap_register sap_register_inst0(
 	.DATA(),
 	.REG_OUT(),
 	.latch(),
-	.enable(),
-	
+	.enable()
 );
 
 */

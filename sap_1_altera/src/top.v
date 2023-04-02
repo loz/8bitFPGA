@@ -5,7 +5,8 @@ module top(
 	input key2,
 	input key3,
 	output[7:0]seg_sel,
-    output[7:0]seg_data
+   output[7:0]seg_data,
+	output [3:0] led
 );
 
 wire one_shot_clock;
@@ -26,6 +27,14 @@ wire reset = control[3];
 wire button = control[4]; //Clock
 
 
+wire [7:0] mem_control;
+wire addr_write = mem_control[0];
+wire mem_write = mem_control[1];
+wire mem_out = mem_control[2];
+wire [3:0] mem_addr_out;
+wire [7:0] mem_data_out;
+
+
 wire [7:0] a_control;
 wire a_latch = a_control[0];
 wire a_enable = a_control[1];
@@ -37,8 +46,13 @@ wire b_enable = b_control[1];
 wire [7:0] a_reg_out;
 wire [7:0] b_reg_out;
 
-wire alu_C; // = LED0;
-wire alu_Z; // = LED1;
+wire alu_C;
+wire alu_Z;
+
+assign led[0] = alu_C;
+assign led[1] = alu_Z;
+assign led[2] = 0;
+assign led[3] = 0;
 
 //A Register
 wire[6:0] seg_data_0;
@@ -64,6 +78,7 @@ seg_decoder seg_decoder_m3(
     .seg_data  (seg_data_3)
 );
 
+//ALU
 sap_alu sap_alu_inst(
 	.a_reg_data(a_reg_out),
 	.b_reg_data(b_reg_out),
@@ -72,6 +87,17 @@ sap_alu sap_alu_inst(
 	.sub(alu_sub),
 	.C(alu_C),
 	.Z(alu_Z)
+);
+
+//RAM
+sap_ram sap_ram_inst0(
+	.clk(one_shot_clock),
+	.write_enable(mem_write),
+	.output_enable(mem_out),
+	.address_enable(addr_write),
+	.DATA(w_bus),
+	.ADDR_OUT(mem_addr_out),
+	.DATA_OUT(mem_data_out)
 );
 
 
@@ -107,24 +133,39 @@ clock_pulser clock_pulser_inst0(
 	.one_clock_pulse(one_shot_clock)
 );
 
-virtual_IO_8_bit vio_w_bus(
+
+virtual_IO_8_bit #(.NAME("WBUS")) vio_w_bus(
 	.probe(w_bus),  //  probes.probe
 	.source(w_val_in)  // sources.source
 );
 
-virtual_IO_8_bit vio_control(
+//
+virtual_IO_8_bit #(.NAME("CTRL")) vio_control(
 	.probe({6'b000000,alu_C, alu_Z}),  //  probes.probe
 	.source(control)  // sources.source
 );
 
-virtual_IO_8_bit vio_a_reg(
+//   
+virtual_IO_8_bit #(.NAME("AREG")) vio_a_reg(
 	.probe(a_reg_out),  //  probes.probe
 	.source(a_control)  // sources.source
 );
 
-virtual_IO_8_bit vio_b_reg(
+// 
+virtual_IO_8_bit #(.NAME("BREG")) vio_b_reg(
 	.probe(b_reg_out),  //  probes.probe
 	.source(b_control)  // sources.source
+);
+
+// 
+virtual_IO_8_bit #(.NAME("MEMD")) vio_memd(
+	.probe(mem_data_out),  //  probes.probe
+	.source(mem_control)  // sources.source
+);
+
+virtual_IO_8_bit #(.NAME("ADRG")) vio_addr_reg(
+	.probe(mem_addr_out),  //  probes.probe
+	.source()  // sources.source
 );
 
 sap_register a_register(

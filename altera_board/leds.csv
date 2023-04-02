@@ -1,0 +1,5 @@
+Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
+Ok,,led[3],Location,PIN_D9,Yes,,,
+Ok,,led[2],Location,PIN_C9,Yes,,,
+Ok,,led[1],Location,PIN_F9,Yes,,,
+Ok,,led[0],Location,PIN_E10,Yes,,,
