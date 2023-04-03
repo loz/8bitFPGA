@@ -168,6 +168,33 @@ virtual_IO_8_bit #(.NAME("ADRG")) vio_addr_reg(
 	.source()  // sources.source
 );
 
+/* New probes wipes config when rescanning, squatting some */
+
+virtual_IO_8_bit #(.NAME("IREG")) vio_ireg(
+	.probe(),  //  probes.probe
+	.source()  // sources.source
+);
+
+virtual_IO_8_bit #(.NAME("PCTR")) vio_program_counter(
+	.probe(),  //  probes.probe
+	.source()  // sources.source
+);
+
+virtual_IO_8_bit #(.NAME("OREG")) vio_output_register(
+	.probe(),  //  probes.probe
+	.source()  // sources.source
+);
+
+virtual_IO_8_bit #(.NAME("CBUS")) vio_control_bus(
+	.probe(),  //  probes.probe
+	.source()  // sources.source
+);
+
+virtual_IO_8_bit #(.NAME("CLOG")) vio_control_logic(
+	.probe(),  //  probes.probe
+	.source()  // sources.source
+);
+
 sap_register a_register(
 	.clk(one_shot_clock),
 	.reset(reset),
