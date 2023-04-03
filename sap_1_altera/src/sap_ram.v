@@ -1,4 +1,4 @@
-module sap_ram(
+module sap_ram #(MEM_INIT_FILE="")(
 	input clk,
 	input write_enable,
 	input output_enable,
@@ -23,6 +23,12 @@ sap_ram sap_ram_inst0(
 
 reg [7:0] memory [16];
 reg [3:0] add_reg;
+
+initial begin
+  if (MEM_INIT_FILE != "") begin
+    $readmemb(MEM_INIT_FILE, memory);
+  end
+end
 
 assign ADDR_OUT = add_reg;
 assign DATA_OUT = memory[add_reg];

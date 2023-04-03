@@ -20,44 +20,44 @@ wire [7:0] w_val_in;
 
 wire [7:0] control;
 
-wire w_enable = control[0];
-wire alu_enable = control[1];
-wire alu_sub = control[2];
-wire reset = control[3];
-wire button = control[4]; //Clock
+wire w_enable; // = control[0];
+wire alu_enable; // = control[1];
+wire alu_sub; // = control[2];
+wire reset = ~key2 | control[3];
+wire button = ~key1 | control[4]; //Clock
 
 
 wire [7:0] mem_control;
-wire addr_write = mem_control[0];
-wire mem_write = mem_control[1];
-wire mem_out = mem_control[2];
+wire addr_write; // = mem_control[0];
+wire mem_write; // = mem_control[1];
+wire mem_out; // = mem_control[2];
 wire [3:0] mem_addr_out;
 wire [7:0] mem_data_out;
 
 wire [7:0] ireg_control;
-wire i_latch = ireg_control[0];
-wire i_enable = ireg_control[1];
+wire i_latch; // = ireg_control[0];
+wire i_enable; // = ireg_control[1];
 wire [7:0] ireg_out;
 wire [3:0] i_instruction;
 
 wire [7:0] pctr_control;
-wire p_jump = pctr_control[0];
-wire p_output_enable = pctr_control[1];
-wire p_counter_enable = pctr_control[2];
+wire p_jump; // = pctr_control[0];
+wire p_output_enable; //= pctr_control[1];
+wire p_counter_enable; // = pctr_control[2];
 wire [3:0] pctr_out;
 
 wire [15:0] output_dec;
 wire [7:0] output_control;
-wire o_latch = output_control[0];
+wire o_latch; // = output_control[0];
 wire [7:0] output_out;
 
 wire [7:0] a_control;
-wire a_latch = a_control[0];
-wire a_enable = a_control[1];
+wire a_latch; // = a_control[0];
+wire a_enable; // = a_control[1];
 
 wire [7:0] b_control;
-wire b_latch = b_control[0];
-wire b_enable = b_control[1];
+wire b_latch; // = b_control[0];
+wire b_enable; // = b_control[1];
 
 wire [7:0] a_reg_out;
 wire [7:0] b_reg_out;
@@ -104,7 +104,7 @@ sap_alu sap_alu_inst(
 );
 
 //RAM
-sap_ram sap_ram_inst0(
+sap_ram #(.MEM_INIT_FILE("programs/example1.txt")) sap_ram_inst0(
 	.clk(one_shot_clock),
 	.write_enable(mem_write),
 	.output_enable(mem_out),
@@ -198,14 +198,18 @@ virtual_IO_8_bit #(.NAME("OREG")) vio_output_register(
 );
 
 
+
 /* New probes wipes config when rescanning, squatting some */
+wire [7:0] CLSB;
+wire [7:0] CMSB;
+
 virtual_IO_8_bit #(.NAME("CBUS")) vio_control_bus(
-	.probe(),  //  probes.probe
+	.probe(CMSB),  //  probes.probe
 	.source()  // sources.source
 );
 
 virtual_IO_8_bit #(.NAME("CLOG")) vio_control_logic(
-	.probe(),  //  probes.probe
+	.probe(CLSB),  //  probes.probe
 	.source()  // sources.source
 );
 
@@ -254,6 +258,49 @@ sap_output_register sap_output_register_inst0(
 	.REG_OUT(output_out),
 	.DEC_OUT(output_dec),
 	.latch(o_latch)
+);
+
+
+/* The Control Logic */
+/*
+wire w_enable; // = control[0];
+wire alu_enable; // = control[1];
+wire alu_sub; // = control[2];
+wire addr_write; // = mem_control[0];
+wire mem_write; // = mem_control[1];
+wire mem_out; // = mem_control[2];
+wire i_latch; // = ireg_control[0];
+wire i_enable; // = ireg_control[1];
+wire [3:0] i_instruction;
+wire p_jump; // = pctr_control[0];
+wire p_output_enable; //= pctr_control[1];
+wire p_counter_enable; // = pctr_control[2];
+wire o_latch; // = output_control[0];
+wire a_latch; // = a_control[0];
+wire a_enable; // = a_control[1];
+wire b_latch; // = b_control[0];
+wire b_enable; // = b_control[1];
+*/
+
+sap_control_logic sap_control_logic_inst0(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.instruction(i_instruction),
+	.halt(), //TODO
+	.maddr_latch(addr_write),
+	.ram_latch(mem_write),
+	.ram_out(mem_out),
+	.instruction_latch(i_latch),
+	.instruction_out(i_enable),
+	.a_reg_latch(a_latch),
+	.a_reg_out(a_enable),
+	.alu_out(alu_enable),
+	.alu_sub(alu_sub),
+	.b_reg_latch(b_latch),
+	.output_latch(o_latch),
+	.counter_enable(p_counter_enable),
+	.counter_out(p_output_enable),
+	.CBUS_OUT({CMSB,CLSB})
 );
 
 assign w_bus = (w_enable) ? w_val_in : 8'bZZZZZZZZ;

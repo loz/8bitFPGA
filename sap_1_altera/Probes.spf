@@ -42,7 +42,7 @@
       <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00000000000000000000000000000000" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="CTRL" is_auto_node="true" name="CTRL">
     <node_ip_info instance_id="1" mfg_id="110" node_id="9" version="0"/>
@@ -80,13 +80,13 @@
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="independent"/>
       <view_node expanded="true" index="3" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="2" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00000000000000000000000000000000" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="AREG" is_auto_node="true" name="AREG">
     <node_ip_info instance_id="2" mfg_id="110" node_id="9" version="0"/>
@@ -120,17 +120,17 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00A200A200A200A200A200A200A200A2" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="BREG" is_auto_node="true" name="BREG">
     <node_ip_info instance_id="3" mfg_id="110" node_id="9" version="0"/>
@@ -164,17 +164,17 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="source[7..2]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00E000E000E000E000E000E000E000E0" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="MEMD" is_auto_node="true" name="MEMD">
     <node_ip_info instance_id="4" mfg_id="110" node_id="9" version="0"/>
@@ -199,7 +199,7 @@
       <probe name="probe[7]"/>
     </probes>
     <view>
-      <view_node expanded="false" group_name="MEMORY" index="0" lsb_to_msb="false" node_type="probe" radix="hex" view_type="group_header"/>
+      <view_node expanded="false" group_name="MEMORY" index="0" lsb_to_msb="false" node_type="probe" radix="bin" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="probe" view_type="group_member"/>
@@ -208,17 +208,17 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="2" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00000000000000000000000000000000" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="ADRG" is_auto_node="true" name="ADRG">
     <node_ip_info instance_id="5" mfg_id="110" node_id="9" version="0"/>
@@ -262,7 +262,7 @@
       <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00400040004000400040004000400040" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="IREG" is_auto_node="true" name="IREG">
     <node_ip_info instance_id="6" mfg_id="110" node_id="9" version="0"/>
@@ -287,7 +287,7 @@
       <probe name="probe[7]"/>
     </probes>
     <view>
-      <view_node expanded="false" group_name="INST" index="0" lsb_to_msb="false" node_type="probe" radix="hex" view_type="group_header"/>
+      <view_node expanded="false" group_name="INST" index="0" lsb_to_msb="false" node_type="probe" radix="bin" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="probe" view_type="group_member"/>
@@ -297,17 +297,17 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00000000000000000000000000000000" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="PCTR" is_auto_node="true" name="PCTR">
     <node_ip_info instance_id="7" mfg_id="110" node_id="9" version="0"/>
@@ -342,17 +342,17 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="2" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00500050005000500050005000500050" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="OREG" is_auto_node="true" name="OREG">
     <node_ip_info instance_id="8" mfg_id="110" node_id="9" version="0"/>
@@ -386,7 +386,7 @@
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="probe" view_type="group_member"/>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
+      <view_node expanded="false" group_name="group[7..0]" index="0" lsb_to_msb="false" node_type="source" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="source" view_type="group_member"/>
@@ -394,9 +394,9 @@
       <view_node expanded="true" index="3" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="2" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
-      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00FF00FF00FF00FF00FF00FF00FF00FF" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="CBUS" is_auto_node="true" name="CBUS">
     <node_ip_info instance_id="9" mfg_id="110" node_id="9" version="0"/>
@@ -421,7 +421,7 @@
       <probe name="probe[7]"/>
     </probes>
     <view>
-      <view_node expanded="false" group_name="CONTROL_BUS" index="0" lsb_to_msb="false" node_type="probe" radix="hex" view_type="group_header"/>
+      <view_node expanded="false" group_name="CONTROL_BUS" index="0" lsb_to_msb="false" node_type="probe" radix="bin" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="probe" view_type="group_member"/>
@@ -440,7 +440,7 @@
       <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00410041004100410041004100410041" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
   <instance enable_logging="true" entity_name="CLOG" is_auto_node="true" name="CLOG">
     <node_ip_info instance_id="10" mfg_id="110" node_id="9" version="0"/>
@@ -465,7 +465,7 @@
       <probe name="probe[7]"/>
     </probes>
     <view>
-      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="probe" view_type="group_header"/>
+      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="probe" radix="bin" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="probe" view_type="group_member"/>
@@ -484,6 +484,6 @@
       <view_node expanded="true" index="1" node_type="source" view_type="group_member"/>
       <view_node expanded="true" index="0" node_type="source" view_type="group_member"/>
     </view>
-    <log data="" max_size="8" size="0" time="" width="16"/>
+    <log data="00000000000000000000000000000000" max_size="8" size="8" time="22E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B2460000000022E0B24600000000" width="16"/>
   </instance>
 </session>

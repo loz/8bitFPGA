@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon Apr  3 11:48:33 2023
+Fitter Status : Successful - Mon Apr  3 18:39:29 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : SAP1
 Top-level Entity Name : top
 Family : Cyclone IV E
 Device : EP4CE6F17C8
 Timing Models : Final
-Total logic elements : 1,975 / 6,272 ( 31 % )
-    Total combinational functions : 1,669 / 6,272 ( 27 % )
-    Dedicated logic registers : 1,133 / 6,272 ( 18 % )
-Total registers : 1133
+Total logic elements : 1,820 / 6,272 ( 29 % )
+    Total combinational functions : 1,587 / 6,272 ( 25 % )
+    Dedicated logic registers : 1,021 / 6,272 ( 16 % )
+Total registers : 1021
 Total pins : 25 / 180 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 3,328 / 276,480 ( 1 % )
