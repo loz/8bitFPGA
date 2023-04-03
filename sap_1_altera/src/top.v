@@ -34,6 +34,11 @@ wire mem_out = mem_control[2];
 wire [3:0] mem_addr_out;
 wire [7:0] mem_data_out;
 
+wire [7:0] ireg_control;
+wire i_latch = ireg_control[0];
+wire i_enable = ireg_control[1];
+wire [7:0] ireg_out;
+wire [3:0] i_instruction;
 
 wire [7:0] a_control;
 wire a_latch = a_control[0];
@@ -168,12 +173,12 @@ virtual_IO_8_bit #(.NAME("ADRG")) vio_addr_reg(
 	.source()  // sources.source
 );
 
-/* New probes wipes config when rescanning, squatting some */
-
 virtual_IO_8_bit #(.NAME("IREG")) vio_ireg(
-	.probe(),  //  probes.probe
-	.source()  // sources.source
+	.probe(ireg_out),  //  probes.probe
+	.source(ireg_control)  // sources.source
 );
+
+/* New probes wipes config when rescanning, squatting some */
 
 virtual_IO_8_bit #(.NAME("PCTR")) vio_program_counter(
 	.probe(),  //  probes.probe
@@ -211,6 +216,16 @@ sap_register b_register(
 	.REG_OUT(b_reg_out),
 	.latch(b_latch),
 	.enable(b_enable)
+);
+
+sap_instruction_register sap_instruction_register_inst0(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.DATA(w_bus),
+	.INSTRUCTION(i_instruction),
+	.REG_OUT(ireg_out),
+	.latch(i_latch),
+	.enable(i_enable)
 );
 
 assign w_bus = (w_enable) ? w_val_in : 8'bZZZZZZZZ;
