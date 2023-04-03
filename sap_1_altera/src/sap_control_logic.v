@@ -84,7 +84,7 @@ localparam LDA = 4'b0001;
 localparam ADD = 4'b0010;
 localparam OUT = 4'b1110;
 
-always @(posedge clk) begin
+always @(negedge clk) begin //Logic runs Offset from main clock
 	if (reset) begin
 		MICRO_STATE <= FETCH;
 	end else begin
