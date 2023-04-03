@@ -46,6 +46,11 @@ wire p_output_enable = pctr_control[1];
 wire p_counter_enable = pctr_control[2];
 wire [3:0] pctr_out;
 
+wire [15:0] output_dec;
+wire [7:0] output_control;
+wire o_latch = output_control[0];
+wire [7:0] output_out;
+
 wire [7:0] a_control;
 wire a_latch = a_control[0];
 wire a_enable = a_control[1];
@@ -65,27 +70,25 @@ assign led[1] = alu_Z;
 assign led[2] = 0;
 assign led[3] = 0;
 
-//A Register
+//Output Display
 wire[6:0] seg_data_0;
 seg_decoder seg_decoder_m0(
-    .bin_data  (a_reg_out[7:4]),
+    .bin_data  (output_dec[15:12]),
     .seg_data  (seg_data_0)
 );
 wire[6:0] seg_data_1;
 seg_decoder seg_decoder_m1(
-    .bin_data  (a_reg_out[3:0]),
+    .bin_data  (output_dec[11:8]),
     .seg_data  (seg_data_1)
 );
-
-//B Register
 wire[6:0] seg_data_2;
 seg_decoder seg_decoder_m2(
-    .bin_data  (b_reg_out[7:4]),
+    .bin_data  (output_dec[7:4]),
     .seg_data  (seg_data_2)
 );
 wire[6:0] seg_data_3;
 seg_decoder seg_decoder_m3(
-    .bin_data  (b_reg_out[3:0]),
+    .bin_data  (output_dec[3:0]),
     .seg_data  (seg_data_3)
 );
 
@@ -189,12 +192,13 @@ virtual_IO_8_bit #(.NAME("PCTR")) vio_program_counter(
 	.source(pctr_control)  // sources.source
 );
 
-/* New probes wipes config when rescanning, squatting some */
 virtual_IO_8_bit #(.NAME("OREG")) vio_output_register(
-	.probe(),  //  probes.probe
-	.source()  // sources.source
+	.probe(output_out),  //  probes.probe
+	.source(output_control)  // sources.source
 );
 
+
+/* New probes wipes config when rescanning, squatting some */
 virtual_IO_8_bit #(.NAME("CBUS")) vio_control_bus(
 	.probe(),  //  probes.probe
 	.source()  // sources.source
@@ -241,6 +245,15 @@ sap_program_counter sap_program_counter_inst0(
 	.jump(p_jump),
 	.output_enable(p_output_enable),
 	.counter_enable(p_counter_enable)
+);
+
+sap_output_register sap_output_register_inst0(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.DATA(w_bus),
+	.REG_OUT(output_out),
+	.DEC_OUT(output_dec),
+	.latch(o_latch)
 );
 
 assign w_bus = (w_enable) ? w_val_in : 8'bZZZZZZZZ;

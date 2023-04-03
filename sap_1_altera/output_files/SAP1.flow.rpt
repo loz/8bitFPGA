@@ -1,5 +1,5 @@
 Flow report for SAP1
-Mon Apr  3 11:11:28 2023
+Mon Apr  3 11:48:48 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr  3 11:11:28 2023          ;
+; Flow Status                        ; Successful - Mon Apr  3 11:48:48 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; SAP1                                           ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE6F17C8                                    ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 1,811 / 6,272 ( 29 % )                         ;
-;     Total combinational functions  ; 1,504 / 6,272 ( 24 % )                         ;
-;     Dedicated logic registers      ; 1,125 / 6,272 ( 18 % )                         ;
-; Total registers                    ; 1125                                           ;
+; Total logic elements               ; 1,975 / 6,272 ( 31 % )                         ;
+;     Total combinational functions  ; 1,669 / 6,272 ( 27 % )                         ;
+;     Dedicated logic registers      ; 1,133 / 6,272 ( 18 % )                         ;
+; Total registers                    ; 1133                                           ;
 ; Total pins                         ; 25 / 180 ( 14 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 3,328 / 276,480 ( 1 % )                        ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/03/2023 11:10:25 ;
+; Start date & time ; 04/03/2023 11:47:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SAP1                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                         ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+-----------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 8796755533499.168051662506972                 ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 8796755533499.168051886307812                 ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                           ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                           ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                           ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -131,12 +131,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4873 MB             ; 00:01:06                           ;
-; Fitter               ; 00:00:11     ; 1.1                     ; 5515 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4695 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4799 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4653 MB             ; 00:00:03                           ;
-; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:29                           ;
+; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4877 MB             ; 00:01:03                           ;
+; Fitter               ; 00:00:11     ; 1.1                     ; 5523 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4698 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4793 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4653 MB             ; 00:00:04                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

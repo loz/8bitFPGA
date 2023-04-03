@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAP1
-Mon Apr  3 11:11:03 2023
+Mon Apr  3 11:48:20 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -67,43 +67,50 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  59. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0
  60. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
  61. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 62. Port Connectivity Checks: "sap_instruction_register:sap_instruction_register_inst0"
- 63. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 64. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0"
- 65. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 66. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0"
- 67. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 68. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0"
- 69. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 70. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0"
- 71. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter"
- 72. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 73. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0"
- 74. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg"
- 75. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 76. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0"
- 77. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg"
- 78. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 79. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0"
- 80. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd"
- 81. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 82. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0"
- 83. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"
- 84. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 85. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0"
- 86. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"
- 87. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 88. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0"
- 89. Port Connectivity Checks: "virtual_IO_8_bit:vio_control"
- 90. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 91. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"
- 92. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
- 93. Port Connectivity Checks: "seg_scan:seg_scan_m0"
- 94. Signal Tap Logic Analyzer Settings
- 95. Post-Synthesis Netlist Statistics for Top Partition
- 96. Elapsed Time Per Partition
- 97. Connections to In-System Debugging Instance "auto_signaltap_0"
- 98. Analysis & Synthesis Messages
+ 62. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div0
+ 63. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod1
+ 64. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div1
+ 65. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod2
+ 66. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod3
+ 67. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod0
+ 68. Port Connectivity Checks: "sap_instruction_register:sap_instruction_register_inst0"
+ 69. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 70. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0"
+ 71. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 72. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0"
+ 73. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 74. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0"
+ 75. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register"
+ 76. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 77. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0"
+ 78. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter"
+ 79. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 80. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0"
+ 81. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg"
+ 82. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 83. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0"
+ 84. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg"
+ 85. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 86. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0"
+ 87. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd"
+ 88. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 89. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0"
+ 90. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"
+ 91. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 92. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0"
+ 93. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"
+ 94. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 95. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0"
+ 96. Port Connectivity Checks: "virtual_IO_8_bit:vio_control"
+ 97. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 98. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"
+ 99. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
+100. Port Connectivity Checks: "seg_scan:seg_scan_m0"
+101. Signal Tap Logic Analyzer Settings
+102. Post-Synthesis Netlist Statistics for Top Partition
+103. Elapsed Time Per Partition
+104. Connections to In-System Debugging Instance "auto_signaltap_0"
+105. Analysis & Synthesis Messages
 
 
 
@@ -130,15 +137,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr  3 11:11:03 2023          ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr  3 11:48:20 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; SAP1                                           ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 1,882                                          ;
-;     Total combinational functions  ; 1,501                                          ;
-;     Dedicated logic registers      ; 1,125                                          ;
-; Total registers                    ; 1125                                           ;
+; Total logic elements               ; 2,055                                          ;
+;     Total combinational functions  ; 1,666                                          ;
+;     Dedicated logic registers      ; 1,133                                          ;
+; Total registers                    ; 1133                                           ;
 ; Total pins                         ; 25                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 3,328                                          ;
@@ -247,8 +254,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -270,6 +277,7 @@ https://fpgasoftware.intel.com/eula.
 ; src/sap_ram.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_ram.v                                                      ;             ;
 ; src/sap_instruction_register.v                                     ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_instruction_register.v                                     ;             ;
 ; src/sap_program_counter.v                                          ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_program_counter.v                                          ;             ;
+; src/sap_output_register.v                                          ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v                                          ;             ;
 ; altsource_probe.v                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v                                       ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                           ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                       ;             ;
@@ -328,6 +336,21 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                        ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                          ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                         ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                     ;             ;
+; db/lpm_divide_dvo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_dvo.tdf                                              ;             ;
+; db/abs_divider_8ag.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/abs_divider_8ag.tdf                                             ;             ;
+; db/alt_u_div_e4f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/alt_u_div_e4f.tdf                                               ;             ;
+; db/add_sub_7pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/add_sub_7pc.tdf                                                 ;             ;
+; db/add_sub_8pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/add_sub_8pc.tdf                                                 ;             ;
+; db/lpm_abs_2v9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_2v9.tdf                                                 ;             ;
+; db/lpm_abs_6v9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_6v9.tdf                                                 ;             ;
+; db/lpm_divide_gno.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_gno.tdf                                              ;             ;
+; db/lpm_divide_gvo.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_gvo.tdf                                              ;             ;
+; db/abs_divider_bag.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/abs_divider_bag.tdf                                             ;             ;
+; db/alt_u_div_k4f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/alt_u_div_k4f.tdf                                               ;             ;
+; db/lpm_abs_5v9.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_5v9.tdf                                                 ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -336,20 +359,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,882                    ;
+; Estimated Total logic elements              ; 2,055                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 1501                     ;
+; Total combinational functions               ; 1666                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 826                      ;
-;     -- 3 input functions                    ; 441                      ;
-;     -- <=2 input functions                  ; 234                      ;
+;     -- 4 input functions                    ; 814                      ;
+;     -- 3 input functions                    ; 502                      ;
+;     -- <=2 input functions                  ; 350                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 1382                     ;
-;     -- arithmetic mode                      ; 119                      ;
+;     -- normal mode                          ; 1476                     ;
+;     -- arithmetic mode                      ; 190                      ;
 ;                                             ;                          ;
-; Total registers                             ; 1125                     ;
-;     -- Dedicated logic registers            ; 1125                     ;
+; Total registers                             ; 1133                     ;
+;     -- Dedicated logic registers            ; 1133                     ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 25                       ;
@@ -358,9 +381,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 756                      ;
-; Total fan-out                               ; 9233                     ;
-; Average fan-out                             ; 3.41                     ;
+; Maximum fan-out                             ; 755                      ;
+; Total fan-out                               ; 9605                     ;
+; Average fan-out                             ; 3.33                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -369,22 +392,37 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 1501 (43)           ; 1125 (0)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 1666 (43)           ; 1133 (0)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |clock_pulser:clock_pulser_inst0|                                                                                                    ; 0 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0                                                                                                                                                                                                                                                                                                            ; clock_pulser                      ; work         ;
 ;       |one_shot:one_shot_inst0|                                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0                                                                                                                                                                                                                                                                                    ; one_shot                          ; work         ;
-;    |sap_alu:sap_alu_inst|                                                                                                               ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_alu:sap_alu_inst                                                                                                                                                                                                                                                                                                                       ; sap_alu                           ; work         ;
+;    |sap_alu:sap_alu_inst|                                                                                                               ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_alu:sap_alu_inst                                                                                                                                                                                                                                                                                                                       ; sap_alu                           ; work         ;
 ;    |sap_instruction_register:sap_instruction_register_inst0|                                                                            ; 1 (1)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_instruction_register:sap_instruction_register_inst0                                                                                                                                                                                                                                                                                    ; sap_instruction_register          ; work         ;
-;    |sap_program_counter:sap_program_counter_inst0|                                                                                      ; 9 (9)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_program_counter:sap_program_counter_inst0                                                                                                                                                                                                                                                                                              ; sap_program_counter               ; work         ;
-;    |sap_ram:sap_ram_inst0|                                                                                                              ; 115 (115)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_ram:sap_ram_inst0                                                                                                                                                                                                                                                                                                                      ; sap_ram                           ; work         ;
+;    |sap_output_register:sap_output_register_inst0|                                                                                      ; 194 (1)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0                                                                                                                                                                                                                                                                                              ; sap_output_register               ; work         ;
+;       |lpm_divide:Div0|                                                                                                                 ; 68 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div0                                                                                                                                                                                                                                                                              ; lpm_divide                        ; work         ;
+;          |lpm_divide_dvo:auto_generated|                                                                                                ; 68 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div0|lpm_divide_dvo:auto_generated                                                                                                                                                                                                                                                ; lpm_divide_dvo                    ; work         ;
+;             |abs_divider_8ag:divider|                                                                                                   ; 68 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div0|lpm_divide_dvo:auto_generated|abs_divider_8ag:divider                                                                                                                                                                                                                        ; abs_divider_8ag                   ; work         ;
+;                |alt_u_div_e4f:divider|                                                                                                  ; 68 (68)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div0|lpm_divide_dvo:auto_generated|abs_divider_8ag:divider|alt_u_div_e4f:divider                                                                                                                                                                                                  ; alt_u_div_e4f                     ; work         ;
+;       |lpm_divide:Div1|                                                                                                                 ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div1                                                                                                                                                                                                                                                                              ; lpm_divide                        ; work         ;
+;          |lpm_divide_gvo:auto_generated|                                                                                                ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div1|lpm_divide_gvo:auto_generated                                                                                                                                                                                                                                                ; lpm_divide_gvo                    ; work         ;
+;             |abs_divider_bag:divider|                                                                                                   ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div1|lpm_divide_gvo:auto_generated|abs_divider_bag:divider                                                                                                                                                                                                                        ; abs_divider_bag                   ; work         ;
+;                |alt_u_div_k4f:divider|                                                                                                  ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div1|lpm_divide_gvo:auto_generated|abs_divider_bag:divider|alt_u_div_k4f:divider                                                                                                                                                                                                  ; alt_u_div_k4f                     ; work         ;
+;       |lpm_divide:Mod0|                                                                                                                 ; 71 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod0                                                                                                                                                                                                                                                                              ; lpm_divide                        ; work         ;
+;          |lpm_divide_gno:auto_generated|                                                                                                ; 71 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod0|lpm_divide_gno:auto_generated                                                                                                                                                                                                                                                ; lpm_divide_gno                    ; work         ;
+;             |abs_divider_8ag:divider|                                                                                                   ; 71 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod0|lpm_divide_gno:auto_generated|abs_divider_8ag:divider                                                                                                                                                                                                                        ; abs_divider_8ag                   ; work         ;
+;                |alt_u_div_e4f:divider|                                                                                                  ; 71 (71)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod0|lpm_divide_gno:auto_generated|abs_divider_8ag:divider|alt_u_div_e4f:divider                                                                                                                                                                                                  ; alt_u_div_e4f                     ; work         ;
+;       |lpm_divide:Mod1|                                                                                                                 ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod1                                                                                                                                                                                                                                                                              ; lpm_divide                        ; work         ;
+;          |lpm_divide_gno:auto_generated|                                                                                                ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod1|lpm_divide_gno:auto_generated                                                                                                                                                                                                                                                ; lpm_divide_gno                    ; work         ;
+;             |abs_divider_8ag:divider|                                                                                                   ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod1|lpm_divide_gno:auto_generated|abs_divider_8ag:divider                                                                                                                                                                                                                        ; abs_divider_8ag                   ; work         ;
+;                |alt_u_div_e4f:divider|                                                                                                  ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Mod1|lpm_divide_gno:auto_generated|abs_divider_8ag:divider|alt_u_div_e4f:divider                                                                                                                                                                                                  ; alt_u_div_e4f                     ; work         ;
+;    |sap_program_counter:sap_program_counter_inst0|                                                                                      ; 8 (8)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_program_counter:sap_program_counter_inst0                                                                                                                                                                                                                                                                                              ; sap_program_counter               ; work         ;
+;    |sap_ram:sap_ram_inst0|                                                                                                              ; 112 (112)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_ram:sap_ram_inst0                                                                                                                                                                                                                                                                                                                      ; sap_ram                           ; work         ;
 ;    |sap_register:a_register|                                                                                                            ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:a_register                                                                                                                                                                                                                                                                                                                    ; sap_register                      ; work         ;
-;    |sap_register:b_register|                                                                                                            ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:b_register                                                                                                                                                                                                                                                                                                                    ; sap_register                      ; work         ;
-;    |seg_decoder:seg_decoder_m0|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m0                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
-;    |seg_decoder:seg_decoder_m1|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m1                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
+;    |sap_register:b_register|                                                                                                            ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_register:b_register                                                                                                                                                                                                                                                                                                                    ; sap_register                      ; work         ;
 ;    |seg_decoder:seg_decoder_m2|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m2                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
 ;    |seg_decoder:seg_decoder_m3|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m3                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
 ;    |seg_decoder:seg_decoder_m6|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m6                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
 ;    |seg_decoder:seg_decoder_m7|                                                                                                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_decoder:seg_decoder_m7                                                                                                                                                                                                                                                                                                                 ; seg_decoder                       ; work         ;
-;    |seg_scan:seg_scan_m0|                                                                                                               ; 82 (82)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_scan:seg_scan_m0                                                                                                                                                                                                                                                                                                                       ; seg_scan                          ; work         ;
+;    |seg_scan:seg_scan_m0|                                                                                                               ; 78 (78)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seg_scan:seg_scan_m0                                                                                                                                                                                                                                                                                                                       ; seg_scan                          ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 380 (1)             ; 204 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 379 (0)             ; 204 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 379 (0)             ; 204 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -458,11 +496,11 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 43 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                 ; altsource_probe_body              ; work         ;
 ;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 40 (21)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                          ; altsource_probe_impl              ; work         ;
 ;                   |sld_rom_sr:\instance_id_gen:rom_info_inst|                                                                           ; 19 (19)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst                                                                                ; sld_rom_sr                        ; work         ;
-;    |virtual_IO_8_bit:vio_control|                                                                                                       ; 48 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control                                                                                                                                                                                                                                                                                                               ; virtual_IO_8_bit                  ; work         ;
-;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 48 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                ; altsource_probe_top               ; work         ;
-;          |altsource_probe:issp_impl|                                                                                                    ; 48 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                      ; altsource_probe                   ; work         ;
-;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 48 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                       ; altsource_probe_body              ; work         ;
-;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 45 (26)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                ; altsource_probe_impl              ; work         ;
+;    |virtual_IO_8_bit:vio_control|                                                                                                       ; 47 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control                                                                                                                                                                                                                                                                                                               ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 47 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 47 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                      ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 47 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                       ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 44 (25)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                ; altsource_probe_impl              ; work         ;
 ;                   |sld_rom_sr:\instance_id_gen:rom_info_inst|                                                                           ; 19 (19)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst                                                                                      ; sld_rom_sr                        ; work         ;
 ;    |virtual_IO_8_bit:vio_ireg|                                                                                                          ; 42 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_ireg                                                                                                                                                                                                                                                                                                                  ; virtual_IO_8_bit                  ; work         ;
 ;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 42 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                   ; altsource_probe_top               ; work         ;
@@ -488,11 +526,11 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 41 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                               ; altsource_probe_body              ; work         ;
 ;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 38 (21)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                        ; altsource_probe_impl              ; work         ;
 ;                   |sld_rom_sr:\instance_id_gen:rom_info_inst|                                                                           ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst                                                                              ; sld_rom_sr                        ; work         ;
-;    |virtual_IO_8_bit:vio_w_bus|                                                                                                         ; 43 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
-;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 43 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
-;          |altsource_probe:issp_impl|                                                                                                    ; 43 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
-;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 43 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                         ; altsource_probe_body              ; work         ;
-;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 40 (23)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                  ; altsource_probe_impl              ; work         ;
+;    |virtual_IO_8_bit:vio_w_bus|                                                                                                         ; 42 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
+;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 42 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
+;          |altsource_probe:issp_impl|                                                                                                    ; 42 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
+;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 42 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                         ; altsource_probe_body              ; work         ;
+;                |altsource_probe_impl:\equal_width_gen:equal_width_inst|                                                                 ; 39 (22)             ; 25 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst                                                                                                                                  ; altsource_probe_impl              ; work         ;
 ;                   |sld_rom_sr:\instance_id_gen:rom_info_inst|                                                                           ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst                                                                                        ; sld_rom_sr                        ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -536,12 +574,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1125  ;
+; Total registers                              ; 1133  ;
 ; Number of registers using Synchronous Clear  ; 94    ;
-; Number of registers using Synchronous Load   ; 111   ;
+; Number of registers using Synchronous Load   ; 119   ;
 ; Number of registers using Asynchronous Clear ; 419   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 711   ;
+; Number of registers using Clock Enable       ; 719   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -585,48 +623,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[6]                                                                                                                                                                                                                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[7]                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sap_output_register:sap_output_register_inst0|r[7]                                                                                                                                                                                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]            ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                        ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                      ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                     ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                              ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                              ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]              ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]             ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]      ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]      ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]              ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]             ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]          ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[7]                                                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[0]                                                                                                                                                                                                                                                  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[7]                                                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[0]                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_program_counter:sap_program_counter_inst0|r[1]                                                                                                                                                                                                                            ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[6]                                                                                                                                                                                                                                              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[3]                                                                                                                                                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_program_counter:sap_program_counter_inst0|r[2]                                                                                                                                                                                                                            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[2]                                                                                                                                                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1486,6 +1525,144 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_dvo ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_gno ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_gvo ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod2 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_gno ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod3 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_gno ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_gno ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "sap_instruction_register:sap_instruction_register_inst0"                                   ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1592,6 +1769,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; source_ena ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
 ; source_clk ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register"                                                       ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; source[7..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1966,27 +2152,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 282                         ;
-; cycloneiii_ff         ; 487                         ;
+; cycloneiii_ff         ; 495                         ;
 ;     CLR               ; 29                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 236                         ;
-;     ENA CLR           ; 41                          ;
-;     ENA CLR SLD       ; 48                          ;
+;     ENA               ; 244                         ;
+;     ENA CLR           ; 33                          ;
+;     ENA CLR SLD       ; 56                          ;
 ;     SCLR              ; 12                          ;
 ;     plain             ; 89                          ;
-; cycloneiii_lcell_comb ; 818                         ;
-;     arith             ; 43                          ;
-;         2 data inputs ; 34                          ;
-;         3 data inputs ; 9                           ;
-;     normal            ; 775                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 54                          ;
-;         3 data inputs ; 177                         ;
-;         4 data inputs ; 523                         ;
+; cycloneiii_lcell_comb ; 983                         ;
+;     arith             ; 114                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 57                          ;
+;     normal            ; 869                         ;
+;         0 data inputs ; 16                          ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 132                         ;
+;         3 data inputs ; 190                         ;
+;         4 data inputs ; 511                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 3.52                        ;
+; Max LUT depth         ; 17.40                       ;
+; Average LUT depth     ; 5.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1995,7 +2182,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2073,7 +2260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Apr  3 11:10:25 2023
+    Info: Processing started: Mon Apr  3 11:47:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2103,15 +2290,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/sap
     Info (12023): Found entity 1: sap_instruction_register File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_instruction_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sap_program_counter.v
     Info (12023): Found entity 1: sap_program_counter File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/sap_output_register.v
+    Info (12023): Found entity 1: sap_output_register File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 73
-Info (12128): Elaborating entity "sap_alu" for hierarchy "sap_alu:sap_alu_inst" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 101
-Info (12128): Elaborating entity "sap_ram" for hierarchy "sap_ram:sap_ram_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 112
-Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 139
-Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 145
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 78
+Info (12128): Elaborating entity "sap_alu" for hierarchy "sap_alu:sap_alu_inst" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 104
+Info (12128): Elaborating entity "sap_ram" for hierarchy "sap_ram:sap_ram_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 115
+Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 142
+Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 148
 Info (12128): Elaborating entity "debounce" for hierarchy "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 22
 Info (12128): Elaborating entity "one_shot" for hierarchy "clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 28
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_w_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 151
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_w_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 154
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2132,7 +2321,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy 
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 756
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 157
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 160
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2150,7 +2339,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control|altsource_
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_a_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 163
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_a_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 166
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2168,7 +2357,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_a_reg|altsource_pr
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_b_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 169
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_b_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 172
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2186,7 +2375,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_b_reg|altsource_pr
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_memd" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 175
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_memd" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 178
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2204,7 +2393,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_memd|altsource_pro
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_addr_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 180
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_addr_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 183
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2222,7 +2411,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_addr_reg|altsource
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_ireg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 185
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_ireg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 188
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2240,7 +2429,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_ireg|altsource_pro
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_program_counter" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 190
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_program_counter" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 193
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2258,7 +2447,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_program_counter|al
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_output_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 196
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_output_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 198
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2276,7 +2465,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_output_register|al
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 201
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2294,7 +2483,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control_bus|altsou
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_logic" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 206
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_logic" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 210
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2312,10 +2501,15 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control_logic|alts
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:a_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 215
-Info (12128): Elaborating entity "sap_instruction_register" for hierarchy "sap_instruction_register:sap_instruction_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 234
-Info (12128): Elaborating entity "sap_program_counter" for hierarchy "sap_program_counter:sap_program_counter_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 244
+Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:a_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 219
+Info (12128): Elaborating entity "sap_instruction_register" for hierarchy "sap_instruction_register:sap_instruction_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 238
+Info (12128): Elaborating entity "sap_program_counter" for hierarchy "sap_program_counter:sap_program_counter_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 248
 Warning (10230): Verilog HDL assignment warning at sap_program_counter.v(36): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_program_counter.v Line: 36
+Info (12128): Elaborating entity "sap_output_register" for hierarchy "sap_output_register:sap_output_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 257
+Warning (10230): Verilog HDL assignment warning at sap_output_register.v(12): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 12
+Warning (10230): Verilog HDL assignment warning at sap_output_register.v(13): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+Warning (10230): Verilog HDL assignment warning at sap_output_register.v(14): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
+Warning (10230): Verilog HDL assignment warning at sap_output_register.v(15): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6524.tdf
     Info (12023): Found entity 1: altsyncram_6524 File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/altsyncram_6524.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ssc.tdf
@@ -2338,7 +2532,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.04.03.11:10:47 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.04.03.11:48:03 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2363,6 +2557,72 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "sap_ram:sap_ram_inst0|memory" is uninferred due to asynchronous read logic File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_ram.v Line: 24
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Div0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Mod1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Div1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Mod2" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Mod3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sap_output_register:sap_output_register_inst0|Mod0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 12
+Info (12130): Elaborated megafunction instantiation "sap_output_register:sap_output_register_inst0|lpm_divide:Div0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+Info (12133): Instantiated megafunction "sap_output_register:sap_output_register_inst0|lpm_divide:Div0" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dvo.tdf
+    Info (12023): Found entity 1: lpm_divide_dvo File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_dvo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_8ag.tdf
+    Info (12023): Found entity 1: abs_divider_8ag File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/abs_divider_8ag.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e4f.tdf
+    Info (12023): Found entity 1: alt_u_div_e4f File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/alt_u_div_e4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/add_sub_8pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_2v9.tdf
+    Info (12023): Found entity 1: lpm_abs_2v9 File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_2v9.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_6v9.tdf
+    Info (12023): Found entity 1: lpm_abs_6v9 File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_6v9.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "sap_output_register:sap_output_register_inst0|lpm_divide:Mod1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+Info (12133): Instantiated megafunction "sap_output_register:sap_output_register_inst0|lpm_divide:Mod1" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gno.tdf
+    Info (12023): Found entity 1: lpm_divide_gno File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_gno.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "sap_output_register:sap_output_register_inst0|lpm_divide:Div1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
+Info (12133): Instantiated megafunction "sap_output_register:sap_output_register_inst0|lpm_divide:Div1" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gvo.tdf
+    Info (12023): Found entity 1: lpm_divide_gvo File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_divide_gvo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_bag.tdf
+    Info (12023): Found entity 1: abs_divider_bag File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/abs_divider_bag.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_k4f.tdf
+    Info (12023): Found entity 1: alt_u_div_k4f File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/alt_u_div_k4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_5v9.tdf
+    Info (12023): Found entity 1: lpm_abs_5v9 File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/lpm_abs_5v9.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "sap_output_register:sap_output_register_inst0|lpm_divide:Mod3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
+Info (12133): Instantiated megafunction "sap_output_register:sap_output_register_inst0|lpm_divide:Mod3" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "sap_output_register:sap_output_register_inst0|lpm_divide:Mod0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 12
+Info (12133): Instantiated megafunction "sap_output_register:sap_output_register_inst0|lpm_divide:Mod0" with the following parameter: File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 12
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Warning (12241): 24 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_instruction_register:sap_instruction_register_inst0|DATA[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_instruction_register.v Line: 4
@@ -2389,6 +2649,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 10
     Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 10
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "sap_output_register:sap_output_register_inst0|lpm_divide:Mod1|lpm_divide_gno:auto_generated|abs_divider_8ag:divider|alt_u_div_e4f:divider|add_sub_8_result_int[0]~0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/alt_u_div_e4f.tdf Line: 67
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 60 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -2396,15 +2658,15 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key1" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 4
     Warning (15610): No output dependent on input pin "key2" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 5
     Warning (15610): No output dependent on input pin "key3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 6
-Info (21057): Implemented 1975 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2148 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 1919 logic cells
+    Info (21061): Implemented 2092 logic cells
     Info (21064): Implemented 26 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Mon Apr  3 11:11:03 2023
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:01:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Mon Apr  3 11:48:20 2023
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:05
 
 
