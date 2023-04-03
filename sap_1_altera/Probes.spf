@@ -332,11 +332,12 @@
       <probe name="probe[7]"/>
     </probes>
     <view>
-      <view_node expanded="false" group_name="PCTR" index="0" lsb_to_msb="false" node_type="probe" radix="hex" view_type="group_header"/>
+      <view_node expanded="false" group_name="unused" index="0" lsb_to_msb="false" node_type="probe" view_type="group_header"/>
       <view_node expanded="true" index="7" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="6" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="5" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="4" node_type="probe" view_type="group_member"/>
+      <view_node expanded="false" group_name="COUNTER" index="0" lsb_to_msb="false" node_type="probe" radix="hex" view_type="group_header"/>
       <view_node expanded="true" index="3" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="2" node_type="probe" view_type="group_member"/>
       <view_node expanded="true" index="1" node_type="probe" view_type="group_member"/>

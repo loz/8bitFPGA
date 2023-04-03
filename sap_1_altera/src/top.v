@@ -40,6 +40,12 @@ wire i_enable = ireg_control[1];
 wire [7:0] ireg_out;
 wire [3:0] i_instruction;
 
+wire [7:0] pctr_control;
+wire p_jump = pctr_control[0];
+wire p_output_enable = pctr_control[1];
+wire p_counter_enable = pctr_control[2];
+wire [3:0] pctr_out;
+
 wire [7:0] a_control;
 wire a_latch = a_control[0];
 wire a_enable = a_control[1];
@@ -178,13 +184,12 @@ virtual_IO_8_bit #(.NAME("IREG")) vio_ireg(
 	.source(ireg_control)  // sources.source
 );
 
-/* New probes wipes config when rescanning, squatting some */
-
 virtual_IO_8_bit #(.NAME("PCTR")) vio_program_counter(
-	.probe(),  //  probes.probe
-	.source()  // sources.source
+	.probe({4'b0000,pctr_out}),  //  probes.probe
+	.source(pctr_control)  // sources.source
 );
 
+/* New probes wipes config when rescanning, squatting some */
 virtual_IO_8_bit #(.NAME("OREG")) vio_output_register(
 	.probe(),  //  probes.probe
 	.source()  // sources.source
@@ -226,6 +231,16 @@ sap_instruction_register sap_instruction_register_inst0(
 	.REG_OUT(ireg_out),
 	.latch(i_latch),
 	.enable(i_enable)
+);
+
+sap_program_counter sap_program_counter_inst0(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.DATA(w_bus),
+	.REG_OUT(pctr_out),
+	.jump(p_jump),
+	.output_enable(p_output_enable),
+	.counter_enable(p_counter_enable)
 );
 
 assign w_bus = (w_enable) ? w_val_in : 8'bZZZZZZZZ;
