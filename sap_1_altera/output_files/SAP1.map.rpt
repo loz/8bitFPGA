@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAP1
-Tue Apr  4 07:18:54 2023
+Tue Apr  4 07:35:23 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -32,90 +32,91 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  24. Source assignments for virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
  25. Source assignments for virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst
  26. Source assignments for sld_signaltap:auto_signaltap_0
- 27. Parameter Settings for User Entity Instance: sap_ram:sap_ram_inst0
- 28. Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0
- 29. Parameter Settings for User Entity Instance: clock_pulser:clock_pulser_inst0|debounce:debounce_inst0
- 30. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus
- 31. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0
- 32. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 33. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control
- 34. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0
- 35. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 36. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg
- 37. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0
- 38. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 39. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg
- 40. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0
- 41. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 42. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd
- 43. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0
- 44. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 45. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg
- 46. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0
- 47. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 48. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg
- 49. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0
- 50. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 51. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter
- 52. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0
- 53. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 54. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register
- 55. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0
- 56. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 57. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus
- 58. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0
- 59. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 60. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic
- 61. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0
- 62. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
- 63. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 64. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div0
- 65. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod1
- 66. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div1
- 67. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod2
- 68. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod3
- 69. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod0
- 70. Port Connectivity Checks: "sap_control_logic:sap_control_logic_inst0"
- 71. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 72. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0"
- 73. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic"
- 74. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 75. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0"
- 76. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus"
- 77. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 78. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0"
- 79. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register"
- 80. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 81. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0"
- 82. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter"
- 83. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 84. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0"
- 85. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg"
- 86. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 87. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0"
- 88. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg"
- 89. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 90. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0"
- 91. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd"
- 92. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 93. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0"
- 94. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"
- 95. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 96. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0"
- 97. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"
- 98. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
- 99. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0"
-100. Port Connectivity Checks: "virtual_IO_8_bit:vio_control"
-101. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
-102. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"
-103. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
-104. Port Connectivity Checks: "seg_scan:seg_scan_m0"
-105. Signal Tap Logic Analyzer Settings
-106. Post-Synthesis Netlist Statistics for Top Partition
-107. Elapsed Time Per Partition
-108. Connections to In-System Debugging Instance "auto_signaltap_0"
-109. Analysis & Synthesis Messages
-110. Analysis & Synthesis Suppressed Messages
+ 27. Parameter Settings for User Entity Instance: slow_clock:comb_14
+ 28. Parameter Settings for User Entity Instance: sap_ram:sap_ram_inst0
+ 29. Parameter Settings for User Entity Instance: seg_scan:seg_scan_m0
+ 30. Parameter Settings for User Entity Instance: clock_pulser:clock_pulser_inst0|debounce:debounce_inst0
+ 31. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus
+ 32. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0
+ 33. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 34. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control
+ 35. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0
+ 36. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 37. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg
+ 38. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0
+ 39. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 40. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg
+ 41. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0
+ 42. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 43. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd
+ 44. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0
+ 45. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 46. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg
+ 47. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0
+ 48. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 49. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg
+ 50. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0
+ 51. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 52. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter
+ 53. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0
+ 54. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 55. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register
+ 56. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0
+ 57. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 58. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus
+ 59. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0
+ 60. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 61. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic
+ 62. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0
+ 63. Parameter Settings for User Entity Instance: virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl
+ 64. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 65. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div0
+ 66. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod1
+ 67. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Div1
+ 68. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod2
+ 69. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod3
+ 70. Parameter Settings for Inferred Entity Instance: sap_output_register:sap_output_register_inst0|lpm_divide:Mod0
+ 71. Port Connectivity Checks: "sap_control_logic:sap_control_logic_inst0"
+ 72. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 73. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0"
+ 74. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_logic"
+ 75. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 76. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0"
+ 77. Port Connectivity Checks: "virtual_IO_8_bit:vio_control_bus"
+ 78. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 79. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0"
+ 80. Port Connectivity Checks: "virtual_IO_8_bit:vio_output_register"
+ 81. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 82. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0"
+ 83. Port Connectivity Checks: "virtual_IO_8_bit:vio_program_counter"
+ 84. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 85. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0"
+ 86. Port Connectivity Checks: "virtual_IO_8_bit:vio_ireg"
+ 87. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 88. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0"
+ 89. Port Connectivity Checks: "virtual_IO_8_bit:vio_addr_reg"
+ 90. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 91. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0"
+ 92. Port Connectivity Checks: "virtual_IO_8_bit:vio_memd"
+ 93. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 94. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0"
+ 95. Port Connectivity Checks: "virtual_IO_8_bit:vio_b_reg"
+ 96. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+ 97. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0"
+ 98. Port Connectivity Checks: "virtual_IO_8_bit:vio_a_reg"
+ 99. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+100. Port Connectivity Checks: "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0"
+101. Port Connectivity Checks: "virtual_IO_8_bit:vio_control"
+102. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl"
+103. Port Connectivity Checks: "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0"
+104. Port Connectivity Checks: "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0"
+105. Port Connectivity Checks: "seg_scan:seg_scan_m0"
+106. Signal Tap Logic Analyzer Settings
+107. Post-Synthesis Netlist Statistics for Top Partition
+108. Elapsed Time Per Partition
+109. Connections to In-System Debugging Instance "auto_signaltap_0"
+110. Analysis & Synthesis Messages
+111. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -142,15 +143,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr  4 07:18:54 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr  4 07:35:23 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; SAP1                                           ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 2,142                                          ;
-;     Total combinational functions  ; 1,769                                          ;
-;     Dedicated logic registers      ; 1,154                                          ;
-; Total registers                    ; 1154                                           ;
+; Total logic elements               ; 2,163                                          ;
+;     Total combinational functions  ; 1,790                                          ;
+;     Dedicated logic registers      ; 1,174                                          ;
+; Total registers                    ; 1174                                           ;
 ; Total pins                         ; 25                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 3,328                                          ;
@@ -284,6 +285,7 @@ https://fpgasoftware.intel.com/eula.
 ; src/sap_program_counter.v                                          ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_program_counter.v                                          ;             ;
 ; src/sap_output_register.v                                          ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v                                          ;             ;
 ; src/sap_control_logic.v                                            ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v                                            ;             ;
+; src/slow_clock.v                                                   ; yes             ; User Verilog HDL File                        ; C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/slow_clock.v                                                   ;             ;
 ; altsource_probe.v                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v                                       ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                           ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                       ;             ;
@@ -365,20 +367,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 2,142                    ;
+; Estimated Total logic elements              ; 2,163                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 1769                     ;
+; Total combinational functions               ; 1790                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 845                      ;
-;     -- 3 input functions                    ; 546                      ;
-;     -- <=2 input functions                  ; 378                      ;
+;     -- 4 input functions                    ; 846                      ;
+;     -- 3 input functions                    ; 543                      ;
+;     -- <=2 input functions                  ; 401                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 1579                     ;
-;     -- arithmetic mode                      ; 190                      ;
+;     -- normal mode                          ; 1582                     ;
+;     -- arithmetic mode                      ; 208                      ;
 ;                                             ;                          ;
-; Total registers                             ; 1154                     ;
-;     -- Dedicated logic registers            ; 1154                     ;
+; Total registers                             ; 1174                     ;
+;     -- Dedicated logic registers            ; 1174                     ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 25                       ;
@@ -388,8 +390,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 753                      ;
-; Total fan-out                               ; 10003                    ;
-; Average fan-out                             ; 3.33                     ;
+; Total fan-out                               ; 10101                    ;
+; Average fan-out                             ; 3.31                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -398,7 +400,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 1769 (4)            ; 1154 (0)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 1790 (6)            ; 1174 (1)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |clock_pulser:clock_pulser_inst0|                                                                                                    ; 0 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0                                                                                                                                                                                                                                                                                                            ; clock_pulser                      ; work         ;
 ;       |one_shot:one_shot_inst0|                                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0                                                                                                                                                                                                                                                                                    ; one_shot                          ; work         ;
 ;    |sap_alu:sap_alu_inst|                                                                                                               ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_alu:sap_alu_inst                                                                                                                                                                                                                                                                                                                       ; sap_alu                           ; work         ;
@@ -473,6 +475,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 15 (15)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
+;    |slow_clock:comb_14|                                                                                                                 ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|slow_clock:comb_14                                                                                                                                                                                                                                                                                                                         ; slow_clock                        ; work         ;
 ;    |virtual_IO_8_bit:vio_a_reg|                                                                                                         ; 41 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg                                                                                                                                                                                                                                                                                                                 ; virtual_IO_8_bit                  ; work         ;
 ;       |altsource_probe_top:in_system_sources_probes_0|                                                                                  ; 41 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0                                                                                                                                                                                                                                                                  ; altsource_probe_top               ; work         ;
 ;          |altsource_probe:issp_impl|                                                                                                    ; 41 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl                                                                                                                                                                                                                                        ; altsource_probe                   ; work         ;
@@ -596,8 +599,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1154  ;
-; Number of registers using Synchronous Clear  ; 95    ;
+; Total registers                              ; 1174  ;
+; Number of registers using Synchronous Clear  ; 114   ;
 ; Number of registers using Synchronous Load   ; 139   ;
 ; Number of registers using Asynchronous Clear ; 419   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -645,53 +648,53 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[7]                                                                                                                                                                                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sap_output_register:sap_output_register_inst0|r[7]                                                                                                                                                                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[4]                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sap_output_register:sap_output_register_inst0|r[3]                                                                                                                                                                                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]   ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                        ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[2]                                                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                         ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                         ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[2]                                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]              ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]             ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]      ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]      ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]          ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[5]                                                                                                                                                                                                                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[2]                                                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[2]                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_program_counter:sap_program_counter_inst0|r[0]                                                                                                                                                                                                                            ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]             ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]          ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[1]                                                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[7]                                                                                                                                                                                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[3]                                                                                                                                                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_program_counter:sap_program_counter_inst0|r[2]                                                                                                                                                                                                                            ;
 ; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[6]                                                                                                                                                                                                                                              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|sap_control_logic:sap_control_logic_inst0|MICRO_STATE                                                                                                                                                                                                                         ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux28                                                                                                                                                                                                                               ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux26                                                                                                                                                                                                                               ;
 ; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux24                                                                                                                                                                                                                               ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux12                                                                                                                                                                                                                               ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux20                                                                                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -911,6 +914,16 @@ Encoding Type:  One-Hot
 +-----------------+-------+------+----------------------+
 ; MESSAGE_DISABLE ; 13410 ; -    ; -                    ;
 +-----------------+-------+------+----------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slow_clock:comb_14 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; SIZE           ; 18    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------+
@@ -2207,29 +2220,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 282                         ;
-; cycloneiii_ff         ; 516                         ;
+; cycloneiii_ff         ; 536                         ;
 ;     CLR               ; 29                          ;
 ;     CLR SCLR          ; 32                          ;
 ;     ENA               ; 263                         ;
 ;     ENA CLR           ; 17                          ;
 ;     ENA CLR SLD       ; 72                          ;
 ;     ENA SCLR          ; 9                           ;
+;     SCLR              ; 19                          ;
 ;     SCLR SLD          ; 4                           ;
-;     plain             ; 90                          ;
-; cycloneiii_lcell_comb ; 1086                        ;
-;     arith             ; 114                         ;
+;     plain             ; 91                          ;
+; cycloneiii_lcell_comb ; 1107                        ;
+;     arith             ; 132                         ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 52                          ;
+;         2 data inputs ; 70                          ;
 ;         3 data inputs ; 57                          ;
-;     normal            ; 972                         ;
+;     normal            ; 975                         ;
 ;         0 data inputs ; 16                          ;
-;         1 data inputs ; 43                          ;
-;         2 data inputs ; 137                         ;
-;         3 data inputs ; 234                         ;
-;         4 data inputs ; 542                         ;
+;         1 data inputs ; 45                          ;
+;         2 data inputs ; 140                         ;
+;         3 data inputs ; 231                         ;
+;         4 data inputs ; 543                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 17.40                       ;
-; Average LUT depth     ; 5.26                        ;
+; Average LUT depth     ; 5.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2238,7 +2252,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -2316,7 +2330,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Apr  4 07:17:58 2023
+    Info: Processing started: Tue Apr  4 07:34:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2328,6 +2342,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/seg
     Info (12023): Found entity 1: seg_scan File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_scan.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file src/seg_decoder.v
     Info (12023): Found entity 1: seg_decoder File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/seg_decoder.v Line: 29
+Warning (10261): Verilog HDL Event Control warning at top.v(15): Event Control contains a complex event expression File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
     Info (12023): Found entity 1: top File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sap_register.v
@@ -2350,17 +2365,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/sap
     Info (12023): Found entity 1: sap_output_register File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/sap_control_logic.v
     Info (12023): Found entity 1: sap_control_logic File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/slow_clock.v
+    Info (12023): Found entity 1: slow_clock File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/slow_clock.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at top.v(86): instance has no name File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 86
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10858): Verilog HDL warning at top.v(25): object w_enable used but never assigned File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
-Warning (10030): Net "w_enable" at top.v(25) has no driver or initial value, using a default initial value '0' File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
-Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 80
-Info (12128): Elaborating entity "sap_alu" for hierarchy "sap_alu:sap_alu_inst" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 106
-Info (12128): Elaborating entity "sap_ram" for hierarchy "sap_ram:sap_ram_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 117
-Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 144
-Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 150
+Warning (10858): Verilog HDL warning at top.v(30): object w_enable used but never assigned File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 30
+Warning (10030): Net "w_enable" at top.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 30
+Info (12128): Elaborating entity "slow_clock" for hierarchy "slow_clock:comb_14" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 86
+Warning (10230): Verilog HDL assignment warning at slow_clock.v(22): truncated value with size 32 to match size of target (19) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/slow_clock.v Line: 22
+Info (12128): Elaborating entity "seg_decoder" for hierarchy "seg_decoder:seg_decoder_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 95
+Info (12128): Elaborating entity "sap_alu" for hierarchy "sap_alu:sap_alu_inst" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 121
+Info (12128): Elaborating entity "sap_ram" for hierarchy "sap_ram:sap_ram_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 132
+Info (12128): Elaborating entity "seg_scan" for hierarchy "seg_scan:seg_scan_m0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 159
+Info (12128): Elaborating entity "clock_pulser" for hierarchy "clock_pulser:clock_pulser_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 165
 Info (12128): Elaborating entity "debounce" for hierarchy "clock_pulser:clock_pulser_inst0|debounce:debounce_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 22
 Info (12128): Elaborating entity "one_shot" for hierarchy "clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/clock_pulser.v Line: 28
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_w_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 156
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_w_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 171
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2381,7 +2401,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy 
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 756
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 162
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 177
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2399,7 +2419,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control|altsource_
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_a_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 168
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_a_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 183
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2417,7 +2437,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_a_reg|altsource_pr
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_b_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 174
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_b_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 189
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2435,7 +2455,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_b_reg|altsource_pr
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_memd" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 180
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_memd" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 195
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2453,7 +2473,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_memd|altsource_pro
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_addr_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 185
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_addr_reg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 200
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2471,7 +2491,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_addr_reg|altsource
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_ireg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 190
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_ireg" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2489,7 +2509,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_ireg|altsource_pro
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_program_counter" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 195
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_program_counter" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 210
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2507,7 +2527,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_program_counter|al
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_output_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 200
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_output_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 215
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2525,7 +2545,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_output_register|al
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 211
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_bus" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 226
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2543,7 +2563,7 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control_bus|altsou
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_logic" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 216
+Info (12128): Elaborating entity "virtual_IO_8_bit" for hierarchy "virtual_IO_8_bit:vio_control_logic" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 231
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/virtual_IO_8_bit.v Line: 23
 Info (12128): Elaborating entity "altsource_probe" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
 Info (12130): Elaborated megafunction instantiation "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/virtual_IO_8_bit/synthesis/submodules/altsource_probe_top.v Line: 55
@@ -2561,16 +2581,16 @@ Info (12133): Instantiated megafunction "virtual_IO_8_bit:vio_control_logic|alts
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 205
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 564
-Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:a_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 225
-Info (12128): Elaborating entity "sap_instruction_register" for hierarchy "sap_instruction_register:sap_instruction_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 244
-Info (12128): Elaborating entity "sap_program_counter" for hierarchy "sap_program_counter:sap_program_counter_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 254
+Info (12128): Elaborating entity "sap_register" for hierarchy "sap_register:a_register" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 240
+Info (12128): Elaborating entity "sap_instruction_register" for hierarchy "sap_instruction_register:sap_instruction_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 259
+Info (12128): Elaborating entity "sap_program_counter" for hierarchy "sap_program_counter:sap_program_counter_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 269
 Warning (10230): Verilog HDL assignment warning at sap_program_counter.v(36): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_program_counter.v Line: 36
-Info (12128): Elaborating entity "sap_output_register" for hierarchy "sap_output_register:sap_output_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 263
+Info (12128): Elaborating entity "sap_output_register" for hierarchy "sap_output_register:sap_output_register_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 278
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(12): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 12
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(13): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 13
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(14): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(15): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
-Info (12128): Elaborating entity "sap_control_logic" for hierarchy "sap_control_logic:sap_control_logic_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 307
+Info (12128): Elaborating entity "sap_control_logic" for hierarchy "sap_control_logic:sap_control_logic_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 322
 Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(129): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 129
 Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(142): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 142
 Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(155): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 155
@@ -2600,7 +2620,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.04.04.07:18:31 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.04.04.07:34:58 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2623,6 +2643,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/ip/sldd6939449/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer button File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 88
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "sap_ram:sap_ram_inst0|memory" is uninferred due to asynchronous read logic File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_ram.v Line: 24
 Info (278001): Inferred 6 megafunctions from design logic
@@ -2693,21 +2715,21 @@ Info (12133): Instantiated megafunction "sap_output_register:sap_output_register
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Warning (12241): 24 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[5]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[5]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[5]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[6]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[6]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[6]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[7]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[7]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[7]" to the node "seg_decoder:seg_decoder_m6|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[0]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[0]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[0]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[1]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[1]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[1]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[2]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[2]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[2]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[3]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 20
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "w_bus[3]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 25
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "sap_register:b_register|DATA[3]" to the node "seg_decoder:seg_decoder_m7|WideOr6" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_register.v Line: 4
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "sap_instruction_register:sap_instruction_register_inst0|DATA[4]" to the node "seg_decoder:seg_decoder_m6|WideOr6" into an OR gate File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_instruction_register.v Line: 4
@@ -2731,18 +2753,16 @@ Info (144001): Generated suppressed messages file C:/Users/loz/Development/8bitF
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 60 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "key3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 6
-Info (21057): Implemented 2236 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2257 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 2180 logic cells
+    Info (21061): Implemented 2201 logic cells
     Info (21064): Implemented 26 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Tue Apr  4 07:18:54 2023
-    Info: Elapsed time: 00:00:56
-    Info: Total CPU time (on all processors): 00:01:38
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Tue Apr  4 07:35:23 2023
+    Info: Elapsed time: 00:00:58
+    Info: Total CPU time (on all processors): 00:01:39
 
 
 +------------------------------------------+

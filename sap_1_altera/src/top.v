@@ -11,6 +11,11 @@ module top(
 
 localparam PROGRAM="programs/example2.txt";
 
+reg manual = 0;  //allow sitching manual/auto stepping
+always @(posedge ~key3) begin
+	manual <= ~manual;
+end
+
 wire one_shot_clock;
 //wire reset = ~rst_n;
 //wire latch = ~key2;
@@ -26,7 +31,7 @@ wire w_enable; // = control[0];
 wire alu_enable; // = control[1];
 wire alu_sub; // = control[2];
 wire reset = ~key2 | control[3];
-wire button = ~key1 | control[4]; //Clock
+
 
 
 wire [7:0] mem_control;
@@ -71,6 +76,16 @@ assign led[0] = alu_C;
 assign led[1] = alu_Z;
 assign led[2] = 0;
 assign led[3] = 0;
+
+//Clock
+wire auto_clock;
+slow_clock #(.SIZE(18))(
+	.clk(clk),
+	.reset(reset),
+	.slow(auto_clock)
+);
+
+wire button = manual ? (~key1 | control[4]) : auto_clock; //Clock
 
 //Output Display
 wire[6:0] seg_data_0;
