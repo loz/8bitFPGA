@@ -38,7 +38,7 @@ always @(posedge clk) begin
 	end
 end
 
-assign DATA = (output_enable) ? {4'b0000,r} : 8'bZZZZZZZZ;
+assign DATA = (output_enable) ? {4'bzzzz,r} : 8'bZZZZZZZZ;
 assign REG_OUT = r;
 
 endmodule

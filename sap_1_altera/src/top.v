@@ -9,9 +9,9 @@ module top(
 	output [3:0] led
 );
 
-localparam PROGRAM="programs/example3.txt";
+localparam PROGRAM="programs/fibonaci.txt";
 
-reg manual = 0;  //allow sitching manual/auto stepping
+reg manual = 1;  //allow sitching manual/auto stepping
 always @(posedge ~key3) begin
 	manual <= ~manual;
 end

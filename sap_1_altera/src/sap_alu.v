@@ -21,7 +21,7 @@ sap_alu sap_alu_inst0(
 */
 
 wire [8:0] alu_plus = a_reg_data + b_reg_data;
-wire [8:0] alu_minus = a_reg_data - b_reg_data;
+wire [8:0] alu_minus = {1'b1,a_reg_data} - b_reg_data; //To Cause CARRY
 
 wire [7:0]  alu_result;
 
