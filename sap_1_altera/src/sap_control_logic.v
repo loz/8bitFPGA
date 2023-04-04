@@ -16,6 +16,7 @@ module sap_control_logic(
 	output output_latch,
 	output counter_enable,
 	output counter_out,
+	output jump,
 	output [15:0] CBUS_OUT
 );
 
@@ -37,7 +38,8 @@ sap_control_logic sap_control_logic_inst0(
 	.b_reg_latch(),
 	.output_latch(),
 	.counter_enable(),
-	.counter_out()
+	.counter_out(),
+	.jump()
 );
 */
 
@@ -50,11 +52,12 @@ localparam II   = 16'b0000_0100_0000_0000; //Instruction Out
 localparam AI   = 16'b0000_0010_0000_0000; //A Reg In
 localparam AO   = 16'b0000_0001_0000_0000; //A Reg Out
 localparam SMO  = 16'b0000_0000_1000_0000; //ALU Out
-localparam SUB  = 16'b0000_0000_0100_0000; //ALU Sub
+localparam SU   = 16'b0000_0000_0100_0000; //ALU Sub
 localparam BI   = 16'b0000_0000_0010_0000; //B Reg In
 localparam OI   = 16'b0000_0000_0001_0000; //Output Reg In
 localparam CE   = 16'b0000_0000_0000_1000; //Counter Enable
 localparam CO   = 16'b0000_0000_0000_0100; //Counter Out
+localparam JE   = 16'b0000_0000_0000_0010; //Jump Enable
 
 reg [15:0] c_bus;
 assign halt = c_bus[15];
@@ -71,6 +74,7 @@ assign b_reg_latch = c_bus[05];
 assign output_latch = c_bus[04];
 assign counter_enable = c_bus[03];
 assign counter_out = c_bus[02];
+assign jump = c_bus[01];
 
 reg HALTED;
 reg [1:0] MICRO_STATE;
@@ -84,6 +88,10 @@ reg [3:0] MICRO_INSTR;
 localparam NOP = 4'b0000;
 localparam LDA = 4'b0001;
 localparam ADD = 4'b0010;
+localparam SUB = 4'b0011;
+localparam STA = 4'b0100;
+localparam LDI = 4'b0101;
+localparam JMP = 4'b0110;
 localparam OUT = 4'b1110;
 localparam HLT = 4'b1111;
 
@@ -133,6 +141,48 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 						endcase
 						MICRO_INSTR <= MICRO_INSTR + 1;
 					end
+					SUB: begin
+						case(MICRO_INSTR)
+							0:
+								c_bus <= IO | MI;
+							1:
+								c_bus <= RO | BI;
+							2: begin
+								c_bus <= SMO | SU | AI;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end
+					STA: begin
+						case(MICRO_INSTR)
+							0:
+								c_bus <= IO | MI;
+							1: begin
+								c_bus <= RI | AO;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end
+					LDI: begin
+						case(MICRO_INSTR)
+							0: begin
+								c_bus <= IO | AI;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end
+					JMP: begin
+						case(MICRO_INSTR)
+							0: begin
+								c_bus <= IO | JE;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end					
 					OUT: begin
 						case(MICRO_INSTR)
 							0: begin

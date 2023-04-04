@@ -36,7 +36,7 @@ always @(posedge clk) begin
 	end
 end
 
-assign DATA = (enable) ? {4'bZZZZ,r[3:0]} : 8'bZZZZZZZZ; //Only sending 4LSB out
+assign DATA = (enable) ? {4'b0000,r[3:0]} : 8'bZZZZZZZZ; //Only sending 4LSB out
 assign INSTRUCTION = r[7:4]; //Always sending the instruction to the I OUT
 assign REG_OUT = r;
 

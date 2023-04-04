@@ -9,10 +9,10 @@
 
  function [15:0] driveBCD(input integer val);
 	begin
-      driveBCD[3:0] = val % 10;
-      driveBCD[7:4] = (val / 10) % 10;
-      driveBCD[11:8] = (val / 100) % 10;
-      driveBCD[15:12] = (val / 1000) % 10;
+      driveBCD[3:0] = (val % 10);
+      driveBCD[7:4] = ((val / 10) % 10);
+      driveBCD[11:8] = ((val / 100) % 10);
+      driveBCD[15:12] = ((val / 1000) % 10);
 	end
  endfunction
 

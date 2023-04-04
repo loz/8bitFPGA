@@ -9,6 +9,8 @@ module top(
 	output [3:0] led
 );
 
+localparam PROGRAM="programs/example2.txt";
+
 wire one_shot_clock;
 //wire reset = ~rst_n;
 //wire latch = ~key2;
@@ -104,7 +106,7 @@ sap_alu sap_alu_inst(
 );
 
 //RAM
-sap_ram #(.MEM_INIT_FILE("programs/example1.txt")) sap_ram_inst0(
+sap_ram #(.MEM_INIT_FILE(PROGRAM)) sap_ram_inst0(
 	.clk(one_shot_clock),
 	.write_enable(mem_write),
 	.output_enable(mem_out),
@@ -300,6 +302,7 @@ sap_control_logic sap_control_logic_inst0(
 	.output_latch(o_latch),
 	.counter_enable(p_counter_enable),
 	.counter_out(p_output_enable),
+	.jump(p_jump),
 	.CBUS_OUT({CMSB,CLSB})
 );
 
