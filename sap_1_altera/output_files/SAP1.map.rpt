@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAP1
-Mon Apr  3 18:46:35 2023
+Tue Apr  4 06:56:02 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -142,15 +142,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr  3 18:46:35 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr  4 06:56:02 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; SAP1                                           ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 1,858                                          ;
-;     Total combinational functions  ; 1,586                                          ;
-;     Dedicated logic registers      ; 1,021                                          ;
-; Total registers                    ; 1021                                           ;
+; Total logic elements               ; 1,861                                          ;
+;     Total combinational functions  ; 1,589                                          ;
+;     Dedicated logic registers      ; 1,022                                          ;
+; Total registers                    ; 1022                                           ;
 ; Total pins                         ; 25                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 3,328                                          ;
@@ -259,7 +259,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -364,20 +365,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,858                    ;
+; Estimated Total logic elements              ; 1,861                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 1586                     ;
+; Total combinational functions               ; 1589                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 727                      ;
-;     -- 3 input functions                    ; 520                      ;
+;     -- 4 input functions                    ; 728                      ;
+;     -- 3 input functions                    ; 522                      ;
 ;     -- <=2 input functions                  ; 339                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 1397                     ;
+;     -- normal mode                          ; 1400                     ;
 ;     -- arithmetic mode                      ; 189                      ;
 ;                                             ;                          ;
-; Total registers                             ; 1021                     ;
-;     -- Dedicated logic registers            ; 1021                     ;
+; Total registers                             ; 1022                     ;
+;     -- Dedicated logic registers            ; 1022                     ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 25                       ;
@@ -387,7 +388,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 754                      ;
-; Total fan-out                               ; 8975                     ;
+; Total fan-out                               ; 8990                     ;
 ; Average fan-out                             ; 3.33                     ;
 +---------------------------------------------+--------------------------+
 
@@ -397,11 +398,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 1586 (4)            ; 1021 (0)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 1589 (4)            ; 1022 (0)                  ; 3328        ; 0            ; 0       ; 0         ; 25   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |clock_pulser:clock_pulser_inst0|                                                                                                    ; 0 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0                                                                                                                                                                                                                                                                                                            ; clock_pulser                      ; work         ;
 ;       |one_shot:one_shot_inst0|                                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clock_pulser:clock_pulser_inst0|one_shot:one_shot_inst0                                                                                                                                                                                                                                                                                    ; one_shot                          ; work         ;
 ;    |sap_alu:sap_alu_inst|                                                                                                               ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_alu:sap_alu_inst                                                                                                                                                                                                                                                                                                                       ; sap_alu                           ; work         ;
-;    |sap_control_logic:sap_control_logic_inst0|                                                                                          ; 63 (63)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_control_logic:sap_control_logic_inst0                                                                                                                                                                                                                                                                                                  ; sap_control_logic                 ; work         ;
+;    |sap_control_logic:sap_control_logic_inst0|                                                                                          ; 66 (66)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_control_logic:sap_control_logic_inst0                                                                                                                                                                                                                                                                                                  ; sap_control_logic                 ; work         ;
 ;    |sap_instruction_register:sap_instruction_register_inst0|                                                                            ; 1 (1)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_instruction_register:sap_instruction_register_inst0                                                                                                                                                                                                                                                                                    ; sap_instruction_register          ; work         ;
 ;    |sap_output_register:sap_output_register_inst0|                                                                                      ; 193 (1)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0                                                                                                                                                                                                                                                                                              ; sap_output_register               ; work         ;
 ;       |lpm_divide:Div0|                                                                                                                 ; 68 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sap_output_register:sap_output_register_inst0|lpm_divide:Div0                                                                                                                                                                                                                                                                              ; lpm_divide                        ; work         ;
@@ -724,12 +725,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1021  ;
+; Total registers                              ; 1022  ;
 ; Number of registers using Synchronous Clear  ; 91    ;
 ; Number of registers using Synchronous Load   ; 130   ;
 ; Number of registers using Asynchronous Clear ; 419   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 612   ;
+; Number of registers using Clock Enable       ; 615   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -773,49 +774,50 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sap_output_register:sap_output_register_inst0|r[4]                                                                                                                                                                                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[6]                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|sap_output_register:sap_output_register_inst0|r[5]                                                                                                                                                                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[7]                                                                                                                                                                                                                  ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0]            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[0] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[1]   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[2]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|word_counter[3]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                        ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[5]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[3]                                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[6]                                              ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[1]                                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[0]                                                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[4]                                                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]              ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]                ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[2]                                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|shift_reg[7]                                                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_w_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]              ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_a_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_b_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]                ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]             ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_memd|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_addr_reg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[3]             ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_ireg|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_program_counter|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]      ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_output_register|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]      ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |top|virtual_IO_8_bit:vio_control_bus|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[1]          ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[0]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[7]                                                                                                                                                                                                                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[7]                                                                                                                                                                                                                                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[3]                                                                                                                                                                                                                  ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[5]                                                                                                                                                                                                                                              ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux27                                                                                                                                                                                                                               ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; Yes        ; |top|virtual_IO_8_bit:vio_control_logic|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\equal_width_gen:equal_width_inst|sld_rom_sr:\instance_id_gen:rom_info_inst|WORD_SR[2]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:b_register|r[4]                                                                                                                                                                                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|sap_register:a_register|r[1]                                                                                                                                                                                                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|sap_instruction_register:sap_instruction_register_inst0|r[1]                                                                                                                                                                                                                  ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|seg_scan:seg_scan_m0|seg_data[0]                                                                                                                                                                                                                                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|sap_control_logic:sap_control_logic_inst0|MICRO_STATE                                                                                                                                                                                                                         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 4 LEs                ; 36 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux25                                                                                                                                                                                                                               ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux23                                                                                                                                                                                                                               ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 2 LEs                ; 22 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux11                                                                                                                                                                                                                               ;
 ; 32:1               ; 2 bits    ; 42 LEs        ; 8 LEs                ; 34 LEs                 ; No         ; |top|sap_control_logic:sap_control_logic_inst0|Mux9                                                                                                                                                                                                                                ;
@@ -2334,26 +2336,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 282                         ;
-; cycloneiii_ff         ; 383                         ;
+; cycloneiii_ff         ; 384                         ;
 ;     CLR               ; 29                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 132                         ;
+;     ENA               ; 135                         ;
 ;     ENA CLR           ; 22                          ;
 ;     ENA CLR SLD       ; 67                          ;
 ;     ENA SCLR          ; 5                           ;
 ;     SCLR              ; 4                           ;
-;     plain             ; 92                          ;
-; cycloneiii_lcell_comb ; 903                         ;
+;     plain             ; 90                          ;
+; cycloneiii_lcell_comb ; 906                         ;
 ;     arith             ; 113                         ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 51                          ;
 ;         3 data inputs ; 57                          ;
-;     normal            ; 790                         ;
+;     normal            ; 793                         ;
 ;         0 data inputs ; 17                          ;
 ;         1 data inputs ; 19                          ;
 ;         2 data inputs ; 122                         ;
-;         3 data inputs ; 208                         ;
-;         4 data inputs ; 424                         ;
+;         3 data inputs ; 210                         ;
+;         4 data inputs ; 425                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 17.40                       ;
 ; Average LUT depth     ; 4.71                        ;
@@ -2443,7 +2445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Apr  3 18:45:44 2023
+    Info: Processing started: Tue Apr  4 06:55:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2698,9 +2700,9 @@ Warning (10230): Verilog HDL assignment warning at sap_output_register.v(13): tr
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(14): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 14
 Warning (10230): Verilog HDL assignment warning at sap_output_register.v(15): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_output_register.v Line: 15
 Info (12128): Elaborating entity "sap_control_logic" for hierarchy "sap_control_logic:sap_control_logic_inst0" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 304
-Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(113): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 113
-Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(126): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 126
-Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(135): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 135
+Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(121): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 121
+Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(134): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 134
+Warning (10230): Verilog HDL assignment warning at sap_control_logic.v(143): truncated value with size 32 to match size of target (4) File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/sap_control_logic.v Line: 143
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6524.tdf
     Info (12023): Found entity 1: altsyncram_6524 File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/altsyncram_6524.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ssc.tdf
@@ -2723,7 +2725,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.04.03.18:46:15 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.04.04.06:55:42 Progress: Loading sldd6939449/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2864,16 +2866,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key3" File: C:/Users/loz/Development/8bitFPGA/sap_1_altera/src/top.v Line: 6
-Info (21057): Implemented 1948 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1951 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 1892 logic cells
+    Info (21061): Implemented 1895 logic cells
     Info (21064): Implemented 26 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Mon Apr  3 18:46:35 2023
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:01:32
+    Info: Peak virtual memory: 4888 megabytes
+    Info: Processing ended: Tue Apr  4 06:56:02 2023
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:14
 
 
 +------------------------------------------+

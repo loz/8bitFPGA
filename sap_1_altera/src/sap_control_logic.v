@@ -72,6 +72,7 @@ assign output_latch = c_bus[04];
 assign counter_enable = c_bus[03];
 assign counter_out = c_bus[02];
 
+reg HALTED;
 reg [1:0] MICRO_STATE;
 
 localparam FETCH = 0;
@@ -80,13 +81,18 @@ localparam EXECUTE = 2;
 
 reg [3:0] MICRO_INSTR;
 
+localparam NOP = 4'b0000;
 localparam LDA = 4'b0001;
 localparam ADD = 4'b0010;
 localparam OUT = 4'b1110;
+localparam HLT = 4'b1111;
 
 always @(negedge clk) begin //Logic runs Offset from main clock
 	if (reset) begin
 		MICRO_STATE <= FETCH;
+		HALTED <= 0;
+	end else if (HALTED) begin
+		HALTED <=1; //STAY STOPPED
 	end else begin
 		case(MICRO_STATE)
 			FETCH: begin
@@ -101,6 +107,8 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 			end
 			EXECUTE: begin
 				case(instruction)
+					NOP:
+						MICRO_STATE <= FETCH;
 					LDA: begin
 						case(MICRO_INSTR)
 							0:
@@ -133,7 +141,10 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 							end
 						endcase
 						MICRO_INSTR <= MICRO_INSTR + 1;
-					end					
+					end
+					HLT: begin
+						HALTED <= 1;
+					end
 				endcase
 			end
 		endcase
