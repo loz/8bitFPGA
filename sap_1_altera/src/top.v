@@ -9,7 +9,7 @@ module top(
 	output [3:0] led
 );
 
-localparam PROGRAM="programs/example2.txt";
+localparam PROGRAM="programs/example3.txt";
 
 reg manual = 0;  //allow sitching manual/auto stepping
 always @(posedge ~key3) begin
@@ -71,11 +71,6 @@ wire [7:0] b_reg_out;
 
 wire alu_C;
 wire alu_Z;
-
-assign led[0] = alu_C;
-assign led[1] = alu_Z;
-assign led[2] = 0;
-assign led[3] = 0;
 
 //Clock
 wire auto_clock;
@@ -248,6 +243,22 @@ sap_register b_register(
 	.enable(b_enable)
 );
 
+wire f_latch;
+wire [7:0] f_flags;
+
+sap_flags_register flags_register(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.IN({alu_C, alu_Z, 6'b000000}), //putting in the flags
+	.OUT(f_flags), //Here's where flags go
+	.latch(f_latch),
+);
+
+assign led[0] = f_flags[7];
+assign led[1] = f_flags[6];
+assign led[2] = 0;
+assign led[3] = 0;
+
 sap_instruction_register sap_instruction_register_inst0(
 	.clk(one_shot_clock),
 	.reset(reset),
@@ -303,6 +314,7 @@ sap_control_logic sap_control_logic_inst0(
 	.clk(one_shot_clock),
 	.reset(reset),
 	.instruction(i_instruction),
+	.flags(f_flags),
 	.halt(), //TODO
 	.maddr_latch(addr_write),
 	.ram_latch(mem_write),
@@ -318,6 +330,7 @@ sap_control_logic sap_control_logic_inst0(
 	.counter_enable(p_counter_enable),
 	.counter_out(p_output_enable),
 	.jump(p_jump),
+	.flag_latch(f_latch),
 	.CBUS_OUT({CMSB,CLSB})
 );
 

@@ -2,6 +2,7 @@ module sap_control_logic(
 	input clk,
 	input reset,
 	input [3:0] instruction,
+	input [7:0] flags,
 	output halt,
 	output maddr_latch,
 	output ram_latch,
@@ -17,6 +18,7 @@ module sap_control_logic(
 	output counter_enable,
 	output counter_out,
 	output jump,
+	output flag_latch,
 	output [15:0] CBUS_OUT
 );
 
@@ -25,6 +27,7 @@ sap_control_logic sap_control_logic_inst0(
 	.clk(),
 	.reset(),
 	.instruction(),
+	.flags(),
 	.halt(),
 	.maddr_latch(),
 	.ram_latch(),
@@ -39,7 +42,8 @@ sap_control_logic sap_control_logic_inst0(
 	.output_latch(),
 	.counter_enable(),
 	.counter_out(),
-	.jump()
+	.jump(),
+	.flag_latch()
 );
 */
 
@@ -58,6 +62,10 @@ localparam OI   = 16'b0000_0000_0001_0000; //Output Reg In
 localparam CE   = 16'b0000_0000_0000_1000; //Counter Enable
 localparam CO   = 16'b0000_0000_0000_0100; //Counter Out
 localparam JE   = 16'b0000_0000_0000_0010; //Jump Enable
+localparam FI	 = 16'b0000_0000_0000_0001; //Flag In
+
+localparam FLAG_C = 7;
+localparam FLAG_Z = 6;
 
 reg [15:0] c_bus;
 assign halt = c_bus[15];
@@ -75,6 +83,7 @@ assign output_latch = c_bus[04];
 assign counter_enable = c_bus[03];
 assign counter_out = c_bus[02];
 assign jump = c_bus[01];
+assign flag_latch = c_bus[00];
 
 reg HALTED;
 reg [1:0] MICRO_STATE;
@@ -92,6 +101,8 @@ localparam SUB = 4'b0011;
 localparam STA = 4'b0100;
 localparam LDI = 4'b0101;
 localparam JMP = 4'b0110;
+localparam JC  = 4'b0111;
+localparam JZ  = 4'b1000;
 localparam OUT = 4'b1110;
 localparam HLT = 4'b1111;
 
@@ -135,7 +146,7 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 							1:
 								c_bus <= RO | BI;
 							2: begin
-								c_bus <= SMO | AI;
+								c_bus <= SMO | AI | FI;
 								MICRO_STATE <= FETCH;
 							end
 						endcase
@@ -148,7 +159,7 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 							1:
 								c_bus <= RO | BI;
 							2: begin
-								c_bus <= SMO | SU | AI;
+								c_bus <= SMO | SU | AI | FI;
 								MICRO_STATE <= FETCH;
 							end
 						endcase
@@ -178,6 +189,26 @@ always @(negedge clk) begin //Logic runs Offset from main clock
 						case(MICRO_INSTR)
 							0: begin
 								c_bus <= IO | JE;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end
+					JC: begin
+						case(MICRO_INSTR)
+							0: begin
+								if(flags[FLAG_C])
+									c_bus <= IO | JE;
+								MICRO_STATE <= FETCH;
+							end
+						endcase
+						MICRO_INSTR <= MICRO_INSTR + 1;
+					end
+					JZ: begin
+						case(MICRO_INSTR)
+							0: begin
+								if(flags[FLAG_Z])
+									c_bus <= IO | JE;
 								MICRO_STATE <= FETCH;
 							end
 						endcase
