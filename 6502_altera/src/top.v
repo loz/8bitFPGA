@@ -34,4 +34,37 @@ clock_pulser clock_pulser_inst0(
 	.one_clock_pulse(one_shot_clock)
 );
 
+//6502
+wire [15:0] address_bus;
+wire [7:0] data_in;
+wire [7:0] data_out;
+wire write_enable;
+wire irq = 0;
+wire non_mask_irq = 0;
+wire ready = 1;
+
+cpu cpu_6502(
+	.clk(one_shot_clock),
+	.reset(reset),
+	.AB(address_bus),
+	.DI(data_in),
+	.DO(data_out),
+	.WE(write_enable),
+	.IRQ(irq),
+	.NMI(non_mask_irq),
+	.RDY(ready)
+);
+
+//Probes
+virtual_IO_16 #(.NAME("ADDR")) addr_probe (
+	.source(), // sources.source
+	.probe(address_bus)   //  probes.probe
+);
+
+wire [15:0] p_data_in;
+assign data_in = p_data_in[7:0];
+virtual_IO_16 #(.NAME("DATA")) data_probe (
+	.source(p_data_in), // sources.source
+	.probe({one_shot_clock,write_enable,6'b00_0000,data_out})   //  probes.probe
+);
 endmodule
