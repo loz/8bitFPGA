@@ -6,7 +6,7 @@ module screen_mapper(
 );
 
 	
-	assign mapped_hpos = hpos>>2;
-	assign mapped_vpos = vpos>>2;
+	assign mapped_hpos = hpos[10:2];
+	assign mapped_vpos = vpos[10:2];
 
 endmodule

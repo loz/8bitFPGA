@@ -89,7 +89,7 @@ screen_mapper smap(
 	.mapped_vpos(m_vpos),
 );
 
-test_7segment_top(
+test_numbers_top ttop(
 	.clk(clk),
 	.reset(~rst_n),
 	.display_on(video_de),

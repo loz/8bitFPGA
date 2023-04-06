@@ -9,8 +9,8 @@ module hvsync_generator(clk, reset, hsync, vsync, display_on, hpos, vpos);
   input reset;
   output hsync, vsync;
   output display_on;
-  output reg [11:0] hpos;
-  output reg [11:0] vpos;
+  output [11:0] hpos;
+  output [11:0] vpos;
  
 //video timing parameter definition
 `ifdef  VIDEO_1280_720
@@ -119,6 +119,10 @@ reg hs_reg_d0;                   //delay 1 clock of 'hs_reg'
 reg vs_reg_d0;                   //delay 1 clock of 'vs_reg'
 reg[11:0] h_cnt;                 //horizontal counter
 reg[11:0] v_cnt;                 //vertical counter
+reg [11:0] hpos_i;
+reg [11:0] vpos_i;
+reg [11:0] hpos_d0;
+reg [11:0] vpos_d0;
 reg h_active;                    //horizontal video active
 reg v_active;                    //vertical video active
 //wire video_active;               //video active(horizontal active and vertical active)
@@ -128,6 +132,8 @@ assign vsync = vs_reg_d0;
 assign video_active = h_active & v_active;
 assign de = video_active_d0;
 assign display_on = video_active_d0;
+assign vpos = vpos_d0;
+assign hpos = hpos_d0;
 
 always@(posedge clk or posedge reset)
 begin
@@ -158,30 +164,38 @@ end
 always@(posedge clk or posedge reset)
 begin
 	if(reset == 1'b1) begin
-		hpos <= 12'd0;
-	end else if(h_cnt >= H_FP + H_SYNC + H_BP - 1)//horizontal video active
-		hpos <= h_cnt - (H_FP[11:0] + H_SYNC[11:0] + H_BP[11:0] - 12'd1);
-	else
-		hpos <= hpos;
+		hpos_i <= 12'd0;
+		hpos_d0 <= hpos_i;
+	end else if(h_cnt >= H_FP + H_SYNC + H_BP - 1) begin //horizontal video active
+		hpos_i <= h_cnt - (H_FP[11:0] + H_SYNC[11:0] + H_BP[11:0] - 12'd1);
+		hpos_d0 <= hpos_i;
+	end else begin
+		hpos_i <= hpos_i;
+		hpos_d0 <= hpos_i;
+	end
 end
 
 always@(posedge clk or posedge reset)
 begin
 	if(reset == 1'b1) begin
 		v_cnt <= 12'd0;
-		vpos <= 12'd0;
+		vpos_i <= 12'd0;
+		vpos_d0 <= vpos_i;
 	end
 	else if(h_cnt == H_FP  - 1)//horizontal sync time
 		if(v_cnt == V_TOTAL - 1) begin//vertical counter maximum value
 			v_cnt <= 12'd0;
-			vpos <= 12'd0;
+			vpos_i <= 12'd0;
+			vpos_d0 <= vpos_i;
 		end else begin
 			v_cnt <= v_cnt + 12'd1;
-			vpos <= v_cnt + 12'd1;
+			vpos_i <= v_cnt + 12'd1;
+			vpos_d0 <= vpos_i;
 		end
 	else begin
 		v_cnt <= v_cnt;
-		vpos <= vpos;
+		vpos_i <= vpos_i;
+		vpos_d0 <= vpos_i;
 	end
 end
 
