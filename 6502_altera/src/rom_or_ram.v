@@ -28,7 +28,7 @@ initial begin
   end
   if (RESET_VECTOR) begin
 	 //memory[15'h0080] = 8'h80;
-	 memory[15'h1FFC] = 8'h01;
+	 memory[15'h1FFC] = 8'h00;
 	 memory[15'h1FFD] = 8'h80;
   end
 end
