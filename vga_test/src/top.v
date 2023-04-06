@@ -70,15 +70,32 @@ hvsync_generator hsync_gen(
 	.vpos(vpos)
 );	
 
-test_pattern test_hsync(
-	.clk(video_clk),
-	.reset(~rst_n),
-	.display_on(video_de),
+wire [2:0] rgb;
+
+rgb_mapper rmap(
+	.rgb(rgb),
 	.rgb_r(video_r),
 	.rgb_g(video_g),
-	.rgb_b(video_b),
+	.rgb_b(video_b)
+);
+
+wire [8:0] m_hpos;
+wire [8:0] m_vpos;
+
+screen_mapper smap(
 	.hpos(hpos),
-	.vpos(vpos)
+	.vpos(vpos),
+	.mapped_hpos(m_hpos),
+	.mapped_vpos(m_vpos),
+);
+
+test_7segment_top(
+	.clk(clk),
+	.reset(~rst_n),
+	.display_on(video_de),
+	.hpos(m_hpos),
+	.vpos(m_vpos),
+	.rgb(rgb)
 );
 
 endmodule
