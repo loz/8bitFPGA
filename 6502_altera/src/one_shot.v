@@ -14,7 +14,7 @@ one_shot one_shot_inst0(
 
 reg q;
 
-always @(posedge button or posedge pulse) begin
+always @(posedge button) begin
 	if (pulse) begin
 		q <= 0;
 	end else begin

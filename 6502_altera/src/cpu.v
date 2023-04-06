@@ -1,24 +1,31 @@
+
+/* verilator lint_off CASEX */
+/* verilator lint_off CASEINCOMPLETE */
+/* verilator lint_off CASEOVERLAP */
+/* verilator lint_off SYNCASYNCNET */
+
 /*
  * verilog model of 6502 CPU.
  *
  * (C) Arlet Ottens, <arlet@c-scape.nl>
  *
+ * https://github.com/Arlet/verilog-6502/
+ *
  * Feel free to use this code in any project (commercial or not), as long as you
  * keep this message, and the copyright notice. This code is provided "as is", 
  * without any warranties of any kind. 
  * 
- */
-
-/*
  * Note that not all 6502 interface signals are supported (yet).  The goal
  * is to create an Acorn Atom model, and the Atom didn't use all signals on
  * the main board.
  *
  * The data bus is implemented as separate read/write buses. Combine them
  * on the output pads if external memory is required.
+ *
+ * Also see: https://github.com/sehugg/mango_one
  */
 
-module cpu( clk, reset, AB, DI, DO, WE, IRQ, NMI, RDY );
+module cpu6502( clk, reset, AB, DI, DO, WE, IRQ, NMI, RDY );
 
 input clk;              // CPU clock 
 input reset;            // reset signal
@@ -311,7 +318,7 @@ always @*
 
         BRA2:           PC_temp = { ADD, PCL };
 
-        BRK2:           PC_temp =      res ? 16'hfffc : 
+        BRK2:           PC_temp =      res ? 16'h9ffc: //Bodge for smaller ROM 16'hfffc : 
                                   NMI_edge ? 16'hfffa : 16'hfffe;
 
         default:        PC_temp = PC;
@@ -348,7 +355,7 @@ always @*
  */
 always @(posedge clk) 
     if( RDY )
-        PC <= PC_temp + PC_inc;
+      PC <= PC_temp + {15'b0, PC_inc};
 
 /*
  * Address Generator 
@@ -595,7 +602,7 @@ always @*
         REG :   alu_op = op; 
 
         DECODE,
-        ABS1:   alu_op = 1'bx;
+        ABS1:   alu_op = 4'bx;
 
         PUSH1,
         BRK0,
@@ -836,7 +843,7 @@ always @(posedge clk )
  * time to read the IR again before the next decode.
  */
 
-always @(posedge clk )
+  always @(posedge clk )
     if( reset )
         IRHOLD_valid <= 0;
     else if( RDY ) begin
@@ -855,6 +862,7 @@ always @(posedge clk )
         DIHOLD <= DI;
 
 assign DIMUX = ~RDY ? DIHOLD : DI;
+
 
 /*
  * Microcode state machine
@@ -1171,7 +1179,6 @@ always @(posedge clk )
 
                 default:        bit_ins <= 0; 
         endcase
-
 /*
  * special instructions
  */
@@ -1217,4 +1224,147 @@ always @(posedge clk )
     else if( NMI & ~NMI_1 )
         NMI_edge <= 1;
 
+endmodule
+
+/*
+ * ALU.
+ *
+ * AI and BI are 8 bit inputs. Result in OUT.
+ * CI is Carry In.
+ * CO is Carry Out.
+ *
+ * op[3:0] is defined as follows:
+ *
+ * 0011   AI + BI
+ * 0111   AI - BI
+ * 1011   AI + AI
+ * 1100   AI | BI
+ * 1101   AI & BI
+ * 1110   AI ^ BI
+ * 1111   AI
+ *
+ */
+
+module ALU( clk, op, right, AI, BI, CI, CO, BCD, OUT, V, Z, N, HC, RDY );
+	input clk;
+	input right;
+	input [3:0] op;		// operation
+	input [7:0] AI;
+	input [7:0] BI;
+	input CI;
+	input BCD;		// BCD style carry
+	output [7:0] OUT;
+	output CO;
+	output V;
+	output Z;
+	output N;
+	output HC;
+	input RDY;
+
+reg [7:0] OUT;
+reg CO;
+wire V;
+wire Z;
+reg N;
+reg HC;
+
+reg AI7;
+reg BI7;
+reg [8:0] temp_logic;
+reg [7:0] temp_BI;
+reg [4:0] temp_l;
+reg [4:0] temp_h;
+wire [8:0] temp = { temp_h, temp_l[3:0] };
+wire adder_CI = (right | (op[3:2] == 2'b11)) ? 0 : CI;
+
+// calculate the logic operations. The 'case' can be done in 1 LUT per
+// bit. The 'right' shift is a simple mux that can be implemented by
+// F5MUX.
+always @*  begin
+	case( op[1:0] )
+          2'b00: temp_logic = {1'b0, AI | BI};
+          2'b01: temp_logic = {1'b0, AI & BI};
+          2'b10: temp_logic = {1'b0, AI ^ BI};
+          2'b11: temp_logic = {1'b0, AI};
+	endcase
+
+	if( right )
+	    temp_logic = { AI[0], CI, AI[7:1] };
+end
+
+// Add logic result to BI input. This only makes sense when logic = AI.
+// This stage can be done in 1 LUT per bit, using carry chain logic.
+always @* begin
+	case( op[3:2] )
+	    2'b00: temp_BI = BI;	// A+B
+	    2'b01: temp_BI = ~BI;	// A-B
+            2'b10: temp_BI = temp_logic[7:0];	// A+A
+	    2'b11: temp_BI = 0;		// A+0
+	endcase	
+end
+
+// HC9 is the half carry bit when doing BCD add
+wire HC9 = BCD & (temp_l[3:1] >= 3'd5);
+
+// CO9 is the carry-out bit when doing BCD add
+wire CO9 = BCD & (temp_h[3:1] >= 3'd5);
+
+// combined half carry bit
+wire temp_HC = temp_l[4] | HC9;
+
+// perform the addition as 2 separate nibble, so we get
+// access to the half carry flag
+always @* begin
+  temp_l = temp_logic[3:0] + temp_BI[3:0] + {4'b0,adder_CI};
+  temp_h = temp_logic[8:4] + temp_BI[7:4] + {4'b0,temp_HC};
+end
+
+// calculate the flags 
+always @(posedge clk)
+    if( RDY ) begin
+	AI7 <= AI[7];
+	BI7 <= temp_BI[7];
+	OUT <= temp[7:0];
+	CO  <= temp[8] | CO9;
+	N   <= temp[7];
+	HC  <= temp_HC;
+    end
+
+assign V = AI7 ^ BI7 ^ CO ^ N;
+assign Z = ~|OUT;
+
+endmodule
+
+// test module
+module cpu6502_test_top(clk, reset, AB, DI, DO, WE);
+input clk,reset;
+output reg [15:0] AB;   // address bus
+output reg [7:0] DI;         // data in, read bus
+output wire [7:0] DO;        // data out, write bus
+output wire WE;              // write enable
+wire IRQ=0;              // interrupt request
+wire NMI=0;              // non-maskable interrupt request
+wire RDY=1;              // Ready signal. Pauses CPU when RDY=0 
+
+  cpu6502 cpu( clk, reset, AB, DI, DO, WE, IRQ, NMI, RDY );
+
+  always @(posedge clk)
+    begin
+      DI <= rom[AB[3:0]];
+    end
+  
+  reg [7:0] rom[0:15];
+  //        LDY #$13
+  // .loop: DEY
+  //        BNE .loop
+  //        BRK
+  initial begin
+    rom[0] = 8'ha0;
+    rom[1] = 8'h13;
+    rom[2] = 8'h88;
+    rom[3] = 8'hd0;
+    rom[4] = 8'hfd;
+    rom[5] = 8'h00;
+  end
+  
 endmodule
