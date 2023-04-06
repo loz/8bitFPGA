@@ -7,13 +7,13 @@ module test_pattern(
 	input clk,
 	input reset,
 	input display_on,
-	output reg [7:0] rgb_r,
-	output reg [7:0] rgb_g,
-	output reg [7:0] rgb_b,
+	output [7:0] rgb_r,
+	output [7:0] rgb_g,
+	output [7:0] rgb_b,
 	input [11:0] hpos,
 	input [11:0] vpos
 );
-
+/*
 reg r;
 reg g;
 reg b;
@@ -28,6 +28,15 @@ begin
 	rgb_g <= {g,g,g,g,g,g,g,g};
 	rgb_b <= {b,b,b,b,b,b,b,b};
 end
+*/
+
+	wire r = display_on & (((hpos&7) == 0) | ((vpos&7)==0));
+	wire g = display_on & vpos[4];
+	wire b = display_on & hpos[4];
+
+	assign rgb_r = {r,r,r,r,r,r,r,r};
+	assign rgb_g = {g,g,g,g,g,g,g,g};
+	assign rgb_b = {b,b,b,b,b,b,b,b};
 
 /*
 localparam FULL = 8'b1111_1111;
