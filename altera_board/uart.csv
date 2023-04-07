@@ -1,0 +1,3 @@
+Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
+Ok,,uart_tx,Location,PIN_N1,Yes,,,
+Ok,,uart_rx,Location,PIN_M2,Yes,,,
