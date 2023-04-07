@@ -1,0 +1,9 @@
+Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
+Ok,,SD_DCLK,Location,PIN_D12,Yes,,,
+Ok,,SD_MISO,Location,PIN_E15,Yes,,,
+Ok,,SD_MOSI,Location,PIN_F10,Yes,,,
+Ok,,SD_nCS,Location,PIN_D11,Yes,,,
+Ok,,SD_DCLK,I/O Standard,3.3-V LVTTL,Yes,sd_card_test,,
+Ok,,SD_MISO,I/O Standard,3.3-V LVTTL,Yes,sd_card_test,,
+Ok,,SD_MOSI,I/O Standard,3.3-V LVTTL,Yes,sd_card_test,,
+Ok,,SD_nCS,I/O Standard,3.3-V LVTTL,Yes,sd_card_test,,

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr  4 13:16:26 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : SAP1
+Top-level Entity Name : top
+Family : Cyclone IV E
+Total logic elements : 2,212
+    Total combinational functions : 1,865
+    Dedicated logic registers : 1,177
+Total registers : 1177
+Total pins : 25
+Total virtual pins : 0
+Total memory bits : 3,328
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

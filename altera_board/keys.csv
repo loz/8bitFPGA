@@ -1,0 +1,5 @@
+Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
+Ok,,rst_n,Location,PIN_N13,Yes,,,
+Ok,,key1,Location,PIN_M15,Yes,,,
+Ok,,key2,Location,PIN_M16,Yes,,,
+Ok,,key3,Location,PIN_E16,Yes,,,

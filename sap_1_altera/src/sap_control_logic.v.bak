@@ -1,0 +1,21 @@
+module control_logic(
+);
+
+
+localparam HALT = 16'b1000_0000_0000_0000; //Halt signal
+localparam MI   = 16'b0100_0000_0000_0000; //Memoy Address In
+localparam RI   = 16'b0010_0000_0000_0000; //Ram In
+localparam RO   = 16'b0001_0000_0000_0000; //Ram Out
+localparam IO   = 16'b0000_1000_0000_0000; //Instruction In
+localparam II   = 16'b0000_0100_0000_0000; //Instruction Out
+localparam AI   = 16'b0000_0010_0000_0000; //A Reg In
+localparam AO   = 16'b0000_0001_0000_0000; //A Reg Out
+localparam SMO  = 16'b0000_0000_1000_0000; //ALU Out
+localparam SUB  = 16'b0000_0000_0100_0000; //ALU Sub
+localparam BI   = 16'b0000_0000_0010_0000; //B Reg In
+localparam OI   = 16'b0000_0000_0001_0000; //Output Reg In
+localparam CE   = 16'b0000_0000_0000_1000; //Counter Enable
+localparam CO   = 16'b0000_0000_0000_0100; //Counter Out
+
+
+endmodule

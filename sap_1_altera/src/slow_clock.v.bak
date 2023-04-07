@@ -1,0 +1,15 @@
+module slow_clock #(param SIZE=15)(
+	input clk,
+	input reset,
+	output slow
+);
+
+
+reg [SIZE:0] counter;
+
+always @(posedge clk) begin
+	if(reset) begin
+		counter <= 0;
+	end else
+	end
+end
