@@ -9,7 +9,7 @@ music.json: music.v
 	yosys -p "read_verilog music.v; synth_gowin -top music -json music.json"
 
 # Place and Route
-music_pnr.json: music.json
+music_pnr.json: music.json *.cst
 	nextpnr-gowin --json music.json --freq 27 --write music_pnr.json --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
 
 # Generate Bitstream

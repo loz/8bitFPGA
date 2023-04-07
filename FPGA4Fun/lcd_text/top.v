@@ -32,34 +32,33 @@ display disp(
     .data(data) //UART data => Display Data
 );
 
-/*
 uart_in uain(
-    .clk(slowclock[30]),
-//    .clk(clk),
+//    .clk(slowclock[30]),
+    .clk(clk),
     .uart_rx(uart_rx),
     .byte_in(bus),
     .ready(data_ready)
 );
-*/
 
 reg init = 1;
 
 always @(posedge clk) begin
     if(init) begin
         disp_ce <= 0;
+        data_ready <= 0;
         init <= 0;
     end
     if(slowclock == 135000) begin
         slowclock <= 0;
         inclock <= ~inclock;
         //disp_ce <= ~disp_ce;
-        led <= ~led;
+       //led <= ~led;
     end
     else
         slowclock <= slowclock + 1;
 end
 
-/*
+
 always @(posedge slowclock[30]) begin
     if(init) begin
         led <= 1;
@@ -71,6 +70,5 @@ always @(posedge slowclock[30]) begin
         led <= 0;
     end
 end
-*/
 
 endmodule
