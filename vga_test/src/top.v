@@ -89,12 +89,14 @@ screen_mapper smap(
 	.mapped_vpos(m_vpos),
 );
 
-test_numbers_top ttop(
+sprite_bitmap_top ttop(
 	.clk(clk),
 	.reset(~rst_n),
 	.display_on(video_de),
 	.hpos(m_hpos),
 	.vpos(m_vpos),
+	.hsync(video_hs),
+	.vsync(video_vs),
 	.rgb(rgb)
 );
 
