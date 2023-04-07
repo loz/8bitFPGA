@@ -1,3 +1,5 @@
+`ifndef HSYNC_GENERATOR_H
+`define HSYNC_GENERATOR_H
 /*
 	creating an interface to support:
 	https://8bitworkshop.com/v3.10.0/?platform=verilog&file=test_hvsync.v#
@@ -248,3 +250,5 @@ begin
 end
 
 endmodule
+
+`endif
