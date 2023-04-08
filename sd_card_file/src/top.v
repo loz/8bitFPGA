@@ -25,16 +25,24 @@ string_writer writer(
 	.uart_rx(uart_rx)
 	);
 
+reg pressed =0;
 
 always @(posedge clk or negedge rst_n) begin
 	if(~rst_n) begin
 		str_ready = 0;
 	end else begin
 		if(~key1) begin
-			outstr <= "Hello Wolrd!\n\0";
-			str_ready <= 1;
-		end else
-			str_ready = 0;
+			//outstr <= "Hello Wolrd!\n\0";
+			if(pressed)
+				str_ready <= 0;
+			else begin
+				str_ready <= 1;
+				pressed <= 1;
+			end
+		end else begin
+			pressed <= 0;
+			str_ready <= 0;
+		end
 	end
 end
 endmodule

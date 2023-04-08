@@ -39,7 +39,7 @@ always @(posedge clk or negedge rst_n) begin
 	end else begin
 		if(tx_data_valid && tx_data_ready) begin
 			tx_data_valid <= 1'b0;
-		end else if(~tx_data_valid) begin
+		end else if(~tx_data_valid && send) begin
 			tx_data <= "J";
 			tx_data_valid <= 1'b1;
 		end
