@@ -13,7 +13,7 @@ module top(
 	output [7:0]     seg_data
 	*/
 );
-reg [657:0] outstr;
+reg [(80*8)-1:0] outstr;
 reg str_ready = 0;
 
 string_writer writer(
@@ -32,10 +32,10 @@ always @(posedge clk or negedge rst_n) begin
 		str_ready = 0;
 	end else begin
 		if(~key1) begin
-			//outstr <= "Hello Wolrd!\n\0";
 			if(pressed)
 				str_ready <= 0;
 			else begin
+				outstr <= "Hello Rosie!\n\r";
 				str_ready <= 1;
 				pressed <= 1;
 			end
