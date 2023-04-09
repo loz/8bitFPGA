@@ -15,21 +15,44 @@ class Cpu:
       loc = 0;
       lines = code.split('\n')
       for line in lines:
-	loc = self.assemble_line(line, loc)
+         loc = self.assemble_line(line, loc)
 
    def assemble_line(self, line, loc):
       op, arg = line.split(' ')
+      obyte = 0x00
+      abyte = 0x00
       if op == 'lda':
-         self.rom[loc] = 0x00
-         self.rom[loc+1] = int(arg)
-         loc += 2
+         if arg.startswith('#'):
+            abyte = int(arg.replace('#',''))
+         else:
+            obyte = 0x01
+            abyte = int(arg)
+      elif op == 'add':
+         if arg.startswith('#'):
+            obyte = 0x02
+            abyte = int(arg.replace('#', ''))
+         else:
+            obyte = 0x03
+            abyte = int(arg)
+      self.rom[loc] = obyte
+      self.rom[loc+1] = abyte
+      loc += 2
       return loc
 
    def tick(self):
       op = self.fetch_byte()
-      if op == 0x00: #LDA
+      if op == 0x00: #LDA-immediate
          arg = self.fetch_byte()
          self.registers["A"] = arg
+      elif op == 0x01: #LDA-absolute
+         arg = self.fetch_byte()
+         self.registers["A"] = self.rom[arg]
+      elif op == 0x02: #ADD-immediate
+         arg = self.fetch_byte()
+         self.registers["A"] += arg
+      elif op == 0x03: #ADD-immediate
+         arg = self.fetch_byte()
+         self.registers["A"] += self.rom[arg]
 
    def fetch_byte(self):
       b = self.rom[self.ip-8000]
