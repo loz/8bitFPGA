@@ -49,10 +49,22 @@ class Cpu:
          self.registers["A"] = self.rom[arg]
       elif op == 0x02: #ADD-immediate
          arg = self.fetch_byte()
-         self.registers["A"] += arg
+         result = self.registers["A"] + arg
+         if result > 255:
+            result = result % 256
+            self.registers["C"] = 1
+         else:
+            self.registers["C"] = 0
+         self.registers["A"] = result
       elif op == 0x03: #ADD-immediate
          arg = self.fetch_byte()
-         self.registers["A"] += self.rom[arg]
+         result = self.registers["A"] + self.rom[arg]
+         if result > 255:
+            result = result % 256
+            self.registers["C"] = 1
+         else:
+            self.registers["C"] = 0
+         self.registers["A"] = result
 
    def fetch_byte(self):
       b = self.rom[self.ip-8000]

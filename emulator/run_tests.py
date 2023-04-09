@@ -28,10 +28,20 @@ add #123""")
     computer = cpu.Cpu()
     computer.assemble("""lda #55
 add 456""")
-    computer.rom[456] = 789;
+    computer.rom[456] = 123;
     computer.tick()
     computer.tick()
-    self.assertEqual(computer.registers["A"], 55+789)
+    self.assertEqual(computer.registers["A"], 55+123)
+
+  def test_command_ADD_sets_carry_bit(self):
+    computer = cpu.Cpu()
+    computer.assemble("""lda #255
+add 456""")
+    computer.rom[456] = 1;
+    computer.tick()
+    computer.tick()
+    self.assertEqual(computer.registers["A"], 0)
+    self.assertEqual(computer.registers["C"], 1)
 
 if __name__ == '__main__':
     unittest.main()
