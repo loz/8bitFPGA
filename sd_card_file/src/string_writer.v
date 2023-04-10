@@ -1,8 +1,9 @@
-module string_writer(clk, rst_n, line, send, uart_tx, uart_rx);
+module string_writer(clk, rst_n, line, send, ready, uart_tx, uart_rx);
 	input clk;
 	input rst_n;
 	input [650:0] line;
 	input send;
+	output ready;
 	output uart_tx;
 	input uart_rx;
 
@@ -24,6 +25,8 @@ localparam SCANNING = 1;
 localparam SENDING = 2;
 
 reg [2:0] state;
+assign ready = (state == IDLE);
+
 uart_tx sender
 (
 	.clk(clk),                         //clock input
@@ -49,6 +52,7 @@ always @(posedge clk or negedge rst_n) begin
 				stack[counter] <= char;
 				to_send <= (to_send >> 8);
 		end else begin
+			counter <= counter - 1;
 			state <= SENDING;
 		end
 	end else begin
