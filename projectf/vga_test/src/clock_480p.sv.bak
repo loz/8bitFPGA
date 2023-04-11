@@ -1,0 +1,8 @@
+module clock_480p (
+	input wire logic clk_50m,
+	input wire logic rst_n,
+	output logic clk_pix
+	);
+
+	
+endmodule
