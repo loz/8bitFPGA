@@ -1,0 +1,11 @@
+module font_mapper(
+	input [8:0] char,
+	input [8:0] xoffset,
+	input [8:0] yoffset
+);
+
+	logic [8:0] charmap[8][95];
+	
+	
+
+endmodule
