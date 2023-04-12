@@ -53,7 +53,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
-set_global_assignment -name SYSTEMVERILOG_FILE src/VGATest_top.sv
 set_location_assignment PIN_E1 -to clk
 set_location_assignment PIN_N13 -to rst_n
 set_location_assignment PIN_M15 -to key1
@@ -83,13 +82,21 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
-set_global_assignment -name SYSTEMVERILOG_FILE src/simple_1024_768.sv
-set_global_assignment -name QIP_FILE videopll.qip
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE src/bram_sdp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/VGATest_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/simple_1024_768.sv
+set_global_assignment -name QIP_FILE videopll.qip
 set_global_assignment -name SYSTEMVERILOG_FILE src/display_1024_600.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/display_800_600.sv
 set_global_assignment -name VERILOG_FILE videopll_40.v
 set_global_assignment -name VERILOG_FILE videopll_49.v
 set_global_assignment -name SYSTEMVERILOG_FILE src/display_1024_768.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/david_16color.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/square.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/clut_simple.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/david_scaled.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/linebuffer_simple.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/xd.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

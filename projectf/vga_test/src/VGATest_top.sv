@@ -14,65 +14,14 @@ module VGATest_top (
     output      logic [4:0] vga_out_b   // 4-bit VGA blue
     );
 
-    // display sync signals and coordinates
-    localparam CORDW = 11;  // screen coordinate width in bits
-    logic signed [CORDW-1:0] sx, sy;
-    logic hsync, vsync, de;
 	 
-	 assign vga_out_hs = hsync;
-	 assign vga_out_vs = vsync;
-	 wire video_clk;
-	 
-	 //generate video pixel clock
-	 videopll_49 video_pll_m0(
-		.inclk0(clk),
-		.c0(video_clk)
+	 david_scaled ttop(
+		.clk,
+		.rst_n,
+		.vga_out_hs,
+		.vga_out_vs,
+		.vga_out_r,
+		.vga_out_g,
+		.vga_out_b
 	);
-	
-	 display_1024_600 display_inst(
-		.clk_pix(video_clk),   				// pixel clock
-		.rst_pix(~rst_n),   // reset in pixel clock domain
-		.sx,  				// horizontal screen position
-		.sy,  				// vertical screen position
-		.hsync,     		// horizontal sync
-		.vsync,     		// vertical sync
-		.de         		// data enable (low in blanking interval)
-    );
-	 
-	 //these are visible for 1024x768 on my ali LCD
-	 /*
-	 localparam START_X = 1;
-	 localparam END_X = 990;
-	 localparam START_Y = 0;
-	 localparam END_Y = 766;
-	 */
-	 
-	 localparam START_X = 0;
-	 localparam END_X = 1023;
-	 localparam START_Y = 0;
-	 localparam END_Y = 599;
-
-    // define a square with screen coordinates
-    logic square;
-    always_comb begin
-			//990/2 +/- 100
-			//766/2 +/- 100
-        square = (sx > 412 && sx < 612) && (sy > 200 && sy < 400);
-    end
-
-    // paint colour: white inside square, blue outside
-    logic [5:0] paint_r, paint_g, paint_b;
-    always_comb begin
-        paint_r = (square) ? 4'hF : (sx == START_X || sy == START_Y) ? 4'hF: 4'h1;
-        paint_g = (square) ? 5'b11111 : 5'h3;
-        paint_b = (square) ? 4'hF : (sx == END_X || sy == END_Y) ? 4'hF : 4'h7;
-    end
-
-    // display colour: paint colour but black in blanking interval
-    //logic [3:0] display_r, display_g, display_b;
-    always_comb begin
-        vga_out_r = (de) ? paint_r[4:0] : 5'h0;
-        vga_out_g = (de) ? paint_g[5:0] : 5'h0;
-        vga_out_b = (de) ? paint_b[4:0] : 5'h0;
-    end
 endmodule
