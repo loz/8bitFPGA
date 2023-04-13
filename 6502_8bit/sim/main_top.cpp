@@ -58,11 +58,13 @@ int main(int argc, char* argv[]) {
     Vtop* top = new Vtop;
 
     // reset
-    top->rst_pix = 1;
-    top->clk_pix = 0;
-    top->eval();
-    top->clk_pix = 1;
-    top->eval();
+    for(int r=0; r<8; r++) {
+        top->rst_pix = 1;
+        top->clk_pix = 0;
+        top->eval();
+        top->clk_pix = 1;
+        top->eval();
+    }
     top->rst_pix = 0;
     top->clk_pix = 0;
     top->eval();
@@ -72,16 +74,20 @@ int main(int argc, char* argv[]) {
     uint64_t frame_count = 0;
 
     // main loop
-    while (1) {
+
+    //while (1) {
+    for(int t=0; t<100; t++) {
         // cycle the clock
         top->clk_pix = 1;
         top->eval();
         top->clk_pix = 0;
         top->eval();
 
+        if(top->tapaddress == 0x8000) {
+            printf("Reset Vector Hit 0x8000, Data(%02x)\n", top->data);
+        }
 
-        //printf("Tick: (%i, %i)\n", top->sdl_sx, top->sdl_sy);
-
+        printf("Tick: (%04x) [%02x]\n", top->tapaddress, top->data);
         // update pixel if not in blanking interval
         if (top->sdl_de) {
             //printf("DisplayVisible\n");

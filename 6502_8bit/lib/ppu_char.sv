@@ -14,6 +14,7 @@ module ppu_char #(
     input line,
     input frame,
     input de,
+	input [7:0] vidmem[4096],
     output [CHANW-1:0] paint_r,
     output [CHANW-1:0] paint_g,
     output [CHANW-1:0] paint_b
@@ -36,7 +37,6 @@ module ppu_char #(
 	 localparam TEXT_H = $clog2(TEXTROW+1);
 	 
 	 localparam BUFFSIZE = (TEXTCOL*TEXTROW);
-	 reg [7:0]text_buffer[TEXTCOL*TEXTROW];
 
 	 logic [TEXT_W-1:0] text_column;
 	 logic [TEXT_H-1:0] text_row;
@@ -46,8 +46,9 @@ module ppu_char #(
 	 
 	 logic [8:0] char;
 
-	 assign char = (text_row >= TEXTROW) ? " " : text_buffer[((text_row * TEXTCOL) + text_column)];
-	 
+	 //assign char = (text_row >= TEXTROW) ? " " : text_buffer[((text_row * TEXTCOL) + text_column)];
+	 assign char = (text_row >= TEXTROW) ? " " : vidmem[((text_row * TEXTCOL) + text_column)];
+	 /*
 	 initial begin
 		for(int i=0;i<BUFFSIZE;i=i+1) begin
 			text_buffer[i] = " ";
@@ -89,7 +90,7 @@ module ppu_char #(
 			text_buffer[80+i] = i+30;
 		end
 	end
-	 
+a	*/	 
 	 wire bitmap;
 	 charmap font_map(
 		.char(char),
