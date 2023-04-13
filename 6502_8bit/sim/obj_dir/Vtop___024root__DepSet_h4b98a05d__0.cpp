@@ -16,21 +16,16 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_triggers__act\n"); );
     // Body
-    vlSelf->__VactTriggered.at(0U) = ((IData)(vlSelf->data) 
-                                      != (IData)(vlSelf->__Vtrigrprev__TOP__data));
-    vlSelf->__VactTriggered.at(1U) = ((IData)(vlSelf->clk_pix) 
+    vlSelf->__VactTriggered.at(0U) = ((IData)(vlSelf->clk_pix) 
                                       & (~ (IData)(vlSelf->__Vtrigrprev__TOP__clk_pix)));
-    vlSelf->__VactTriggered.at(2U) = (((IData)(vlSelf->clk_pix) 
+    vlSelf->__VactTriggered.at(1U) = (((IData)(vlSelf->clk_pix) 
                                        & (~ (IData)(vlSelf->__Vtrigrprev__TOP__clk_pix))) 
                                       | ((IData)(vlSelf->rst_pix) 
                                          & (~ (IData)(vlSelf->__Vtrigrprev__TOP__rst_pix))));
-    vlSelf->__Vtrigrprev__TOP__data = vlSelf->data;
+    vlSelf->__VactTriggered.at(2U) = ((~ (IData)(vlSelf->clk_pix)) 
+                                      & (IData)(vlSelf->__Vtrigrprev__TOP__clk_pix));
     vlSelf->__Vtrigrprev__TOP__clk_pix = vlSelf->clk_pix;
     vlSelf->__Vtrigrprev__TOP__rst_pix = vlSelf->rst_pix;
-    if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->__VactDidInit))))) {
-        vlSelf->__VactDidInit = 1U;
-        vlSelf->__VactTriggered.at(0U) = 1U;
-    }
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
         Vtop___024root___dump_triggers__act(vlSelf);

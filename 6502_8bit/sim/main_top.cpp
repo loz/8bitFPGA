@@ -75,8 +75,8 @@ int main(int argc, char* argv[]) {
 
     // main loop
 
-    //while (1) {
-    for(int t=0; t<100; t++) {
+    while (1) {
+    //for(int t=0; t<100; t++) {
         // cycle the clock
         top->clk_pix = 1;
         top->eval();
@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
             printf("Reset Vector Hit 0x8000, Data(%02x)\n", top->data);
         }
 
-        printf("Tick: (%04x) [%02x]\n", top->tapaddress, top->data);
+        //printf("Tick: (%04x) [%02x]\n", top->tapaddress, top->data);
         // update pixel if not in blanking interval
         if (top->sdl_de) {
             //printf("DisplayVisible\n");

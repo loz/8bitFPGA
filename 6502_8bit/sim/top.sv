@@ -18,7 +18,7 @@ module top #(parameter CORDW=12) (  // coordinate width
     //6502
     wire [15:0] address_bus;
     reg [7:0] data_capture;
-    wire  [7:0] data_in;
+    reg  [7:0] data_in;
     wire [7:0] data_out;
     wire write_enable;
     wire irq = 0;
@@ -34,7 +34,6 @@ module top #(parameter CORDW=12) (  // coordinate width
     assign address = address_bus[14:0];
     wire [7:0] ram_inout;
     wire [7:0] rom_inout;
-    //reg [7:0] data_bus;
 
     wire [7:0] READPORT[0:8192];
     
@@ -50,6 +49,11 @@ module top #(parameter CORDW=12) (  // coordinate width
     	.RDY(ready)
     );//6502
 
+    always_ff @(posedge clk_pix) begin
+        if(rom_enable)
+            data_in <= rom_inout;
+    end
+
     /*
 	    All the confusion, the conlusion I have to work is
 	    DATA IN must be left alone unless there is a change, 
@@ -62,14 +66,14 @@ module top #(parameter CORDW=12) (  // coordinate width
 	    up to the cucle of the ROM/RAM module and ignore otherwise.
     */
     //always_ff @(posedge clk_pix) begin
-        assign data_in = rom_inout;
+    //    assign data_in = rom_inout;
     //end
-    //assign rom_inout = ( rom_enable & write_enable) ? data_out : 8'bZZZZZZZZ;
+    assign rom_inout = ( rom_enable & write_enable) ? data_out : 8'bZZZZZZZZ;
     //assign ram_inout = (~rom_enable & write_enable) ? data_out : 8'bZZZZZZZZ;
 
     rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/hello.mem")) rom(
 	    .clk(clk_pix),
-	    .write_enable(1'b0), //ROM not RAM!
+	    .write_enable(write_enable), //TODO: Add RAM and Ref ram!1'b0), //ROM not RAM!
        .output_enable(rom_enable),
 	    .ADDRESS(address),
 	    .DATA(rom_inout),
