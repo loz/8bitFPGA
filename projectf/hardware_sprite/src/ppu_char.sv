@@ -69,10 +69,10 @@ module ppu_char (
     logic [COLRW-1:0] bg_colr;
 	 logic [1:0] shade;
 	 localparam MESSAGE = "!This is a Message$$ ";
-	 assign char = MESSAGE[(text_column * text_row) % 20];
+	 //assign char = text_column+30; //MESSAGE[(text_column * text_row) % 20];
+	 assign char = ((text_row * TEXTROW) + text_column) % 128;
 	 
 	 /*
-    always_ff @(posedge clk_pix) begin
 		if(last_row != text_row) begin
 			last_row <= text_row;
 		end else if(last_column != text_column) begin
@@ -94,8 +94,8 @@ module ppu_char (
 	 wire bitmap;
 	 charmap font_map(
 		.char(char),
-		.xoffset((sx % 16) / 2),
-		.yoffset((sy % 16) / 2),
+		.xoffset((sx>>1) % 8),
+		.yoffset((sy>>1) % 8),
 		.bitmap
 	 );
 	 
