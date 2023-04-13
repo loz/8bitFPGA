@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6F17C8
-set_global_assignment -name TOP_LEVEL_ENTITY VGATest_top
+set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:49:53  APRIL 11, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -76,14 +76,18 @@ set_location_assignment PIN_L3 -to vga_out_r[3]
 set_location_assignment PIN_L4 -to vga_out_r[4]
 set_location_assignment PIN_N3 -to vga_out_vs
 set_location_assignment PIN_L6 -to vga_out_hs
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SEARCH_PATH "c:/users/loz/development/8bitfpga/6502_8bit/lib"
+set_global_assignment -name SYSTEMVERILOG_FILE ../lib/ppu_char.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../lib/charmap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/top.sv
 set_global_assignment -name QIP_FILE videopll.qip
 set_global_assignment -name SYSTEMVERILOG_FILE src/display_1024_600.sv
