@@ -23,16 +23,17 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(sdl_g,7,0);
         VL_OUT8(sdl_b,7,0);
         VL_OUT8(data,7,0);
+        VL_OUT8(rw,0,0);
+        CData/*7:0*/ top__DOT__data_bus;
         CData/*7:0*/ top__DOT__data_in;
         CData/*7:0*/ top__DOT__data_out;
         CData/*0:0*/ top__DOT__write_enable;
-        CData/*7:0*/ top__DOT__rom_inout;
         CData/*0:0*/ top__DOT__de;
         CData/*0:0*/ top__DOT__frame;
         CData/*3:0*/ top__DOT__paint_r;
         CData/*3:0*/ top__DOT__paint_g;
         CData/*3:0*/ top__DOT__paint_b;
-        CData/*0:0*/ top__DOT____VdfgTmp_h505ceec6__0;
+        CData/*7:0*/ top__DOT__ram_inout__strong;
         CData/*7:0*/ top__DOT__cpu_6502__DOT__ABL;
         CData/*7:0*/ top__DOT__cpu_6502__DOT__ABH;
         CData/*7:0*/ top__DOT__cpu_6502__DOT__ADD;
@@ -78,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__cpu_6502__DOT__alu_op;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__adc_bcd;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__adj_bcd;
-        CData/*0:0*/ top__DOT__cpu_6502__DOT__bit_ins;
     };
     struct {
+        CData/*0:0*/ top__DOT__cpu_6502__DOT__bit_ins;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__plp;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__php;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__clc;
@@ -98,10 +99,13 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_BI;
         CData/*4:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_h;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_HC;
-        CData/*7:0*/ top__DOT__rom__DOT____Vlvbound_h85f41f4a__0;
+        CData/*7:0*/ top__DOT__ram__DOT____Vlvbound_h85f41f4a__0;
         CData/*5:0*/ __Vdly__top__DOT__cpu_6502__DOT__state;
+        CData/*7:0*/ __Vtrigrprev__TOP__top__DOT__data_bus;
+        CData/*0:0*/ __VstlDidInit;
         CData/*0:0*/ __Vtrigrprev__TOP__clk_pix;
         CData/*0:0*/ __Vtrigrprev__TOP__rst_pix;
+        CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
         VL_OUT16(sdl_sx,11,0);
         VL_OUT16(sdl_sy,11,0);
@@ -117,15 +121,16 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ __VstlIterCount;
         IData/*31:0*/ __VactIterCount;
         VlUnpacked<CData/*7:0*/, 8193> top__DOT__READPORT;
-        VlUnpacked<CData/*7:0*/, 8193> top__DOT____Vcellout__rom__READPORT;
+        VlUnpacked<CData/*7:0*/, 8193> top__DOT____Vcellout__ram__READPORT;
         VlUnpacked<CData/*7:0*/, 4096> top__DOT____Vcellinp__ppu__vidmem;
         VlUnpacked<CData/*7:0*/, 4> top__DOT__cpu_6502__DOT__AXYS;
         VlUnpacked<CData/*7:0*/, 8193> top__DOT__rom__DOT__memory;
+        VlUnpacked<CData/*7:0*/, 8193> top__DOT__ram__DOT__memory;
         VlUnpacked<SData/*8:0*/, 800> top__DOT__ppu__DOT__font_map__DOT__charmap;
     };
-    VlTriggerVec<1> __VstlTriggered;
-    VlTriggerVec<3> __VactTriggered;
-    VlTriggerVec<3> __VnbaTriggered;
+    VlTriggerVec<2> __VstlTriggered;
+    VlTriggerVec<4> __VactTriggered;
+    VlTriggerVec<4> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     Vtop__Syms* const vlSymsp;

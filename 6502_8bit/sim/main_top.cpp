@@ -74,9 +74,12 @@ int main(int argc, char* argv[]) {
     uint64_t frame_count = 0;
 
     // main loop
-
-    while (1) {
-    //for(int t=0; t<100; t++) {
+    //#define __DEBUG_CLOCKS_
+    #ifdef __DEBUG_CLOCKS_
+        for(int t=0; t<100; t++) {
+    #else
+        while (1) {
+    #endif
         // cycle the clock
         top->clk_pix = 1;
         top->eval();
@@ -87,7 +90,9 @@ int main(int argc, char* argv[]) {
             printf("Reset Vector Hit 0x8000, Data(%02x)\n", top->data);
         }
 
-        //printf("Tick: (%04x) [%02x]\n", top->tapaddress, top->data);
+        #ifdef __DEBUG_CLOCKS_
+        printf("Tick: (%04x) [%02x] %s\n", top->tapaddress, top->data, (top->rw == 0 ? "r" : "w"));
+        #endif
         // update pixel if not in blanking interval
         if (top->sdl_de) {
             //printf("DisplayVisible\n");
