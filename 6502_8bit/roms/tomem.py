@@ -10,9 +10,16 @@ for o,a in opts:
 		filename = a
 
 offset = 0
+
 with open(filename,"rb") as f:
 	block = f.read()
+	counter = 0
+	line = []
 	str = ""
 	for ch in block:
-		str += hex(ord(ch))+" "
+		line.append("{:02x}".format(ord(ch)))
+		if len(line) == 32:
+			str += " ".join(line) + "\n"
+			line = []
+	str += " ".join(line)
 	print str
