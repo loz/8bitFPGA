@@ -57,7 +57,7 @@ module top #(parameter CORDW=12) (  // coordinate width
     assign address = address_bus[14:0];
     wire [7:0] ram_out;
     wire [7:0] rom_out;
-    rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/hello.mem")) rom(
+    rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/current.mem")) rom(
 	    .clk(clk_pix),
 	    .write_enable(1'b0), //ROM not RAM!
         .output_enable(rom_enable),

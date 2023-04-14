@@ -47,15 +47,15 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
-    VlWide<5>/*159:0*/ __Vtemp_h76154a64__0;
+    VlWide<5>/*159:0*/ __Vtemp_hd9fed8bb__0;
     VlWide<4>/*127:0*/ __Vtemp_h3f974f67__0;
     // Body
-    __Vtemp_h76154a64__0[0U] = 0x2e6d656dU;
-    __Vtemp_h76154a64__0[1U] = 0x656c6c6fU;
-    __Vtemp_h76154a64__0[2U] = 0x6d732f68U;
-    __Vtemp_h76154a64__0[3U] = 0x2e2f726fU;
-    __Vtemp_h76154a64__0[4U] = 0x2eU;
-    VL_READMEM_N(true, 8, 8192, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h76154a64__0)
+    __Vtemp_hd9fed8bb__0[0U] = 0x2e6d656dU;
+    __Vtemp_hd9fed8bb__0[1U] = 0x72656e74U;
+    __Vtemp_hd9fed8bb__0[2U] = 0x2f637572U;
+    __Vtemp_hd9fed8bb__0[3U] = 0x726f6d73U;
+    __Vtemp_hd9fed8bb__0[4U] = 0x2e2e2fU;
+    VL_READMEM_N(true, 8, 8192, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_hd9fed8bb__0)
                  ,  &(vlSelf->top__DOT__rom__DOT__memory)
                  , 0, ~0ULL);
     vlSelf->top__DOT__rom__DOT__memory[0x1ffcU] = 0U;
