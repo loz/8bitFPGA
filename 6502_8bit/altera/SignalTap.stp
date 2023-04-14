@@ -1,0 +1,955 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 10CL006(Y|Z)/10CL010(Y|Z)/.. (0x020F10DD)" sof_file="output_files/65028Bit.sof">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance enabled="false" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="8"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="16368"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2023/04/14 12:07:05  #0">
+      <clock name="clk" polarity="posedge" tap_mode="probeonly"/>
+      <config pipeline_level="0" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="cpu6502:cpu_6502|ABH[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~0" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~1" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~2" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~3" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~4" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~5" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~6" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~7" tap_mode="probeonly"/>
+          <wire name="data_in[0]" tap_mode="probeonly"/>
+          <wire name="data_in[1]" tap_mode="probeonly"/>
+          <wire name="data_in[2]" tap_mode="probeonly"/>
+          <wire name="data_in[3]" tap_mode="probeonly"/>
+          <wire name="data_in[4]" tap_mode="probeonly"/>
+          <wire name="data_in[5]" tap_mode="probeonly"/>
+          <wire name="data_in[6]" tap_mode="probeonly"/>
+          <wire name="data_in[7]" tap_mode="probeonly"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="cpu6502:cpu_6502|ABH[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~0" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~1" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~2" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~3" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~4" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~5" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~6" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~7" tap_mode="probeonly"/>
+          <wire name="data_in[0]" tap_mode="probeonly"/>
+          <wire name="data_in[1]" tap_mode="probeonly"/>
+          <wire name="data_in[2]" tap_mode="probeonly"/>
+          <wire name="data_in[3]" tap_mode="probeonly"/>
+          <wire name="data_in[4]" tap_mode="probeonly"/>
+          <wire name="data_in[5]" tap_mode="probeonly"/>
+          <wire name="data_in[6]" tap_mode="probeonly"/>
+          <wire name="data_in[7]" tap_mode="probeonly"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="cpu6502:cpu_6502|ABH[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABH[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[0]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[1]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[2]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[3]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[4]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[5]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[6]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|ABL[7]" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~0" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~1" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~2" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~3" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~4" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~5" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~6" tap_mode="probeonly"/>
+          <wire name="cpu6502:cpu_6502|IR~7" tap_mode="probeonly"/>
+          <wire name="data_in[0]" tap_mode="probeonly"/>
+          <wire name="data_in[1]" tap_mode="probeonly"/>
+          <wire name="data_in[2]" tap_mode="probeonly"/>
+          <wire name="data_in[3]" tap_mode="probeonly"/>
+          <wire name="data_in[4]" tap_mode="probeonly"/>
+          <wire name="data_in[5]" tap_mode="probeonly"/>
+          <wire name="data_in[6]" tap_mode="probeonly"/>
+          <wire name="data_in[7]" tap_mode="probeonly"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node is_selected="false" level-0="alt_or" name="cpu6502:cpu[6502..6502]" order="msb_to_lsb" state="collapse" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="combinatorial">
+            <node data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~0" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="probeonly" trigger_index="16" type="unknown"/>
+            <node data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~1" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="probeonly" trigger_index="17" type="unknown"/>
+            <node data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~2" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="probeonly" trigger_index="18" type="unknown"/>
+            <node data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~3" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="probeonly" trigger_index="19" type="unknown"/>
+            <node data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~4" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="probeonly" trigger_index="20" type="unknown"/>
+            <node data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~5" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="probeonly" trigger_index="21" type="unknown"/>
+            <node data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~6" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="probeonly" trigger_index="22" type="unknown"/>
+            <node data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~7" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="probeonly" trigger_index="23" type="unknown"/>
+          </node>
+          <node is_selected="false" level-0="alt_or" name="data_in[0..7]" order="lsb_to_msb" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="register">
+            <node data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="probeonly" trigger_index="24" type="unknown"/>
+            <node data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="probeonly" trigger_index="25" type="unknown"/>
+            <node data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="probeonly" trigger_index="26" type="unknown"/>
+            <node data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="probeonly" trigger_index="27" type="unknown"/>
+            <node data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="28" tap_mode="probeonly" trigger_index="28" type="unknown"/>
+            <node data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="29" tap_mode="probeonly" trigger_index="29" type="unknown"/>
+            <node data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="30" tap_mode="probeonly" trigger_index="30" type="unknown"/>
+            <node data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="31" tap_mode="probeonly" trigger_index="31" type="unknown"/>
+          </node>
+          <node is_selected="false" level-0="alt_or" name="Group" order="msb_to_lsb" state="collapse" type="register">
+            <node data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[0]" storage_index="0" tap_mode="probeonly" trigger_index="0" type="unknown"/>
+            <node data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[1]" storage_index="1" tap_mode="probeonly" trigger_index="1" type="unknown"/>
+            <node data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[2]" storage_index="2" tap_mode="probeonly" trigger_index="2" type="unknown"/>
+            <node data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[3]" storage_index="3" tap_mode="probeonly" trigger_index="3" type="unknown"/>
+            <node data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[4]" storage_index="4" tap_mode="probeonly" trigger_index="4" type="unknown"/>
+            <node data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[5]" storage_index="5" tap_mode="probeonly" trigger_index="5" type="unknown"/>
+            <node data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[6]" storage_index="6" tap_mode="probeonly" trigger_index="6" type="unknown"/>
+            <node data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[7]" storage_index="7" tap_mode="probeonly" trigger_index="7" type="unknown"/>
+            <node data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[0]" storage_index="8" tap_mode="probeonly" trigger_index="8" type="unknown"/>
+            <node data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[1]" storage_index="9" tap_mode="probeonly" trigger_index="9" type="unknown"/>
+            <node data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[2]" storage_index="10" tap_mode="probeonly" trigger_index="10" type="unknown"/>
+            <node data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[3]" storage_index="11" tap_mode="probeonly" trigger_index="11" type="unknown"/>
+            <node data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[4]" storage_index="12" tap_mode="probeonly" trigger_index="12" type="unknown"/>
+            <node data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[5]" storage_index="13" tap_mode="probeonly" trigger_index="13" type="unknown"/>
+            <node data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[6]" storage_index="14" tap_mode="probeonly" trigger_index="14" type="unknown"/>
+            <node data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[7]" storage_index="15" tap_mode="probeonly" trigger_index="15" type="unknown"/>
+          </node>
+        </unified_setup_data_view>
+        <data_view>
+          <bus is_selected="false" level-0="alt_or" name="cpu6502:cpu[6502..6502]" order="msb_to_lsb" state="collapse" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="combinatorial">
+            <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~0" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="probeonly" trigger_index="16" type="unknown"/>
+            <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~1" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="probeonly" trigger_index="17" type="unknown"/>
+            <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~2" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="probeonly" trigger_index="18" type="unknown"/>
+            <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~3" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="probeonly" trigger_index="19" type="unknown"/>
+            <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~4" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="probeonly" trigger_index="20" type="unknown"/>
+            <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~5" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="probeonly" trigger_index="21" type="unknown"/>
+            <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~6" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="probeonly" trigger_index="22" type="unknown"/>
+            <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~7" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="probeonly" trigger_index="23" type="unknown"/>
+          </bus>
+          <bus is_selected="false" level-0="alt_or" name="data_in[0..7]" order="lsb_to_msb" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="register">
+            <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="probeonly" trigger_index="24" type="unknown"/>
+            <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="probeonly" trigger_index="25" type="unknown"/>
+            <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="probeonly" trigger_index="26" type="unknown"/>
+            <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="probeonly" trigger_index="27" type="unknown"/>
+            <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="28" tap_mode="probeonly" trigger_index="28" type="unknown"/>
+            <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="29" tap_mode="probeonly" trigger_index="29" type="unknown"/>
+            <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="30" tap_mode="probeonly" trigger_index="30" type="unknown"/>
+            <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="31" tap_mode="probeonly" trigger_index="31" type="unknown"/>
+          </bus>
+          <bus is_selected="false" level-0="alt_or" name="Group" order="msb_to_lsb" state="collapse" type="register">
+            <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[0]" storage_index="0" tap_mode="probeonly" trigger_index="0" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[1]" storage_index="1" tap_mode="probeonly" trigger_index="1" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[2]" storage_index="2" tap_mode="probeonly" trigger_index="2" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[3]" storage_index="3" tap_mode="probeonly" trigger_index="3" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[4]" storage_index="4" tap_mode="probeonly" trigger_index="4" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[5]" storage_index="5" tap_mode="probeonly" trigger_index="5" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[6]" storage_index="6" tap_mode="probeonly" trigger_index="6" type="unknown"/>
+            <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[7]" storage_index="7" tap_mode="probeonly" trigger_index="7" type="unknown"/>
+            <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[0]" storage_index="8" tap_mode="probeonly" trigger_index="8" type="unknown"/>
+            <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[1]" storage_index="9" tap_mode="probeonly" trigger_index="9" type="unknown"/>
+            <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[2]" storage_index="10" tap_mode="probeonly" trigger_index="10" type="unknown"/>
+            <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[3]" storage_index="11" tap_mode="probeonly" trigger_index="11" type="unknown"/>
+            <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[4]" storage_index="12" tap_mode="probeonly" trigger_index="12" type="unknown"/>
+            <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[5]" storage_index="13" tap_mode="probeonly" trigger_index="13" type="unknown"/>
+            <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[6]" storage_index="14" tap_mode="probeonly" trigger_index="14" type="unknown"/>
+            <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[7]" storage_index="15" tap_mode="probeonly" trigger_index="15" type="unknown"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <bus is_selected="false" level-0="alt_or" name="cpu6502:cpu[6502..6502]" order="msb_to_lsb" state="collapse" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="combinatorial">
+            <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~0" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="16" tap_mode="probeonly" trigger_index="16" type="unknown"/>
+            <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~1" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="17" tap_mode="probeonly" trigger_index="17" type="unknown"/>
+            <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~2" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="18" tap_mode="probeonly" trigger_index="18" type="unknown"/>
+            <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~3" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="19" tap_mode="probeonly" trigger_index="19" type="unknown"/>
+            <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~4" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="20" tap_mode="probeonly" trigger_index="20" type="unknown"/>
+            <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~5" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="21" tap_mode="probeonly" trigger_index="21" type="unknown"/>
+            <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~6" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="22" tap_mode="probeonly" trigger_index="22" type="unknown"/>
+            <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="cpu6502:cpu_6502|IR~7" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="23" tap_mode="probeonly" trigger_index="23" type="unknown"/>
+          </bus>
+          <bus is_selected="false" level-0="alt_or" name="data_in[0..7]" order="lsb_to_msb" storage-0="alt_or" storage-1="alt_or" storage-2="alt_or" type="register">
+            <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[0]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="24" tap_mode="probeonly" trigger_index="24" type="unknown"/>
+            <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[1]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="25" tap_mode="probeonly" trigger_index="25" type="unknown"/>
+            <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[2]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="26" tap_mode="probeonly" trigger_index="26" type="unknown"/>
+            <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[3]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="27" tap_mode="probeonly" trigger_index="27" type="unknown"/>
+            <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[4]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="28" tap_mode="probeonly" trigger_index="28" type="unknown"/>
+            <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[5]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="29" tap_mode="probeonly" trigger_index="29" type="unknown"/>
+            <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[6]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="30" tap_mode="probeonly" trigger_index="30" type="unknown"/>
+            <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="dont_care" name="data_in[7]" pwr_level-0="dont_care" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="31" tap_mode="probeonly" trigger_index="31" type="unknown"/>
+          </bus>
+          <bus is_selected="false" level-0="alt_or" name="Group" order="msb_to_lsb" state="collapse" type="register">
+            <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[0]" storage_index="0" tap_mode="probeonly" trigger_index="0" type="unknown"/>
+            <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[1]" storage_index="1" tap_mode="probeonly" trigger_index="1" type="unknown"/>
+            <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[2]" storage_index="2" tap_mode="probeonly" trigger_index="2" type="unknown"/>
+            <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[3]" storage_index="3" tap_mode="probeonly" trigger_index="3" type="unknown"/>
+            <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[4]" storage_index="4" tap_mode="probeonly" trigger_index="4" type="unknown"/>
+            <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[5]" storage_index="5" tap_mode="probeonly" trigger_index="5" type="unknown"/>
+            <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[6]" storage_index="6" tap_mode="probeonly" trigger_index="6" type="unknown"/>
+            <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABH[7]" storage_index="7" tap_mode="probeonly" trigger_index="7" type="unknown"/>
+            <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[0]" storage_index="8" tap_mode="probeonly" trigger_index="8" type="unknown"/>
+            <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[1]" storage_index="9" tap_mode="probeonly" trigger_index="9" type="unknown"/>
+            <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[2]" storage_index="10" tap_mode="probeonly" trigger_index="10" type="unknown"/>
+            <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[3]" storage_index="11" tap_mode="probeonly" trigger_index="11" type="unknown"/>
+            <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[4]" storage_index="12" tap_mode="probeonly" trigger_index="12" type="unknown"/>
+            <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[5]" storage_index="13" tap_mode="probeonly" trigger_index="13" type="unknown"/>
+            <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[6]" storage_index="14" tap_mode="probeonly" trigger_index="14" type="unknown"/>
+            <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" name="cpu6502:cpu_6502|ABL[7]" storage_index="15" tap_mode="probeonly" trigger_index="15" type="unknown"/>
+          </bus>
+        </setup_view>
+        <trigger_in_editor/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger CRC="3A8CF92B" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2023/04/14 12:07:05  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>11111111111111111111111111111111
+            <pwr_up_transitional>11111111111111111111111111111111</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: Trig @ 2023/04/14 12:14:12 (0:0:0.1 elapsed)" power_up_mode="false" sample_depth="1024" trigger_position="128">00000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000001000000010000000100000011000000110000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001000000010000100011001110010101110000000110001000011000100011001000000001100010000110001000110010000000010100100000000001000010000000000111001000100000000000000100000001000010001100111001010111000000011000100001100010001100100000000110001000011000100011001000000001010010000000000100001000000000011100100010000000000000010000000100001000110011100101011100000001100010000110001000110010000000011000100001100010001100100000000101001000000000010000100000000001110010001000000000000001</data>
+          <extradata>11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111T1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
+        </log>
+      </trigger>
+    </signal_set>
+  </instance>
+  <embedded_sof_files>
+    <embedded_sof_file id_crc_pairs="" name="65028Bit.sof" size="358710">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
++MW9ojh5pumHMRTVxqbQu2O+DYgvmbCsF17NcrDxVMmc0fd5mn741ZgF9iGS
+0XMeqtn3ygor0AzT+ipNVJWH43Mb4PYTZ/bkV/60Q3bow4uFov8nRC7dw6Sm
+5RvZOpNm1RJEZX2x42uWMcZhRX4UutiHx7I9kE9v/RN7Sf6NvNdxE/hnfDzN
+0LruxmDkzpVbPHCGDIk/IwWOJZe8idwpGCUsgwnl0FAzcPDZj8tfC9db4fH7
+KtbU/fSYZXjYoUYD5bmqU3nZx6t1AX3DQajP9RCgazBw7wSDlHsJxIVpAuO4
+3qkBdFy8OzQ5B1UqQ5doM1FJhSWxTPfh3v/qRL2KTX+LOYkXLNOCZw3NKlgy
+bZnWx5V7WwPiixS7WLVXmfjBXM3AuPb5FXg+9ou/MCG7dS/Aex/eJ3Vfx5dm
+D2OYMGbWu5wDprEbs77chBkvN2k33rISjINf6Py2+HHgvj6wcn9qQNLaBt1a
+NLnVsPhikczquTl9Rhc8drXMrJ9tNZblHxBdYu4qpktAVdcGtk6l9d9aBapP
+SI/Z7siJARZ28xMiK2bigr3+1iJtskVZFaIK2AddsSU0+cKuSRi6B0xjZ2LS
+euVyI53pxphaJ6oD5OxzaSKPaXrZYMg/ySxD1DYuHdk96NaWP9l5Q0Z2q1Ex
+PQTYw3h2QNnpnDukI5NMydqXBztjmc90mWB+yu0OfDdBbMS7UYYwra8Nqwn8
+OxMKYm4YSU4kRMnyO8Xb+9JXrUYsuqDWlxWK+GJebhPinPU9xO18Tww1ePrI
+h40p+ytJML77dneTIR2dQ7cElZOEp1hbpScWw9y3qQr3i0u52f8FSFN70lkL
+HmNzERxbVRY84WiJbkP8RuXabHMZuERqZgLkYnkcwzZsyJqrRDG52280mb8g
+8MbIhNCVzCPvI547zQI7zVGuSX8ojbIe0mjIMqGtsyTASgfjCz03mdaaLyVo
+xRdKs/zx4TutrdiqcJqAIx4h+aszBrogT6WY5hpEGu3P3PtDFF82sYzE9rsI
+OFMnI6Unb6GUPnqUwNjaoyopnwhKM4LIQx2MeLmhBvjgiwvN3r6/AjLdrZpR
+3GZwlAvyy/fAtUiTaswhN3RLUN152HhdLq80vySTQtcVjHUwjtMRByihefH7
+Q5nf0EmAyFp2GWgEPi/zIXCdA4I6dMN662HguPkEVb3jbHQKUVg5VPwl7fmg
+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
+
+    
+    
+    </embedded_sof_file>
+  </embedded_sof_files>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <single attribute="lock mode" value="0"/>
+    <single attribute="sof manager visible" value="0"/>
+    <multi attribute="frame size" size="2" value="1280,897"/>
+    <multi attribute="jtag widget size" size="2" value="325,137"/>
+  </global_info>
+</session>
