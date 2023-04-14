@@ -58,6 +58,7 @@ always @(negedge clk) begin
 end
 
 //assign DATA = buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
+//assign DATA = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ; //buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
 assign DATA = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ; //buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
 
 /*
