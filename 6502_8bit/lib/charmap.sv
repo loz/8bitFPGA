@@ -1,3 +1,6 @@
+`default_nettype none
+`timescale 1ns / 1ps
+
 module charmap(
 	input [8:0] char,
 	input [8:0] xoffset,
@@ -12,7 +15,7 @@ module charmap(
     end
 	 
 	wire [8:0] availchar;
-	assign availchar = (char<32) ? 0 : char-31;
+	assign availchar = (char<32) ? (char == 0 ? 1 : 0) : char-31;
 	
 	wire [8:0] row;
 	assign row=charmap[(availchar*8)+yoffset];

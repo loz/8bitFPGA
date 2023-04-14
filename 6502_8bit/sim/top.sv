@@ -1,4 +1,3 @@
-
 `default_nettype none
 `timescale 1ns / 1ps
 
@@ -11,7 +10,72 @@ module top #(parameter CORDW=12) (  // coordinate width
     output      logic sdl_frame,
     output      logic [7:0] sdl_r,         // 8-bit red
     output      logic [7:0] sdl_g,         // 8-bit green
-    output      logic [7:0] sdl_b          // 8-bit blue
+    output      logic [7:0] sdl_b,          // 8-bit blue
+    output wire [15:0] tapaddress,
+    output wire [7:0] data,
+    output wire rw
+    );
+
+    //6502
+    wire [15:0] address_bus;
+    wire [7:0] data_bus;
+
+    assign tapaddress = address_bus;
+    assign data = data_bus;
+    assign rw = write_enable;
+
+
+    
+    reg  [7:0] data_in;
+    wire [7:0] data_out;
+    wire write_enable;
+    wire irq = 0;
+    wire non_mask_irq = 0;
+    wire ready = 1;
+    cpu6502 cpu_6502(
+    	.clk(clk_pix),
+    	.reset(rst_pix),
+    	.AB(address_bus),
+    	.DI(data_in),
+    	.DO(data_out),
+    	.WE(write_enable),
+    	.IRQ(irq),
+    	.NMI(non_mask_irq),
+    	.RDY(ready)
+    );//6502
+
+    always_ff @(posedge clk_pix) begin
+        if (~write_enable)
+            if(rom_enable)
+                data_in <= data_bus;
+            else
+                data_in <= data_bus;
+    end
+    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_inout : ram_inout);
+    assign ram_inout = (~rom_enable & write_enable) ? data_bus : 8'bZZZZZZZZ;
+
+    wire rom_enable;
+    assign rom_enable = address_bus[15];
+    wire [14:0] address;
+    assign address = address_bus[14:0];
+    wire [7:0] ram_inout;
+    wire [7:0] rom_inout;
+    wire [7:0] READPORT[0:8192];
+    rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/hello.mem")) rom(
+	    .clk(clk_pix),
+	    .write_enable(1'b0), //ROM not RAM!
+        .output_enable(rom_enable),
+	    .ADDRESS(address),
+	    .DATA(rom_inout)
+    );
+
+    rom_or_ram #() ram(
+	    .clk(clk_pix),
+	    .write_enable(write_enable), //ROM not RAM!
+        .output_enable(~rom_enable),
+	    .ADDRESS(address),
+	    .DATA(ram_inout),
+        .READPORT
     );
 
     // display sync signals and coordinates
@@ -39,6 +103,7 @@ module top #(parameter CORDW=12) (  // coordinate width
         .line,
         .frame,
         .de,
+        .vidmem(READPORT[4096:8191]),
         .paint_r,
         .paint_g,
         .paint_b
