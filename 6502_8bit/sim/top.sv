@@ -46,36 +46,36 @@ module top #(parameter CORDW=12) (  // coordinate width
 
     always_ff @(posedge clk_pix) begin
         if (~write_enable)
-            if(rom_enable)
-                data_in <= data_bus;
-            else
-                data_in <= data_bus;
+           data_in <= data_bus;
     end
-    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_inout : ram_inout);
-    assign ram_inout = (~rom_enable & write_enable) ? data_bus : 8'bZZZZZZZZ;
+    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
+    //assign ram_inout = (~rom_enable & write_enable) ? data_bus : 8'bZZZZZZZZ;
 
     wire rom_enable;
     assign rom_enable = address_bus[15];
     wire [14:0] address;
     assign address = address_bus[14:0];
-    wire [7:0] ram_inout;
-    wire [7:0] rom_inout;
-    wire [7:0] READPORT[0:8192];
+    wire [7:0] ram_out;
+    wire [7:0] rom_out;
     rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/hello.mem")) rom(
 	    .clk(clk_pix),
 	    .write_enable(1'b0), //ROM not RAM!
         .output_enable(rom_enable),
 	    .ADDRESS(address),
-	    .DATA(rom_inout)
+	    .DATA_OUT(rom_out)
     );
 
-    rom_or_ram #() ram(
+	wire [14:0] ppu_address;
+	wire [7:0]  ppu_data;
+    rom_or_ram ram(
 	    .clk(clk_pix),
 	    .write_enable(write_enable), //ROM not RAM!
         .output_enable(~rom_enable),
 	    .ADDRESS(address),
-	    .DATA(ram_inout),
-        .READPORT
+	    .DATA_IN(data_bus),
+        .DATA_OUT(ram_out),
+        .Q1_ADDRESS(ppu_address),
+        .Q1_DATA_OUT(ppu_data)
     );
 
     // display sync signals and coordinates
@@ -95,7 +95,7 @@ module top #(parameter CORDW=12) (  // coordinate width
 
     // paint colours: white inside square, blue outside
     logic [3:0] paint_r, paint_g, paint_b;
-    ppu_char ppu (
+    ppu_char #(.RAM_ACCESS(1)) ppu (
         .clk(clk_pix),
         .rst_n(~rst_pix),
         .sx,
@@ -103,7 +103,8 @@ module top #(parameter CORDW=12) (  // coordinate width
         .line,
         .frame,
         .de,
-        .vidmem(READPORT[4096:8191]),
+        .vid_address(ppu_address),
+		.vid_data(ppu_data),
         .paint_r,
         .paint_g,
         .paint_b

@@ -6,8 +6,10 @@ module rom_or_ram #(MEM_INIT_FILE="", RESET_VECTOR=0, SIZE=8192)(
 	input write_enable,
 	input output_enable,
 	input [14:0] ADDRESS,
-	inout reg [7:0] DATA,
-	output [7:0] READPORT[0:SIZE-1]
+	input [7:0] DATA_IN,
+	output [7:0] DATA_OUT,
+	input [14:0] Q1_ADDRESS,
+	output [7:0] Q1_DATA_OUT
 );
 
 /*
@@ -21,8 +23,6 @@ rom_or_ram rom_or_ram_inst0(
 */
 
 reg [7:0] memory [0:SIZE-1];
-assign READPORT = memory;
-
 //reg [12:0] addr;
 //reg [7:0] buffwrite;
 //reg [7:0] buffwrite_d0;
@@ -43,7 +43,7 @@ end
 
 always @(negedge clk) begin
 	if (write_enable) begin
-		memory[ADDRESS] <= DATA;
+		memory[ADDRESS] <= DATA_IN;
 	end
 	//addr <= ADDRESS[12:0];
 	/*
@@ -59,8 +59,8 @@ end
 
 //assign DATA = buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
 //assign DATA = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ; //buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
-assign DATA = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ; //buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
-
+assign DATA_OUT = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ; //buffwrite_d0; //#data_ready ? buffwrite : 8'bZZZZZZZZ;
+assign Q1_DATA_OUT = memory[Q1_ADDRESS];
 /*
 
 virtual_IO_16 #(.NAME("MADR")) mem_addr_probe (
