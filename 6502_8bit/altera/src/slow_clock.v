@@ -1,0 +1,15 @@
+`default_nettype none
+`timescale 1ns / 1ps
+
+module slow_clock #(SIZE=8) (clk, outclock);
+	input clk;
+	output outclock;
+
+	reg [SIZE-1:0] counter;
+	
+	always @(posedge clk)
+		counter <= counter;
+	
+	assign outclock = counter[SIZE-1];
+	
+endmodule

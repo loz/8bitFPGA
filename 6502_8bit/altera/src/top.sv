@@ -14,22 +14,40 @@ module top #(parameter CORDW=12) (
     output      logic [4:0] vga_out_b   // 4-bit VGA blue
     );
 	 
+	 
 	 wire clk_pix;
+	 wire reset;
 	 wire rst_pix;
 	 assign rst_pix = ~rst_n;
-
-   //6502
+	 assign reset = ~rst_n;
+	 
+	 wire clk_sys;
+	 //slow_clock #(.SIZE(16)) cpu_clock (
+	//	.clk(clk),
+	//	.outclock(clk_sys)
+	 //);
+	 assign clk_sys = clk;
+	 
+    //6502
     wire [15:0] address_bus;
     wire [7:0] data_bus;
     reg  [7:0] data_in;
     wire [7:0] data_out;
+	 
+	 virtualprobe_16bit #(.NAME("CPU0")) cpu_probe0 (
+		.probe({data_in, data_out})
+	  );
+	 virtualprobe_16bit #(.NAME("ADDR")) addr_probe0 (
+		.probe(address_bus)
+	 ); 
+	 
     wire write_enable;
     wire irq = 0;
     wire non_mask_irq = 0;
     wire ready = 1;
     cpu6502 cpu_6502(
-    	.clk(clk),
-    	.reset(rst_pix),
+    	.clk(clk_sys),
+    	.reset(reset),
     	.AB(address_bus),
     	.DI(data_in),
     	.DO(data_out),
@@ -39,12 +57,15 @@ module top #(parameter CORDW=12) (
     	.RDY(ready)
     );//6502
 
-	 always_ff @(posedge clk) begin
-        if (~write_enable)
-            data_in <= data_bus;
+	 always_ff @(posedge clk_sys) begin
+    //    //if (~write_enable)
+            data_in <= (rom_enable ? rom_out : ram_out);
     end
 	 
-    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
+	 //assign data_in = (rom_enable ? rom_out : ram_out);
+	 
+	 //This appears to be the bug.  Doesn't look like RAM reading is working!
+    //assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
 
     wire rom_enable;
     assign rom_enable = address_bus[15];
@@ -52,8 +73,8 @@ module top #(parameter CORDW=12) (
     assign address = address_bus[14:0];
     wire [7:0] ram_out;
     wire [7:0] rom_out;
-    rom #(.MEM_INIT_FILE("../roms/current.mem")) rom0(
-	    .clk(clk_pix),
+    rom #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/current.mem")) rom0(
+	    .clk(clk_sys),
        .output_enable(rom_enable),
 	    .ADDRESS(address),
 	    .DATA_OUT(rom_out)
@@ -61,18 +82,47 @@ module top #(parameter CORDW=12) (
 	 
 	 wire [14:0] ppu_address;
 	 wire [7:0]  ppu_data;
+	 virtualprobe_16bit #(.NAME("PPU0")) ppu_probe0 (
+		.probe({write_enable,rom_enable,clk_sys,5'd0, ppu_data})
+	  );
+	 virtualprobe_16bit #(.NAME("PADR")) ppu_probe1 (
+		.probe({1'b0, ppu_address})
+	 );
+
+	 /*
+	 ram_1port ram_1port_inst (
+		.address(address),
+		.clock(clk_sys),
+		.data(data_out),
+		.wren(write_enable),
+	   .q(ram_out)
+ 	 );
+	 */
+	 /*
+	 myram_2port #(.SIZE(4096)) ram_2port_inst (
+		.ADDRESS(address),
+		.clk(clk_sys),
+		.DATA_IN(data_out),
+		.write_enable(write_enable),
+	   .DATA_OUT(ram_out),
+		.Q1_ADDRESS(ppu_address),
+		.Q1_DATA_OUT(ppu_data)
+ 	 );
+	 */
+	 
 	 ram_2port	ram_2port_inst (
 		.address_a ( address ),
 		.address_b ( ppu_address ),
-		.clock_a ( clk ),
+		.clock_a ( ~clk_sys ),     //Read/Write on Negative Edge
 		.clock_b ( clk_pix ),
-		.data_a ( data_bus ),
-		//.data_b ( data_b_sig ), //PPU does not write
+		.data_a ( data_out ),
+		//.data_b ( data_b_sig ),  //PPU does not write
 		.wren_a ( write_enable ),
-		.wren_b ( 1'b0 ), //PPU does not write
+		.wren_b ( 1'b0 ),          //PPU does not write
 		.q_a ( ram_out ),
 		.q_b ( ppu_data )
 	);
+	
 	 
 	 //generate video pixel clock
 	 videopll_49 video_pll_m0(
@@ -97,15 +147,15 @@ module top #(parameter CORDW=12) (
 	 
    // paint colours: white inside square, blue outside
     logic [3:0] paint_r, paint_g, paint_b;
-    ppu_char #(.RAM_ACCESS(1)) ppu(
+	 //logic [7:0] fake_data = 8'h42;
+    ppu_char ppu(
         .clk(clk_pix),
-        .rst_n(~rst_pix),
+        .rst_n(rst_n),
         .sx,
         .sy,
         .line,
         .frame,
         .de,
-		  //.vidmem(READPORT[4096:8191]),
 		  .vid_address(ppu_address),
 		  .vid_data(ppu_data),
         .paint_r,
