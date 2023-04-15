@@ -5,8 +5,7 @@ module ppu_char #(
     CORDW=12,    // signed coordinate width (bits)
     H_RES=1024,  // horizontal resolution (pixels)
     V_RES=600,   // vertical resolution (lines)
-	 CHANW = 4,
-	 RAM_ACCESS=0
+	 CHANW = 4
 	)(
     input  wire logic clk,      		    // 50 MHz clock
     input  wire logic rst_n,            // reset button
@@ -15,9 +14,8 @@ module ppu_char #(
     input line,
     input frame,
     input de,
-    input [7:0] vidmem[4096], //Optional, if not RAMOUT
-	 output [14:0] vid_address,
-	 input  [7:0]  vid_data,
+	output [14:0] vid_address,
+	input  [7:0]  vid_data,
     output [CHANW-1:0] paint_r,
     output [CHANW-1:0] paint_g,
     output [CHANW-1:0] paint_b
@@ -50,9 +48,7 @@ module ppu_char #(
 	 logic [8:0] char;
 
 	 localparam VIDEO_RAM = 'h1000;
-	 assign char = (RAM_ACCESS == 1) ? 
-						  ((text_row >= TEXTROW) ? " " : vid_data)
-						: ((text_row >= TEXTROW) ? " " : vidmem[((text_row * TEXTCOL) + text_column)]);
+	 assign char = ((text_row >= TEXTROW) ? " " : vid_data);
 	 assign vid_address = VIDEO_RAM + ((text_row * TEXTCOL) + text_column);
 	 /*
 	 initial begin

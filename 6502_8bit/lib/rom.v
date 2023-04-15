@@ -18,19 +18,19 @@ rom rom_inst0(
 */
 
 reg [7:0] memory [0:SIZE-1];
-
+wire [12:0] mapped_address;
+assign mapped_address = ADDRESS[12:0];
 
 initial begin
   if (MEM_INIT_FILE != "") begin
     $readmemh(MEM_INIT_FILE, memory);
   end
   if (RESET_VECTOR) begin
-	 //memory[15'h0080] = 8'h80;
-	 memory[15'h1FFC] = 8'h00;
-	 memory[15'h1FFD] = 8'h80;
+	 memory[13'h1FFC] = 8'h00;
+	 memory[13'h1FFD] = 8'h80;
   end
 end
 
-assign DATA_OUT = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ;
+assign DATA_OUT = output_enable ? memory[mapped_address] : 8'bZZZZZZZZ;
 
 endmodule

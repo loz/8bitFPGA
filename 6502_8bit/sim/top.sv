@@ -94,7 +94,7 @@ module top #(parameter CORDW=12) (  // coordinate width
 
     // paint colours: white inside square, blue outside
     logic [3:0] paint_r, paint_g, paint_b;
-    ppu_char #(.RAM_ACCESS(1)) ppu (
+    ppu_char ppu (
         .clk(clk_pix),
         .rst_n(~rst_pix),
         .sx,
