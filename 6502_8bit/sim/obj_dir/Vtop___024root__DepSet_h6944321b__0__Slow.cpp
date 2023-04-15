@@ -56,10 +56,10 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     __Vtemp_hd9fed8bb__0[3U] = 0x726f6d73U;
     __Vtemp_hd9fed8bb__0[4U] = 0x2e2e2fU;
     VL_READMEM_N(true, 8, 8192, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_hd9fed8bb__0)
-                 ,  &(vlSelf->top__DOT__rom__DOT__memory)
+                 ,  &(vlSelf->top__DOT__rom0__DOT__memory)
                  , 0, ~0ULL);
-    vlSelf->top__DOT__rom__DOT__memory[0x1ffcU] = 0U;
-    vlSelf->top__DOT__rom__DOT__memory[0x1ffdU] = 0x80U;
+    vlSelf->top__DOT__rom0__DOT__memory[0x1ffcU] = 0U;
+    vlSelf->top__DOT__rom0__DOT__memory[0x1ffdU] = 0x80U;
     __Vtemp_h3f974f67__0[0U] = 0x2e6d656dU;
     __Vtemp_h3f974f67__0[1U] = 0x666f6e74U;
     __Vtemp_h3f974f67__0[2U] = 0x7265732fU;
@@ -736,7 +736,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                               ? 0xffU : 0U) & (((0x8000U 
                                                  & (IData)(vlSelf->top__DOT__address_bus))
                                                  ? 
-                                                vlSelf->top__DOT__rom__DOT__memory
+                                                vlSelf->top__DOT__rom0__DOT__memory
                                                 [(0x1fffU 
                                                   & (IData)(vlSelf->top__DOT__address_bus))]
                                                  : 0U) 
@@ -956,7 +956,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__cpu_6502__DOT__ALU__DOT__temp = 0;
     vlSelf->top__DOT__cpu_6502__DOT__ALU__DOT__temp_HC = 0;
     for (int __Vi0 = 0; __Vi0 < 8192; ++__Vi0) {
-        vlSelf->top__DOT__rom__DOT__memory[__Vi0] = 0;
+        vlSelf->top__DOT__rom0__DOT__memory[__Vi0] = 0;
     }
     for (int __Vi0 = 0; __Vi0 < 8192; ++__Vi0) {
         vlSelf->top__DOT__ram__DOT__memory[__Vi0] = 0;

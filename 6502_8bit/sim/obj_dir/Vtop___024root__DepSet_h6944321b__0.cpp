@@ -1479,7 +1479,7 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__2(Vtop___024root* vlSelf) {
                               ? 0xffU : 0U) & (((0x8000U 
                                                  & (IData)(vlSelf->top__DOT__address_bus))
                                                  ? 
-                                                vlSelf->top__DOT__rom__DOT__memory
+                                                vlSelf->top__DOT__rom0__DOT__memory
                                                 [(0x1fffU 
                                                   & (IData)(vlSelf->top__DOT__address_bus))]
                                                  : 0U) 

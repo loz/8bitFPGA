@@ -110,7 +110,7 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ __VstlIterCount;
         IData/*31:0*/ __VactIterCount;
         VlUnpacked<CData/*7:0*/, 4> top__DOT__cpu_6502__DOT__AXYS;
-        VlUnpacked<CData/*7:0*/, 8192> top__DOT__rom__DOT__memory;
+        VlUnpacked<CData/*7:0*/, 8192> top__DOT__rom0__DOT__memory;
         VlUnpacked<CData/*7:0*/, 8192> top__DOT__ram__DOT__memory;
         VlUnpacked<SData/*8:0*/, 800> top__DOT__ppu__DOT__font_map__DOT__charmap;
     };
