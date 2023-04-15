@@ -191,13 +191,13 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                            | (IData)(vlSelf->top__DOT__cpu_6502__DOT__cond_code)))));
     vlSelf->top__DOT__cpu_6502__DOT__cond_true = Vtop__ConstPool__TABLE_hdb9aaec7_0
         [__Vtableidx8];
+    vlSelf->top__DOT__cpu_6502__DOT____Vcellinp__ALU__BCD 
+        = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__adc_bcd) 
+           & (0xdU == (IData)(vlSelf->top__DOT__cpu_6502__DOT__state)));
     __Vtableidx2 = (((IData)(vlSelf->top__DOT__cpu_6502__DOT__store) 
                      << 6U) | (IData)(vlSelf->top__DOT__cpu_6502__DOT__state));
     vlSelf->top__DOT__write_enable = Vtop__ConstPool__TABLE_hd12ab508_0
         [__Vtableidx2];
-    vlSelf->top__DOT__cpu_6502__DOT____Vcellinp__ALU__BCD 
-        = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__adc_bcd) 
-           & (0xdU == (IData)(vlSelf->top__DOT__cpu_6502__DOT__state)));
     top__DOT__ppu__DOT__char = ((0x25U <= (0x3fU & 
                                            VL_DIVS_III(32, 
                                                        (VL_EXTENDS_II(32,12, (IData)(vlSelf->top__DOT__sy)) 
@@ -753,8 +753,10 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                    & (IData)(vlSelf->top__DOT__address_bus))
                                                    ? 0xffU
                                                    : 0U)))
-                         : vlSelf->top__DOT__ram__DOT__memory
-                        [(0x1fffU & (IData)(vlSelf->top__DOT__address_bus))]));
+                         : ((0x4000U & (IData)(vlSelf->top__DOT__address_bus))
+                             ? (IData)(vlSelf->sdl_uart_byte)
+                             : vlSelf->top__DOT__ram__DOT__memory
+                            [(0x1fffU & (IData)(vlSelf->top__DOT__address_bus))])));
     top__DOT__cpu_6502__DOT__ALU__DOT__temp_logic = 
         ((2U & (IData)(top__DOT__cpu_6502__DOT__alu_op))
           ? ((1U & (IData)(top__DOT__cpu_6502__DOT__alu_op))
@@ -819,6 +821,21 @@ VL_ATTR_COLD void Vtop___024root___eval_stl(Vtop___024root* vlSelf) {
         Vtop___024root___stl_sequent__TOP__0(vlSelf);
     }
 }
+
+#ifdef VL_DEBUG
+VL_ATTR_COLD void Vtop___024root___dump_triggers__ico(Vtop___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___dump_triggers__ico\n"); );
+    // Body
+    if ((1U & (~ (IData)(vlSelf->__VicoTriggered.any())))) {
+        VL_DBG_MSGF("         No triggers active\n");
+    }
+    if (vlSelf->__VicoTriggered.at(0U)) {
+        VL_DBG_MSGF("         'ico' region trigger index 0 is active: Internal 'ico' trigger - first iteration\n");
+    }
+}
+#endif  // VL_DEBUG
 
 #ifdef VL_DEBUG
 VL_ATTR_COLD void Vtop___024root___dump_triggers__act(Vtop___024root* vlSelf) {

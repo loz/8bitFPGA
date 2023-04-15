@@ -34,13 +34,9 @@ print_ch:
 
 ; IRQ
 byteread:
-  lda #$49
-  ldx #01
-  sta $1000,x
+  ; fetch the byte from UART
+  lda %0100000000000000
   jsr print_ch
-  inx
-  lda #$52
-  sta $1000,x
   ;clear the interupt
   sta %0100000000000000
   rti

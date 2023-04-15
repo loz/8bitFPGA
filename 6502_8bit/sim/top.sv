@@ -52,7 +52,9 @@ module top #(parameter CORDW=12) (  // coordinate width
         if (~write_enable)
            data_in <= data_bus;
     end
-    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
+    assign data_bus = (write_enable) ? data_out : 
+                      (rom_enable ? rom_out : 
+                        uart_enabled ? uart_byte : ram_out);
     //assign ram_inout = (~rom_enable & write_enable) ? data_bus : 8'bZZZZZZZZ;
 
     wire rom_enable;
@@ -129,7 +131,9 @@ module top #(parameter CORDW=12) (  // coordinate width
     logic [7:0] uart_out;
     logic interupt;
     logic clear_interupt;
-    assign clear_interupt = address_bus[14]; //14th bit is IRQ Clear, when written to
+    logic uart_enabled;
+    assign uart_enabled = address_bus[14];
+    assign clear_interupt = write_enable && uart_enabled; //14th bit is IRQ Clear, when written to
     uart_mapper umapper (
         .clk(clk_pix),
         .rst_n(~rst_pix),

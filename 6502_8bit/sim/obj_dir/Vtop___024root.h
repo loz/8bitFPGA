@@ -112,6 +112,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*11:0*/ top__DOT__display_inst__DOT__x;
         SData/*11:0*/ top__DOT__display_inst__DOT__y;
         IData/*31:0*/ __VstlIterCount;
+        IData/*31:0*/ __VicoIterCount;
         IData/*31:0*/ __VactIterCount;
         VlUnpacked<CData/*7:0*/, 4> top__DOT__cpu_6502__DOT__AXYS;
         VlUnpacked<CData/*7:0*/, 8192> top__DOT__rom0__DOT__memory;
@@ -119,6 +120,7 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<SData/*8:0*/, 800> top__DOT__ppu__DOT__font_map__DOT__charmap;
     };
     VlTriggerVec<1> __VstlTriggered;
+    VlTriggerVec<1> __VicoTriggered;
     VlTriggerVec<3> __VactTriggered;
     VlTriggerVec<3> __VnbaTriggered;
 

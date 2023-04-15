@@ -114,15 +114,15 @@ int main(int argc, char* argv[]) {
                 if (e.type == SDL_QUIT) {
                     break;
                 } else if (e.type == SDL_KEYDOWN) {
-                    printf("Key Pressed, %02x (%s)\n", e.key.keysym.scancode, SDL_GetKeyName(e.key.keysym.sym));
+                    //printf("Key Pressed, %02x (%s)\n", e.key.keysym.scancode, SDL_GetKeyName(e.key.keysym.sym));
                     top->sdl_uart_byte = SDL_GetKeyName(e.key.keysym.sym)[0];
                     top->sdl_uart_byte_ready = 1;
                     top->clk_pix = 1;
                     top->eval();
-                    printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
+                    //printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
                     top->clk_pix = 0;
                     top->eval();
-                    printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
+                    //printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
                     top->sdl_uart_byte_ready = 0;
                 }
             }
