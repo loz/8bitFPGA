@@ -86,6 +86,12 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SEARCH_PATH "c:/users/loz/development/8bitfpga/6502_8bit/lib"
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION ON
+set_global_assignment -name VERILOG_FILE virtualprobe_16bit/synthesis/virtualprobe_16bit.v
+set_global_assignment -name QSYS_FILE virtualprobe_16bit.qsys
+set_global_assignment -name VERILOG_FILE ../lib/rom.v
 set_global_assignment -name VERILOG_FILE ../lib/cpu6502.v
 set_global_assignment -name VERILOG_FILE ../lib/rom_or_ram.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../lib/ppu_char.sv
@@ -94,8 +100,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/display_1024_600.sv
 set_global_assignment -name VERILOG_FILE videopll_49.v
 set_global_assignment -name QIP_FILE ram_2port.qip
-set_global_assignment -name ENABLE_SIGNALTAP OFF
-set_global_assignment -name USE_SIGNALTAP_FILE SignalTap.stp
-set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION ON
-set_global_assignment -name VERILOG_FILE src/rom.v
+set_global_assignment -name VERILOG_FILE src/slow_clock.v
+set_global_assignment -name SOURCE_FILE Probes.spf
+set_global_assignment -name QIP_FILE ram_1port.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
