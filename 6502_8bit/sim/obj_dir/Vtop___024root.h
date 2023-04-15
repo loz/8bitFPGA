@@ -22,8 +22,11 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(sdl_r,7,0);
         VL_OUT8(sdl_g,7,0);
         VL_OUT8(sdl_b,7,0);
+        VL_IN8(sdl_uart_byte,7,0);
+        VL_IN8(sdl_uart_byte_ready,0,0);
         VL_OUT8(data,7,0);
         VL_OUT8(rw,0,0);
+        VL_OUT8(irqtap,0,0);
         CData/*7:0*/ top__DOT__data_in;
         CData/*7:0*/ top__DOT__data_out;
         CData/*0:0*/ top__DOT__write_enable;
@@ -76,11 +79,11 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__cpu_6502__DOT__plp;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__php;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__clc;
+    };
+    struct {
         CData/*0:0*/ top__DOT__cpu_6502__DOT__sec;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__cld;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__sed;
-    };
-    struct {
         CData/*0:0*/ top__DOT__cpu_6502__DOT__cli;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__sei;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__clv;
@@ -92,6 +95,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_BI;
         CData/*4:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_h;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_HC;
+        CData/*0:0*/ top__DOT__umapper__DOT__byte_ready;
         CData/*5:0*/ __Vdly__top__DOT__cpu_6502__DOT__state;
         CData/*0:0*/ __Vtrigrprev__TOP__clk_pix;
         CData/*0:0*/ __Vtrigrprev__TOP__rst_pix;

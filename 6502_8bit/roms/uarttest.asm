@@ -6,6 +6,7 @@ ROWS=36
 BCURSOR=$00 ; VStores VMEM Buffer Location
   .org $8000
 start:
+  cli       ;enable interupts
   ldx #$00        ; set X register to zero
   stx CURSORX
   stx CURSORY
@@ -31,11 +32,18 @@ print_ch:
   lda CURSORX
   rts
 
+; IRQ
 byteread:
-  lda #$41
+  lda #$49
   ldx #01
   sta $1000,x
   jsr print_ch
+  inx
+  lda #$52
+  sta $1000,x
+  ;clear the interupt
+  sta %0100000000000000
+  rti
 
   .org $9ffc
 RESVEC:  .word start

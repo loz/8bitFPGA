@@ -32,9 +32,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     __Vdly__top__DOT__display_inst__DOT__y = 0;
     SData/*11:0*/ __Vdly__top__DOT__display_inst__DOT__x;
     __Vdly__top__DOT__display_inst__DOT__x = 0;
+    CData/*0:0*/ __Vdly__top__DOT__umapper__DOT__byte_ready;
+    __Vdly__top__DOT__umapper__DOT__byte_ready = 0;
     // Body
     __Vdly__top__DOT__display_inst__DOT__x = vlSelf->top__DOT__display_inst__DOT__x;
     __Vdly__top__DOT__display_inst__DOT__y = vlSelf->top__DOT__display_inst__DOT__y;
+    __Vdly__top__DOT__umapper__DOT__byte_ready = vlSelf->top__DOT__umapper__DOT__byte_ready;
     __Vdlyvset__top__DOT__cpu_6502__DOT__AXYS__v0 = 0U;
     if ((0x3ffU == VL_EXTENDS_II(32,12, (IData)(vlSelf->top__DOT__display_inst__DOT__x)))) {
         __Vdly__top__DOT__display_inst__DOT__y = ((0x257U 
@@ -52,6 +55,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                                                   & ((IData)(1U) 
                                                      + 
                                                      VL_EXTENDS_II(12,12, (IData)(vlSelf->top__DOT__display_inst__DOT__x))));
+    }
+    if (((IData)(vlSelf->sdl_uart_byte_ready) & (~ (IData)(vlSelf->top__DOT__umapper__DOT__byte_ready)))) {
+        __Vdly__top__DOT__umapper__DOT__byte_ready = 1U;
+    } else if ((((IData)(vlSelf->top__DOT__address_bus) 
+                 >> 0xeU) & (IData)(vlSelf->top__DOT__umapper__DOT__byte_ready))) {
+        __Vdly__top__DOT__umapper__DOT__byte_ready = 0U;
     }
     if (((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge) 
          & (0xbU == (IData)(vlSelf->top__DOT__cpu_6502__DOT__state)))) {
@@ -235,10 +244,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                                               ((IData)(vlSelf->top__DOT__data_in) 
                                                >> 6U));
     }
+    vlSelf->top__DOT__umapper__DOT__byte_ready = __Vdly__top__DOT__umapper__DOT__byte_ready;
     if (__Vdlyvset__top__DOT__cpu_6502__DOT__AXYS__v0) {
         vlSelf->top__DOT__cpu_6502__DOT__AXYS[__Vdlyvdim0__top__DOT__cpu_6502__DOT__AXYS__v0] 
             = __Vdlyvval__top__DOT__cpu_6502__DOT__AXYS__v0;
     }
+    vlSelf->irqtap = vlSelf->top__DOT__umapper__DOT__byte_ready;
     vlSelf->top__DOT__cpu_6502__DOT__HC = vlSelf->top__DOT__cpu_6502__DOT__ALU__DOT__temp_HC;
     vlSelf->top__DOT__cpu_6502__DOT__adj_bcd = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__adc_sbc) 
                                                 & (IData)(vlSelf->top__DOT__cpu_6502__DOT__D));
@@ -868,7 +879,9 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
     if ((1U & (~ (IData)(vlSelf->top__DOT__write_enable)))) {
         vlSelf->top__DOT__data_in = vlSelf->data;
     }
-    vlSelf->top__DOT__cpu_6502__DOT__IR = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge)
+    vlSelf->top__DOT__cpu_6502__DOT__IR = ((((~ (IData)(vlSelf->top__DOT__cpu_6502__DOT__I)) 
+                                             & (IData)(vlSelf->top__DOT__umapper__DOT__byte_ready)) 
+                                            | (IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge))
                                             ? 0U : 
                                            ((IData)(vlSelf->top__DOT__cpu_6502__DOT__IRHOLD_valid)
                                              ? (IData)(vlSelf->top__DOT__cpu_6502__DOT__IRHOLD)
@@ -884,7 +897,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__4(Vtop___024root* vlSelf) 
 }
 
 extern const VlUnpacked<CData/*0:0*/, 256> Vtop__ConstPool__TABLE_hf63381f3_0;
-extern const VlUnpacked<CData/*0:0*/, 512> Vtop__ConstPool__TABLE_hc7241849_0;
+extern const VlUnpacked<CData/*0:0*/, 2048> Vtop__ConstPool__TABLE_h990428e9_0;
 extern const VlUnpacked<CData/*0:0*/, 128> Vtop__ConstPool__TABLE_hd12ab508_0;
 extern const VlUnpacked<CData/*0:0*/, 8192> Vtop__ConstPool__TABLE_h85b28cba_0;
 extern const VlUnpacked<CData/*1:0*/, 2048> Vtop__ConstPool__TABLE_h660d6bfa_0;
@@ -909,7 +922,7 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
     top__DOT__cpu_6502__DOT__ALU__DOT__temp_logic = 0;
     CData/*4:0*/ top__DOT__cpu_6502__DOT__ALU__DOT__temp_l;
     top__DOT__cpu_6502__DOT__ALU__DOT__temp_l = 0;
-    SData/*8:0*/ __Vtableidx1;
+    SData/*10:0*/ __Vtableidx1;
     __Vtableidx1 = 0;
     CData/*6:0*/ __Vtableidx2;
     __Vtableidx2 = 0;
@@ -928,10 +941,15 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__cpu_6502__DOT__write_register 
         = Vtop__ConstPool__TABLE_hf63381f3_0[__Vtableidx3];
     __Vtableidx1 = (((IData)(vlSelf->top__DOT__cpu_6502__DOT__backwards) 
-                     << 8U) | (((IData)(vlSelf->top__DOT__cpu_6502__DOT__CO) 
-                                << 7U) | (((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge) 
-                                           << 6U) | (IData)(vlSelf->top__DOT__cpu_6502__DOT__state))));
-    vlSelf->top__DOT__cpu_6502__DOT__PC_inc = Vtop__ConstPool__TABLE_hc7241849_0
+                     << 0xaU) | (((IData)(vlSelf->top__DOT__cpu_6502__DOT__CO) 
+                                  << 9U) | (((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge) 
+                                             << 8U) 
+                                            | (((IData)(vlSelf->irqtap) 
+                                                << 7U) 
+                                               | (((IData)(vlSelf->top__DOT__cpu_6502__DOT__I) 
+                                                   << 6U) 
+                                                  | (IData)(vlSelf->top__DOT__cpu_6502__DOT__state))))));
+    vlSelf->top__DOT__cpu_6502__DOT__PC_inc = Vtop__ConstPool__TABLE_h990428e9_0
         [__Vtableidx1];
     __Vtableidx2 = (((IData)(vlSelf->top__DOT__cpu_6502__DOT__store) 
                      << 6U) | (IData)(vlSelf->top__DOT__cpu_6502__DOT__state));
@@ -1278,7 +1296,9 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
                                      ? 0U : (IData)(top__DOT__cpu_6502__DOT__regfile)));
                 } else {
                     vlSelf->top__DOT__cpu_6502__DOT__PC_temp 
-                        = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge)
+                        = ((((~ (IData)(vlSelf->top__DOT__cpu_6502__DOT__I)) 
+                             & (IData)(vlSelf->irqtap)) 
+                            | (IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge))
                             ? (((IData)(vlSelf->top__DOT__cpu_6502__DOT__ABH) 
                                 << 8U) | (IData)(vlSelf->top__DOT__cpu_6502__DOT__ABL))
                             : (IData)(vlSelf->top__DOT__cpu_6502__DOT__PC));
@@ -1305,11 +1325,12 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
                 vlSelf->top__DOT__cpu_6502__DOT__PC_temp 
                     = ((IData)(vlSelf->top__DOT__cpu_6502__DOT__res)
                         ? 0x9ffcU : ((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge)
-                                      ? 0xfffaU : 0xfffeU));
+                                      ? 0x9ffaU : 0x9ffeU));
                 top__DOT__cpu_6502__DOT__BI = (0xffU 
                                                & 0U);
                 vlSelf->top__DOT__data_out = (0xffU 
-                                              & ((IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge)
+                                              & (((IData)(vlSelf->irqtap) 
+                                                  | (IData)(vlSelf->top__DOT__cpu_6502__DOT__NMI_edge))
                                                   ? 
                                                  (0xefU 
                                                   & (IData)(vlSelf->top__DOT__cpu_6502__DOT__P))
@@ -1589,5 +1610,7 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("clk_pix");}
     if (VL_UNLIKELY((vlSelf->rst_pix & 0xfeU))) {
         Verilated::overWidthError("rst_pix");}
+    if (VL_UNLIKELY((vlSelf->sdl_uart_byte_ready & 0xfeU))) {
+        Verilated::overWidthError("sdl_uart_byte_ready");}
 }
 #endif  // VL_DEBUG

@@ -11,9 +11,12 @@ module top #(parameter CORDW=12) (  // coordinate width
     output      logic [7:0] sdl_r,         // 8-bit red
     output      logic [7:0] sdl_g,         // 8-bit green
     output      logic [7:0] sdl_b,          // 8-bit blue
+    input       logic [7:0] sdl_uart_byte,
+    input       logic sdl_uart_byte_ready,
     output wire [15:0] tapaddress,
     output wire [7:0] data,
-    output wire rw
+    output wire rw,
+    output wire irqtap
     );
 
     //6502
@@ -23,13 +26,13 @@ module top #(parameter CORDW=12) (  // coordinate width
     assign tapaddress = address_bus;
     assign data = data_bus;
     assign rw = write_enable;
-
+    assign irqtap = irq;
 
     
     reg  [7:0] data_in;
     wire [7:0] data_out;
     wire write_enable;
-    wire irq = 0;
+    wire irq = interupt;
     wire non_mask_irq = 0;
     wire ready = 1;
     cpu6502 cpu_6502(
@@ -44,6 +47,7 @@ module top #(parameter CORDW=12) (  // coordinate width
     	.RDY(ready)
     );//6502
 
+
     always_ff @(posedge clk_pix) begin
         if (~write_enable)
            data_in <= data_bus;
@@ -57,7 +61,8 @@ module top #(parameter CORDW=12) (  // coordinate width
     assign address = address_bus[14:0];
     wire [7:0] ram_out;
     wire [7:0] rom_out;
-    rom #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/current.mem")) rom0(
+    //rom #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/current.mem")) rom0(
+    rom #(.MEM_INIT_FILE("../roms/current.mem")) rom0(
 	    .clk(clk_pix),
         .output_enable(rom_enable),
 	    .ADDRESS(address),
@@ -108,6 +113,32 @@ module top #(parameter CORDW=12) (  // coordinate width
         .paint_g,
         .paint_b
     );
+
+    //Get bytes from UART
+    logic [7:0] uart_byte;
+    logic uart_byte_ready;
+    sdl_uart sd_uart(
+        .clk(clk_pix),
+        .obyte_ready(uart_byte_ready),
+        .obyte(uart_byte),
+        .sdl_byte(sdl_uart_byte),
+        .sdl_byte_ready(sdl_uart_byte_ready)
+    );
+
+    //Map into the Address/CPU/DataBus
+    logic [7:0] uart_out;
+    logic interupt;
+    logic clear_interupt;
+    assign clear_interupt = address_bus[14]; //14th bit is IRQ Clear, when written to
+    uart_mapper umapper (
+        .clk(clk_pix),
+        .rst_n(~rst_pix),
+        .data_bus(uart_out),
+        .interupt(interupt),
+        .clear_interupt(clear_interupt),
+        .uart_byte(uart_byte),
+        .uart_byte_ready(uart_byte_ready)
+        );
 
     // SDL output (8 bits per colour channel)
     always_ff @(posedge clk_pix) begin

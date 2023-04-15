@@ -31,8 +31,11 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&sdl_r,7,0);
     VL_OUT8(&sdl_g,7,0);
     VL_OUT8(&sdl_b,7,0);
+    VL_IN8(&sdl_uart_byte,7,0);
+    VL_IN8(&sdl_uart_byte_ready,0,0);
     VL_OUT8(&data,7,0);
     VL_OUT8(&rw,0,0);
+    VL_OUT8(&irqtap,0,0);
     VL_OUT16(&sdl_sx,11,0);
     VL_OUT16(&sdl_sy,11,0);
     VL_OUT16(&tapaddress,15,0);

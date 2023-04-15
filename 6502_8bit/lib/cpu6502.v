@@ -321,8 +321,13 @@ always @*
 
         BRA2:           PC_temp = { ADD, PCL };
 
-        BRK2:           PC_temp =      res ? 16'h9ffc: //Bodge for smaller ROM 16'hfffc : 
-                                  NMI_edge ? 16'hfffa : 16'hfffe;
+        //Overwrite NMIVEC to 9ffa
+        //Overwrite RESETVEC to 9ffc
+        //Overwrtie IRQVEC to 9ffe
+        BRK2:           PC_temp =      res ? 16'h9ffc: 
+                                  NMI_edge ? 16'h9ffa : 16'h9ffe;
+        //BRK2:           PC_temp =      res ? 16'hfffc:
+        //                          NMI_edge ? 16'hfffa : 16'hfffe;
 
         default:        PC_temp = PC;
     endcase

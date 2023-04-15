@@ -17,8 +17,11 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , sdl_r{vlSymsp->TOP.sdl_r}
     , sdl_g{vlSymsp->TOP.sdl_g}
     , sdl_b{vlSymsp->TOP.sdl_b}
+    , sdl_uart_byte{vlSymsp->TOP.sdl_uart_byte}
+    , sdl_uart_byte_ready{vlSymsp->TOP.sdl_uart_byte_ready}
     , data{vlSymsp->TOP.data}
     , rw{vlSymsp->TOP.rw}
+    , irqtap{vlSymsp->TOP.irqtap}
     , sdl_sx{vlSymsp->TOP.sdl_sx}
     , sdl_sy{vlSymsp->TOP.sdl_sy}
     , tapaddress{vlSymsp->TOP.tapaddress}

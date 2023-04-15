@@ -102,7 +102,9 @@ int main(int argc, char* argv[]) {
             p->g = top->sdl_g;
             p->r = top->sdl_r;
         }
-
+        //if(top->irqtap == 1) {
+        //    printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
+        //}
 
         // update texture once per frame (in blanking)
         if (top->sdl_sy == 0 && top->sdl_sx == 0) {
@@ -111,9 +113,20 @@ int main(int argc, char* argv[]) {
             if (SDL_PollEvent(&e)) {
                 if (e.type == SDL_QUIT) {
                     break;
+                } else if (e.type == SDL_KEYDOWN) {
+                    printf("Key Pressed, %02x (%s)\n", e.key.keysym.scancode, SDL_GetKeyName(e.key.keysym.sym));
+                    top->sdl_uart_byte = SDL_GetKeyName(e.key.keysym.sym)[0];
+                    top->sdl_uart_byte_ready = 1;
+                    top->clk_pix = 1;
+                    top->eval();
+                    printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
+                    top->clk_pix = 0;
+                    top->eval();
+                    printf("Tick: (%04x) [%02x] IRQ?: %s\n", top->tapaddress, top->data, (top->irqtap == 0 ? "N" : "Y"));
+                    top->sdl_uart_byte_ready = 0;
                 }
             }
-            if (keyb_state[SDL_SCANCODE_Q]) break;  // quit if user presses 'Q'
+            //if (keyb_state[SDL_SCANCODE_Q]) break;  // quit if user presses 'Q'
 
             SDL_UpdateTexture(sdl_texture, NULL, screenbuffer, H_RES*sizeof(Pixel));
             SDL_RenderClear(sdl_renderer);
