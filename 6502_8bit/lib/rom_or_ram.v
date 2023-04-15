@@ -41,6 +41,6 @@ always @(negedge clk) begin
 	end
 end
 
-assign DATA_OUT = output_enable ? memory[ADDRESS] : 8'bZZZZZZZZ;
-assign Q1_DATA_OUT = Q1_CLOCK ?   memory[Q1_ADDRESS] : 8'bZZZZZZZZ;
+assign DATA_OUT = memory[ADDRESS];
+assign Q1_DATA_OUT = memory[Q1_ADDRESS];
 endmodule
