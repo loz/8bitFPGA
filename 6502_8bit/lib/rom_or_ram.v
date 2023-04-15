@@ -1,7 +1,7 @@
 `default_nettype none
 `timescale 1ns / 1ps
 
-module rom_or_ram #(MEM_INIT_FILE="", RESET_VECTOR=0, SIZE=8192)(
+module rom_or_ram #(MEM_INIT_FILE="", RESET_VECTOR=0, SIZE=4096)(
 	input clk,
 	input write_enable,
 	input output_enable,

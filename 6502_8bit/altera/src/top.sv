@@ -43,22 +43,20 @@ module top #(parameter CORDW=12) (
         if (~write_enable)
             data_in <= data_bus;
     end
-    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_inout : ram_out);
-    //assign ram_inout = (~rom_enable & write_enable) ? data_bus : 8'bZZZZZZZZ;
+	 
+    assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
 
     wire rom_enable;
     assign rom_enable = address_bus[15];
     wire [14:0] address;
     assign address = address_bus[14:0];
     wire [7:0] ram_out;
-    wire [7:0] rom_inout;
-    wire [7:0] READPORT[0:8191];
-    rom_or_ram #(.RESET_VECTOR(1), .MEM_INIT_FILE("../roms/hello.mem")) rom(
-	    .clk(clk),
-	    .write_enable(1'b0), //ROM not RAM!
-        .output_enable(rom_enable),
+    wire [7:0] rom_out;
+    rom #(.MEM_INIT_FILE("../roms/current.mem")) rom0(
+	    .clk(clk_pix),
+       .output_enable(rom_enable),
 	    .ADDRESS(address),
-	    .DATA(rom_inout)
+	    .DATA_OUT(rom_out)
     );
 	 
 	 wire [14:0] ppu_address;
@@ -75,17 +73,6 @@ module top #(parameter CORDW=12) (
 		.q_a ( ram_out ),
 		.q_b ( ppu_data )
 	);
-
-	 /*
-    rom_or_ram ram(
-	    .clk(clk),
-	    .write_enable(write_enable), //RAM
-        .output_enable(~rom_enable),
-	    .ADDRESS(address),
-	    .DATA(ram_inout),
-       .READPORT
-    );
-	 */
 	 
 	 //generate video pixel clock
 	 videopll_49 video_pll_m0(
