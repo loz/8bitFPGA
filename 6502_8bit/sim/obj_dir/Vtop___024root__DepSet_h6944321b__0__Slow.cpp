@@ -744,18 +744,8 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                    & (IData)(vlSelf->top__DOT__address_bus))
                                                    ? 0xffU
                                                    : 0U)))
-                         : (((0x8000U & (IData)(vlSelf->top__DOT__address_bus))
-                              ? 0U : 0xffU) & (((0x8000U 
-                                                 & (IData)(vlSelf->top__DOT__address_bus))
-                                                 ? 0U
-                                                 : 
-                                                vlSelf->top__DOT__ram__DOT__memory
-                                                [(0x1fffU 
-                                                  & (IData)(vlSelf->top__DOT__address_bus))]) 
-                                               & ((0x8000U 
-                                                   & (IData)(vlSelf->top__DOT__address_bus))
-                                                   ? 0U
-                                                   : 0xffU)))));
+                         : vlSelf->top__DOT__ram__DOT__memory
+                        [(0x1fffU & (IData)(vlSelf->top__DOT__address_bus))]));
     top__DOT__cpu_6502__DOT__ALU__DOT__temp_logic = 
         ((2U & (IData)(top__DOT__cpu_6502__DOT__alu_op))
           ? ((1U & (IData)(top__DOT__cpu_6502__DOT__alu_op))
