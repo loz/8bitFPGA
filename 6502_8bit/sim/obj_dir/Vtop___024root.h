@@ -30,6 +30,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT__data_in;
         CData/*7:0*/ top__DOT__data_out;
         CData/*0:0*/ top__DOT__write_enable;
+        CData/*0:0*/ top__DOT__ram_enabled;
         CData/*0:0*/ top__DOT__de;
         CData/*0:0*/ top__DOT__frame;
         CData/*3:0*/ top__DOT__paint_r;
@@ -78,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__cpu_6502__DOT__bit_ins;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__plp;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__php;
-        CData/*0:0*/ top__DOT__cpu_6502__DOT__clc;
     };
     struct {
+        CData/*0:0*/ top__DOT__cpu_6502__DOT__clc;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__sec;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__cld;
         CData/*0:0*/ top__DOT__cpu_6502__DOT__sed;
