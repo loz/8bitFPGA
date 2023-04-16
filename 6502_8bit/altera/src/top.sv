@@ -89,6 +89,10 @@ module top #(parameter CORDW=12) (
 		.probe({1'b0, ppu_address})
 	 );
 	 
+     wire ram_write_enable;
+     wire ram_enabled;
+     assign ram_enabled = ~rom_enable && ~uart_enabled;
+     assign ram_write_enable = write_enable && ram_enabled;
 	 ram_2port	ram_2port_inst (
 		.address_a ( address ),
 		.address_b ( ppu_address ),
@@ -96,7 +100,7 @@ module top #(parameter CORDW=12) (
 		.clock_b ( clk_pix ),
 		.data_a ( data_out ),
 		//.data_b ( data_b_sig ),  //PPU does not write
-		.wren_a ( write_enable ),
+		.wren_a ( ram_write_enable ),
 		.wren_b ( 1'b0 ),          //PPU does not write
 		.q_a ( ram_out ),
 		.q_b ( ppu_data )

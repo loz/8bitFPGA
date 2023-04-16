@@ -108,14 +108,32 @@ int main(int argc, char* argv[]) {
 
         // update texture once per frame (in blanking)
         if (top->sdl_sy == 0 && top->sdl_sx == 0) {
-            // check for quit event
+            SDL_UpdateTexture(sdl_texture, NULL, screenbuffer, H_RES*sizeof(Pixel));
+            SDL_RenderClear(sdl_renderer);
+            SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, NULL);
+            SDL_RenderPresent(sdl_renderer);
+            frame_count++;
+
+            // UART Keypress simulation
             SDL_Event e;
             if (SDL_PollEvent(&e)) {
                 if (e.type == SDL_QUIT) {
                     break;
                 } else if (e.type == SDL_KEYDOWN) {
                     //printf("Key Pressed, %02x (%s)\n", e.key.keysym.scancode, SDL_GetKeyName(e.key.keysym.sym));
-                    top->sdl_uart_byte = SDL_GetKeyName(e.key.keysym.sym)[0];
+                    switch(e.key.keysym.scancode) {
+                        case SDL_SCANCODE_BACKSPACE:
+                            top->sdl_uart_byte = 0x08;
+                            break;
+                        case SDL_SCANCODE_SPACE:
+                            top->sdl_uart_byte = 0x20;
+                            break;
+                        case SDL_SCANCODE_RETURN:
+                            top->sdl_uart_byte = 0x15;
+                            break;
+                        default:
+                            top->sdl_uart_byte = SDL_GetKeyName(e.key.keysym.sym)[0];
+                    }
                     top->sdl_uart_byte_ready = 1;
                     top->clk_pix = 1;
                     top->eval();
@@ -126,13 +144,6 @@ int main(int argc, char* argv[]) {
                     top->sdl_uart_byte_ready = 0;
                 }
             }
-            //if (keyb_state[SDL_SCANCODE_Q]) break;  // quit if user presses 'Q'
-
-            SDL_UpdateTexture(sdl_texture, NULL, screenbuffer, H_RES*sizeof(Pixel));
-            SDL_RenderClear(sdl_renderer);
-            SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, NULL);
-            SDL_RenderPresent(sdl_renderer);
-            frame_count++;
         }
     }
 

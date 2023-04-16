@@ -477,7 +477,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__1(Vtop___024root* vlSelf) 
     __Vdlyvset__top__DOT__ram__DOT__memory__v0 = 0;
     // Body
     __Vdlyvset__top__DOT__ram__DOT__memory__v0 = 0U;
-    if (vlSelf->top__DOT__write_enable) {
+    if (vlSelf->top__DOT__ram_enabled) {
         __Vdlyvval__top__DOT__ram__DOT__memory__v0 
             = vlSelf->data;
         __Vdlyvset__top__DOT__ram__DOT__memory__v0 = 1U;
@@ -1470,6 +1470,9 @@ VL_INLINE_OPT void Vtop___024root___nba_comb__TOP__1(Vtop___024root* vlSelf) {
         vlSelf->top__DOT__data_out = (0xffU & (IData)(top__DOT__cpu_6502__DOT__regfile));
     }
     vlSelf->tapaddress = vlSelf->top__DOT__address_bus;
+    vlSelf->top__DOT__ram_enabled = (IData)((0U == 
+                                             (0xc000U 
+                                              & (IData)(vlSelf->top__DOT__address_bus))));
     top__DOT__cpu_6502__DOT__ALU__DOT__temp_logic = 
         ((2U & (IData)(top__DOT__cpu_6502__DOT__alu_op))
           ? ((1U & (IData)(top__DOT__cpu_6502__DOT__alu_op))

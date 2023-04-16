@@ -738,6 +738,9 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__paint_b = Vtop__ConstPool__TABLE_h1a6a251c_0
         [__Vtableidx9];
     vlSelf->tapaddress = vlSelf->top__DOT__address_bus;
+    vlSelf->top__DOT__ram_enabled = (IData)((0U == 
+                                             (0xc000U 
+                                              & (IData)(vlSelf->top__DOT__address_bus))));
     vlSelf->data = ((IData)(vlSelf->top__DOT__write_enable)
                      ? (IData)(vlSelf->top__DOT__data_out)
                      : ((0x8000U & (IData)(vlSelf->top__DOT__address_bus))
@@ -903,6 +906,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__data_in = 0;
     vlSelf->top__DOT__data_out = 0;
     vlSelf->top__DOT__write_enable = 0;
+    vlSelf->top__DOT__ram_enabled = 0;
     vlSelf->top__DOT__sx = 0;
     vlSelf->top__DOT__sy = 0;
     vlSelf->top__DOT__de = 0;

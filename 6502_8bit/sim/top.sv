@@ -73,10 +73,14 @@ module top #(parameter CORDW=12) (  // coordinate width
 
 	wire [14:0] ppu_address;
 	wire [7:0]  ppu_data;
+    wire ram_write_enable;
+    wire ram_enabled;
+    assign ram_enabled = ~rom_enable && ~uart_enabled;
+    assign ram_write_enable = write_enable && ram_enabled;
     rom_or_ram ram(
 	    .clk(clk_pix),
-	    .write_enable(write_enable), //ROM not RAM!
-        .output_enable(~rom_enable),
+	    .write_enable(ram_enabled),
+        .output_enable(ram_write_enable),
 	    .ADDRESS(address),
 	    .DATA_IN(data_bus),
         .DATA_OUT(ram_out),
