@@ -123,13 +123,13 @@ int main(int argc, char* argv[]) {
                     //printf("Key Pressed, %02x (%s)\n", e.key.keysym.scancode, SDL_GetKeyName(e.key.keysym.sym));
                     switch(e.key.keysym.scancode) {
                         case SDL_SCANCODE_BACKSPACE:
-                            top->sdl_uart_byte = 0x08;
+                            top->sdl_uart_byte = 0x7f;
                             break;
                         case SDL_SCANCODE_SPACE:
                             top->sdl_uart_byte = 0x20;
                             break;
                         case SDL_SCANCODE_RETURN:
-                            top->sdl_uart_byte = 0x15;
+                            top->sdl_uart_byte = 0x0d;
                             break;
                         default:
                             top->sdl_uart_byte = SDL_GetKeyName(e.key.keysym.sym)[0];
