@@ -38,9 +38,9 @@ print_ch:
 byteread:
   ; fetch the byte from UART
   lda %0100000000000000
-  cmp #$15
+  cmp #$0d
   beq newline
-  cmp #$08
+  cmp #$7f
   beq backspace
   jsr print_ch
 cnt:
