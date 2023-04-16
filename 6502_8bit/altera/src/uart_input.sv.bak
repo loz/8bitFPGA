@@ -1,0 +1,3 @@
+module uart_input(clk, rst_n, uart_rx, uart_byte, uart_byte_ready);
+
+endmodule;

@@ -6,6 +6,7 @@
 module top #(parameter CORDW=12) (
     input  wire logic clk,      		    // 50 MHz clock
     input  wire logic rst_n,            // reset button
+	 input  wire uart_rx,
     output      logic vga_out_hs,       // VGA horizontal sync
     output      logic vga_out_vs,       // VGA vertical sync
     //output    logic dvi_de,         // DVI data enable
@@ -42,7 +43,7 @@ module top #(parameter CORDW=12) (
 	 ); 
 	 
     wire write_enable;
-    wire irq = 0;
+    wire irq = interupt;
     wire non_mask_irq = 0;
     wire ready = 1;
     cpu6502 cpu_6502(
@@ -59,13 +60,12 @@ module top #(parameter CORDW=12) (
 
 	 always_ff @(posedge clk_sys) begin
     //    //if (~write_enable)
-            data_in <= (rom_enable ? rom_out : ram_out);
+            data_in <= data_bus;
     end
 	 
-	 //assign data_in = (rom_enable ? rom_out : ram_out);
-	 
-	 //This appears to be the bug.  Doesn't look like RAM reading is working!
-    //assign data_bus = (write_enable) ? data_out : (rom_enable ? rom_out : ram_out);
+    assign data_bus = (write_enable) ? data_out : 
+                      (rom_enable ? rom_out : 
+                        uart_enabled ? uart_byte : ram_out);
 
     wire rom_enable;
     assign rom_enable = address_bus[15];
@@ -88,27 +88,6 @@ module top #(parameter CORDW=12) (
 	 virtualprobe_16bit #(.NAME("PADR")) ppu_probe1 (
 		.probe({1'b0, ppu_address})
 	 );
-
-	 /*
-	 ram_1port ram_1port_inst (
-		.address(address),
-		.clock(clk_sys),
-		.data(data_out),
-		.wren(write_enable),
-	   .q(ram_out)
- 	 );
-	 */
-	 /*
-	 myram_2port #(.SIZE(4096)) ram_2port_inst (
-		.ADDRESS(address),
-		.clk(clk_sys),
-		.DATA_IN(data_out),
-		.write_enable(write_enable),
-	   .DATA_OUT(ram_out),
-		.Q1_ADDRESS(ppu_address),
-		.Q1_DATA_OUT(ppu_data)
- 	 );
-	 */
 	 
 	 ram_2port	ram_2port_inst (
 		.address_a ( address ),
@@ -122,6 +101,35 @@ module top #(parameter CORDW=12) (
 		.q_a ( ram_out ),
 		.q_b ( ppu_data )
 	);
+	
+	//UART Keyboard
+   //Get bytes from UART
+   logic [7:0] uart_byte;
+   logic uart_byte_ready;	
+	uart_input uart_0(
+		.clk(clk_sys),
+		.rst_n(rst_n),
+		.uart_rx(uart_rx),
+		.uart_byte(uart_byte),
+		.uart_byte_ready(uart_byte_ready)
+	);
+   //Map into the Address/CPU/DataBus
+   logic [7:0] uart_out;
+   logic interupt;
+   logic clear_interupt;
+   logic uart_enabled;
+   assign uart_enabled = address_bus[14];
+   assign clear_interupt = write_enable && uart_enabled; //14th bit is IRQ Clear, when written to
+   uart_mapper umapper (
+       .clk(clk_sys),
+       .rst_n(rst_n),
+       .data_bus(uart_out),
+       .interupt(interupt),
+       .clear_interupt(clear_interupt),
+       .uart_byte(uart_byte),
+       .uart_byte_ready(uart_byte_ready)
+       );
+	
 	
 	 
 	 //generate video pixel clock
