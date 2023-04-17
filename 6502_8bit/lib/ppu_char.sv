@@ -14,8 +14,8 @@ module ppu_char #(
     input line,
     input frame,
     input de,
-	output [14:0] vid_address,
-	input  [7:0]  vid_data,
+	 output [14:0] vid_address,
+	 input  [7:0]  vid_data,
     output [CHANW-1:0] paint_r,
     output [CHANW-1:0] paint_g,
     output [CHANW-1:0] paint_b

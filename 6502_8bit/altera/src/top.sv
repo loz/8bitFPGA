@@ -97,7 +97,7 @@ module top #(parameter CORDW=12) (
 		.address_a ( address ),
 		.address_b ( ppu_address ),
 		.clock_a ( ~clk_sys ),     //Read/Write on Negative Edge
-		.clock_b ( clk_pix ),
+		.clock_b ( clk_pix ),		//Negative Edge for ppu
 		.data_a ( data_out ),
 		//.data_b ( data_b_sig ),  //PPU does not write
 		.wren_a ( ram_write_enable ),
@@ -146,7 +146,7 @@ module top #(parameter CORDW=12) (
     logic signed [CORDW-1:0] sx, sy;
     logic de, line, frame;
     display_1024_600 display_inst (
-        .clk_pix,
+        .clk_pix(~clk_pix),  //Negative edge of clock to allow for latched RAM
         .rst_pix(rst_pix),
         .sx(sx),
         .sy(sy),
@@ -161,7 +161,7 @@ module top #(parameter CORDW=12) (
     logic [3:0] paint_r, paint_g, paint_b;
 	 //logic [7:0] fake_data = 8'h42;
     ppu_char ppu(
-        .clk(clk_pix),
+        .clk(~clk_pix),
         .rst_n(rst_n),
         .sx,
         .sy,
