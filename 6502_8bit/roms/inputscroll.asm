@@ -60,11 +60,13 @@ newline:
   lda #COLUMNS
   ;subtract Cursor
   sbc CURSORX
+  clc
   adc BCURSOR
   bcc skip_zp 
   inc BCURSOR+1 ;Zero page of cursor increased, next 512bytes
 skip_zp:
   sta BCURSOR
+  jsr inc_cursor ;add 1 for column right
   lda #00
   sta CURSORX ; re-set cursor
   inc CURSORY
@@ -109,7 +111,7 @@ cpy_row:
   beq rowdone
   jmp cpy_row
 rowdone:
-  jsr inc_cursor
+  jsr inc_cursor ;columns is 1 short of screen buffer size
   inc CURSORY
   lda CURSORY
   cmp #ROWS
@@ -119,18 +121,21 @@ rowdone:
 allrowsdone:
   lda #00
   sta CURSORX
+  jsr cursor_up
+  jsr dec_cursor ;we overshot for the row
+  rts
+
+cursor_up:
+  pha ;preserve a
+  sec
   lda BCURSOR
   sbc #COLUMNS
-  bcc skip_unpage
+  bcs skip_cupage
   dec BCURSOR+1
-skip_unpage:
-  sbc #01
-  bcc skip_unpage2
-  dec BCURSOR+1
-skip_unpage2:
+skip_cupage:
   sta BCURSOR
-  inc BCURSOR
   dec CURSORY
+  pla ;restore a
   rts
 
 inc_cursor:
