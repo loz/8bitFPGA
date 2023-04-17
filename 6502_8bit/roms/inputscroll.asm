@@ -2,9 +2,10 @@ VIDMEM=$1000
 CURSORX=$02
 CURSORY=$03
 COLUMNS=63
-ROWS=36
+ROWS=37
 BCURSOR=$00 ; VStores VMEM Buffer Location
 CCURSOR=$04 ; COPY CURSOR
+WORDVAR=$06 ; Var for word maths
   .org $8000
 start:
   cli       ;enable interupts
@@ -26,8 +27,8 @@ main:
 print_ch:
   ldx #00
   sta (BCURSOR,X) ;Print at buffer cursor
-  inc BCURSOR     ;Move buffer cursor
-  inc CURSORX     ;X=X+1
+  jsr inc_cursor
+  inc CURSORX
   tay
   lda #$5f
   sta (BCURSOR,X)
@@ -42,11 +43,16 @@ byteread:
   beq newline
   cmp #$7f
   beq backspace
+  lda CURSORX
+  cmp #COLUMNS
+  beq cnt ; Skip it at column limit
+  lda %0100000000000000
   jsr print_ch
 cnt:
   ;clear the interupt
   sta %0100000000000000
   rti
+
 newline:
   lda #$20
   sta (BCURSOR,X)
@@ -77,8 +83,8 @@ backspace:
   beq cnt
   lda #$20
   sta (BCURSOR,X)
-  dec BCURSOR     ;Move buffer cursor
-  dec CURSORX     ;X=X+1
+  jsr dec_cursor
+  dec CURSORX
   lda #$5f
   sta (BCURSOR,X)
   jmp cnt
@@ -97,25 +103,13 @@ scroll_screen:
 cpy_row:
   lda (CCURSOR,X)
   sta (BCURSOR,X)
-  inc BCURSOR
-  inc CCURSOR
+  jsr inc_cursor
   iny
   cpy #COLUMNS 
   beq rowdone
   jmp cpy_row
 rowdone:
-  inc BCURSOR
-  lda BCURSOR
-  cmp #00 ;rolled over
-  bne skip_bcpage
-  inc BCURSOR+1
-skip_bcpage:
-  inc CCURSOR
-  lda CCURSOR
-  cmp #00 ;rolled over
-  bne skip_ccpage
-  inc CCURSOR+1
-skip_ccpage:
+  jsr inc_cursor
   inc CURSORY
   lda CURSORY
   cmp #ROWS
@@ -138,7 +132,40 @@ skip_unpage2:
   inc BCURSOR
   dec CURSORY
   rts
-  
+
+inc_cursor:
+  pha ;preserve a
+  inc BCURSOR
+  lda BCURSOR
+  cmp #00 ;rolled over
+  bne skip_bcpage
+  inc BCURSOR+1
+skip_bcpage:
+  inc CCURSOR
+  lda CCURSOR
+  cmp #00 ;rolled over
+  bne skip_ccpage
+  inc CCURSOR+1
+skip_ccpage:
+  pla ;restore a
+  rts
+
+dec_cursor:
+  pha ;preserve a
+  dec BCURSOR
+  lda BCURSOR
+  cmp #$ff ;rolled over
+  bne skip_dbcpage
+  dec BCURSOR+1
+skip_dbcpage:
+  dec CCURSOR
+  lda CCURSOR
+  cmp #$ff ;rolled over
+  bne skip_dccpage
+  dec CCURSOR+1
+skip_dccpage:
+  pla ;restore a
+  rts
 
   .org $9ffc
 RESVEC:  .word start
