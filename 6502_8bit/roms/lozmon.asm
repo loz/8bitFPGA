@@ -7,7 +7,7 @@ COLUMNS=63
 ROWS=37
 BCURSOR=$00 ; VStores VMEM Buffer Location
 CCURSOR=$04 ; COPY CURSOR
-WORDVAR=$06 ; Var for word maths
+PCURSOR=$06 ; Parse Cursor
 CURLOC=$08  ; Current Memory Location
 ENDLOC=$10  ; End range location
 MESSAGE=$12 ; MESSAGE Variable
@@ -41,6 +41,34 @@ print_ch:
   inc CURSORX
   rts
 
+  ; areg charater printed to screen
+print_hex:
+  pha ; Save A for re-use
+  ror
+  ror
+  ror
+  ror
+  clc
+  and #%00001111
+  jsr print_hex_lower ;really upper 4bits
+  pla ;get back original A value for actual lower
+  clc
+  and #%00001111
+  jsr print_hex_lower
+  rts
+
+print_hex_lower:
+  cmp #10
+  bcc print_hex_lower_digit
+  ; Hex based
+  adc #54
+  jmp print_hex_lower_nextbit
+print_hex_lower_digit:
+  adc #48
+print_hex_lower_nextbit:
+  jsr print_ch
+  rts
+
 ;show cursor at its location
 show_cursor:
   pha
@@ -70,11 +98,15 @@ cnt:
   rti
 execcmd:
   jsr clear_cursor
+  jsr parse_input
+  cmp #0
+  bne execcmd_finish
+  jsr show_memory
+execcmd_finish:
   jsr newline
   jsr show_prompt
   jsr show_cursor
   jmp cnt
-
 backspace:
   lda CURSORX
   cmp #01
@@ -85,11 +117,108 @@ backspace:
   dec CURSORX
   jmp cnt
 
+
+; Show memory at CURLOC
+show_memory_block
+  jsr newline
+  ldy #0
+show_block_loop
+  lda (CURLOC), Y
+  jsr print_hex
+  lda #" "
+  jsr print_ch
+  cpy #16
+  beq show_block_done
+  iny
+  jmp show_block_loop
+show_block_done:
+  rts
+
+show_memory:
+  jsr show_memory_block
+  rts
+  jsr newline
+  lda #"0"
+  jsr print_ch
+  lda #"x"
+  jsr print_ch
+  lda CURLOC
+  jsr print_hex
+  lda #":"
+  jsr print_ch
+  ldx #0
+  lda (CURLOC, X)
+  jsr print_hex
+  rts
+
+; Parse input on this line
+parse_input:
+  ;Set PCursor to start of current Prompt
+  lda BCURSOR
+  clc
+  sbc CURSORX
+  sta PCURSOR
+  lda BCURSOR+1
+  sbc #0
+  sta PCURSOR+1
+  clc
+  lda PCURSOR
+  adc #2
+  sta PCURSOR
+  lda PCURSOR+1
+  adc #0
+  sta PCURSOR+1
+  lda #$3a ; :
+  jsr print_ch
+  ldy #0
+parse_continue:
+  lda (PCURSOR),Y
+  clc
+  cmp #$30 ; is this digit? ($30-46)
+  bcs parse_digit
+  jmp invalid_parse
+parse_digit:
+  clc
+  cmp #$3A; is this over dec range?
+  bcs parse_potential_hex
+  ; ASSERT - Is digit
+  clc
+  sbc #$2F
+  sta CURLOC ;store the digit
+  jmp parse_complete
+parse_potential_hex:
+  clc
+  cmp #$41; is this hex? ($41-$46)
+  bcs parse_hex
+  jmp invalid_parse
+parse_hex:
+  clc
+  cmp #$47
+  bcs invalid_parse
+  ;normalise to binary value
+  clc
+  sbc #$36
+  sta CURLOC
+  ;None valid
+  jmp parse_complete
+invalid_parse:
+  ; nothing extra
+  lda #$3F
+  jsr print_ch
+  lda #1; 'Not Success'
+  rts
+parse_complete:
+  lda #0; 'Success'
+  sta CURLOC+1 ; Ensure ZERO page for now
+  rts
+
+; Remove cusor char
 clear_cursor:
   lda #$20
   sta (BCURSOR,X)
   rts
 
+; Prompt >
 show_prompt:
   lda #$3e
   jsr print_ch
@@ -118,6 +247,7 @@ skip_zp:
 skip_scroll:
   rts
 
+; Line scrolling
 scroll_screen:
   lda #<VIDMEM    ;LSB
   sta BCURSOR  
