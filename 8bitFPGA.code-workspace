@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "./"
+		},
+		{
+			"path": "../lcd-st7789-sv"
+		},
+		{
+			"path": "../tangnano9k-series-examples"
+		},
+		{
+			"path": "../Downloads/PIAX301V2/demo"
+		}
+	],
+	"settings": {}
+}
