@@ -9,8 +9,11 @@ BCURSOR=$00 ; VStores VMEM Buffer Location
 CCURSOR=$04 ; COPY CURSOR
 PCURSOR=$06 ; Parse Cursor
 CURLOC=$08  ; Current Memory Location
-ENDLOC=$10  ; End range location
-MESSAGE=$12 ; MESSAGE Variable
+ENDLOC=$0A  ; End range location
+MESSAGE=$0C ; MESSAGE Variable
+PARSED=$0E ; Last Parsed Char/Value
+PARSELOC=$10
+VARX=$12
   .org $8000
 start:
   cli       ;enable interupts
@@ -38,7 +41,6 @@ print_ch:
   ldx #00
   sta (BCURSOR,X) ;Print at buffer cursor
   jsr inc_cursor
-  inc CURSORX
   rts
 
   ; areg charater printed to screen
@@ -67,14 +69,6 @@ print_hex_lower_digit:
   adc #48
 print_hex_lower_nextbit:
   jsr print_ch
-  rts
-
-;show cursor at its location
-show_cursor:
-  pha
-  lda #$5f
-  sta (BCURSOR,X)
-  pla
   rts
 
 ; IRQ
@@ -114,7 +108,6 @@ backspace:
   jsr clear_cursor
   jsr dec_cursor
   jsr show_cursor
-  dec CURSORX
   jmp cnt
 
 
@@ -127,7 +120,7 @@ show_block_loop
   jsr print_hex
   lda #" "
   jsr print_ch
-  cpy #16
+  cpy #15
   beq show_block_done
   iny
   jmp show_block_loop
@@ -142,6 +135,8 @@ show_memory:
   jsr print_ch
   lda #"x"
   jsr print_ch
+  lda CURLOC+1
+  jsr print_hex
   lda CURLOC
   jsr print_hex
   lda #":"
@@ -168,11 +163,61 @@ parse_input:
   lda PCURSOR+1
   adc #0
   sta PCURSOR+1
-  lda #$3a ; :
-  jsr print_ch
   ldy #0
+  ; reset the parsed word
+  sty PARSELOC
+  sty PARSELOC+1
+  ;Chars to parse
+  lda CURSORX
+  clc 
+  sbc #0
+  sta VARX ;Work around, CURSORX seems of by 1
 parse_continue:
   lda (PCURSOR),Y
+  jsr parse_hex
+  cmp #0
+  bne parse_finish
+  ;Shift the value through the word
+  lda PARSELOC
+  clc
+  rol PARSELOC
+  rol PARSELOC+1
+  clc
+  rol PARSELOC
+  rol PARSELOC+1
+  clc
+  rol PARSELOC
+  rol PARSELOC+1
+  clc
+  rol PARSELOC
+  rol PARSELOC+1
+  ;add current 4bit to the word
+  clc
+  lda PARSELOC
+  ora PARSED
+  sta PARSELOC
+  ;lda #"."
+  ;sta (PCURSOR),Y
+  iny ;increment y after as we want <CURSORX
+  cpy VARX
+  beq parse_success
+  jmp parse_continue
+parse_success:
+  ;lda #")"
+  ;jsr print_ch
+  ;Transfer parsed to Current
+  lda PARSELOC
+  sta CURLOC
+  lda PARSELOC+1
+  sta CURLOC+1
+  lda #0
+  rts
+parse_finish:
+  lda VARX
+  jsr print_hex
+  rts
+
+parse_hex:
   clc
   cmp #$30 ; is this digit? ($30-46)
   bcs parse_digit
@@ -184,43 +229,48 @@ parse_digit:
   ; ASSERT - Is digit
   clc
   sbc #$2F
-  sta CURLOC ;store the digit
+  sta PARSED ;store the digit
   jmp parse_complete
 parse_potential_hex:
   clc
   cmp #$41; is this hex? ($41-$46)
-  bcs parse_hex
+  bcs parse_the_hex
   jmp invalid_parse
-parse_hex:
+parse_the_hex:
   clc
   cmp #$47
   bcs invalid_parse
   ;normalise to binary value
   clc
   sbc #$36
-  sta CURLOC
+  sta PARSED
   ;None valid
   jmp parse_complete
 invalid_parse:
   ; nothing extra
-  lda #$3F
-  jsr print_ch
   lda #1; 'Not Success'
   rts
 parse_complete:
   lda #0; 'Success'
-  sta CURLOC+1 ; Ensure ZERO page for now
+  rts
+
+;show cursor at its location
+show_cursor:
+  ldx #0
+  lda #"_"
+  sta (BCURSOR,X)
   rts
 
 ; Remove cusor char
 clear_cursor:
-  lda #$20
+  ldx #0
+  lda #" "
   sta (BCURSOR,X)
   rts
 
 ; Prompt >
 show_prompt:
-  lda #$3e
+  lda #">"
   jsr print_ch
   rts
 
@@ -229,14 +279,17 @@ newline:
   ;advance buffer cursor to new line
   lda #COLUMNS
   ;subtract Cursor
+  clc
   sbc CURSORX
+  clc
+  adc #2
   clc
   adc BCURSOR
   bcc skip_zp 
   inc BCURSOR+1 ;Zero page of cursor increased, next 512bytes
 skip_zp:
   sta BCURSOR
-  jsr inc_cursor ;add 1 for column right
+  ;jsr inc_cursor ;add 1 for column right
   lda #00
   sta CURSORX ; re-set cursor
   inc CURSORY
@@ -280,6 +333,8 @@ allrowsdone:
   sta CURSORX
   jsr cursor_up
   jsr dec_cursor ;we overshot for the row
+  lda #00
+  sta CURSORX
   rts
 
 cursor_up:
@@ -310,6 +365,7 @@ skip_bcpage:
   inc CCURSOR+1
 skip_ccpage:
   pla ;restore a
+  inc CURSORX
   rts
 
 dec_cursor:
@@ -327,6 +383,7 @@ skip_dbcpage:
   dec CCURSOR+1
 skip_dccpage:
   pla ;restore a
+  dec CURSORX
   rts
 
 ; Print string starting a memory location MESSAGE
@@ -342,7 +399,6 @@ print_message_loop:
 print_message_complete
   jsr newline
   jsr newline
-  jsr inc_cursor ;this is needed for some reason
   rts
 
 WELCOME_PROMPT: .ascii "Welcome to LOZmon, memory explorer."
