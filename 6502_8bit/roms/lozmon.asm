@@ -14,6 +14,8 @@ MESSAGE=$0C ; MESSAGE Variable
 PARSED=$0E ; Last Parsed Char/Value
 PARSELOC=$10
 VARX=$12
+DOBLOCK=$14
+BLKCURSOR=$16
   .org $8000
 start:
   cli       ;enable interupts
@@ -114,22 +116,83 @@ backspace:
 ; Show memory at CURLOC
 show_memory_block
   jsr newline
+  lda #"0"
+  jsr print_ch
+  lda #"x"
+  jsr print_ch
+  lda CURLOC+1
+  jsr print_hex
+  lda CURLOC
+  jsr print_hex
+  lda #"-"
+  jsr print_ch
+  lda ENDLOC+1
+  jsr print_hex
+  lda ENDLOC
+  jsr print_hex
+  lda #":"
+  jsr print_ch
+  jsr newline
+  ldy #0
+  lda CURLOC
+  sta BLKCURSOR
+  lda CURLOC+1
+  sta BLKCURSOR+1
+show_block_loop_start:
+  lda #"0"
+  jsr print_ch
+  lda #"x"
+  jsr print_ch
+  lda BLKCURSOR+1
+  jsr print_hex
+  lda BLKCURSOR
+  jsr print_hex
+  lda #":"
+  jsr print_ch
+  lda #" "
+  jsr print_ch
   ldy #0
 show_block_loop
-  lda (CURLOC), Y
+  lda (BLKCURSOR), Y
   jsr print_hex
   lda #" "
   jsr print_ch
   cpy #15
-  beq show_block_done
+  bcs show_block_row_done
   iny
   jmp show_block_loop
+show_block_row_done:
+  lda #":"
+  jsr print_ch
+  lda ENDLOC+1
+  cmp BLKCURSOR+1
+  beq show_block_chk_lsb
+  bcs show_next_blk
+  jmp show_block_done
+show_block_chk_lsb:
+  lda ENDLOC
+  cmp BLKCURSOR
+  bcc show_block_done
+show_next_blk:
+  lda BLKCURSOR
+  clc
+  adc #16
+  sta BLKCURSOR
+  lda BLKCURSOR+1
+  adc #0
+  sta BLKCURSOR+1
+  jsr newline
+  jmp show_block_loop_start
 show_block_done:
   rts
 
 show_memory:
+  lda DOBLOCK
+  cmp #1
+  bne show_single_memory
   jsr show_memory_block
   rts
+show_single_memory:
   jsr newline
   lda #"0"
   jsr print_ch
@@ -148,6 +211,8 @@ show_memory:
 
 ; Parse input on this line
 parse_input:
+  lda #0
+  sta DOBLOCK
   ;Set PCursor to start of current Prompt
   lda BCURSOR
   clc
@@ -172,6 +237,13 @@ parse_input:
   clc 
   sbc #0
   sta VARX ;Work around, CURSORX seems of by 1
+  lda (PCURSOR),Y
+  ;this is TO block
+  cmp #"."
+  bne parse_continue
+  lda #1
+  sta DOBLOCK
+  iny
 parse_continue:
   lda (PCURSOR),Y
   jsr parse_hex
@@ -196,7 +268,7 @@ parse_continue:
   lda PARSELOC
   ora PARSED
   sta PARSELOC
-  ;lda #"."
+  ;lda #"_"
   ;sta (PCURSOR),Y
   iny ;increment y after as we want <CURSORX
   cpy VARX
@@ -206,15 +278,26 @@ parse_success:
   ;lda #")"
   ;jsr print_ch
   ;Transfer parsed to Current
+  lda DOBLOCK
+  cmp #1
+  beq store_end
   lda PARSELOC
   sta CURLOC
   lda PARSELOC+1
   sta CURLOC+1
   lda #0
   rts
+store_end:
+  lda #">"
+  jsr print_ch
+  beq store_end
+  lda PARSELOC
+  sta ENDLOC
+  lda PARSELOC+1
+  sta ENDLOC+1
+  lda #0
+  rts
 parse_finish:
-  lda VARX
-  jsr print_hex
   rts
 
 parse_hex:
